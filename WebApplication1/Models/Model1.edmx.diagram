@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="15e57bed5df64d11a1762e42f9eb8b7b" Name="Diagram1">
+        <EntityTypeShape EntityType="DAPMModel.CTKM" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Đơn_mua_hàng" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Khách_hàng" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Kho" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Mã_giảm_giá" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Nhân_viên" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Sản_phẩm" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Chi_tiết_đơn_hàng" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Chi_tiết_kiểm_kho" Width="1.5" PointX="8.25" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_CT__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_đơ__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Đơn_mua_h__ID_kh__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Đơn_mua_h__ID_mã__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Nhân_viên__ID_đơ__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_ki__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Nhân_viên__ID_ki__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_sả__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_sả__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.Chi_tiết_CTKM" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
