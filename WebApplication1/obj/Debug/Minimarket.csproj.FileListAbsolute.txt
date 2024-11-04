@@ -77,3 +77,7 @@ C:\Users\Hidr0\source\repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csp
 C:\Users\Hidr0\source\repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.Up2Date
 C:\Users\Hidr0\source\repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Hidr0\source\repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.AssemblyReference.cache
+C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.pdb
