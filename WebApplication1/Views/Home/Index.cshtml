@@ -1,104 +1,33 @@
-﻿@*@model IEnumerable<anhemtoicodeweb.Models.Product>*@
-@model Tuple<IEnumerable<anhemtoicodeweb.Models.Product>, IEnumerable<anhemtoicodeweb.Models.Category>>
-
-@{
+﻿@{
     ViewBag.Title = "Home Page";
 }
 
-@section Styles {
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="@Url.Content("~/Content/css/Index.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/css/ForAdmin.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Slick/slick.min.css")" rel="stylesheet" type="text/css" />
-    <style>
-        body {
-            display: none;
-        }
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    </section>
 
-        .index-container {
-            all: unset;
-            margin-top: 0.5rem !important;
-        }
-
-        .navbar-header {
-            border-bottom: unset;
-        }
-
-        .product-box {
-            width: unset !important;
-        }
-    </style>
-}
-
-@section Javascript {
-    <script type="text/javascript" src="@Url.Content("~/Scripts/Slick/slick.min.js")" defer></script>
-    <script type="text/javascript" src="@Url.Content("~/Scripts/IndexScript.js")" defer></script>
-}
-
-<main class="h-auto">
-    <link href="~/Content/css/Index.css" rel="stylesheet" />
-    <div class="position-relative" id="slide1">
-        <button class="slick-prev slick-arrow"><</button>
-        <button class="slick-next slick-arrow">></button>
-        <div class="slide-container">
-            <img class="image_banner" src="~/Image/banner1.png">
-            <img class="image_banner" src="~/Image/banner2.jpg">
-            <img class="image_banner" src="~/Image/banner3.png">
-        </div>
-    </div>
-    <div class="container">
-        <section>
-            <h2>Danh mục</h2>
-            <div class="container-wrap category">
-                @foreach (var category in Model.Item2)
-                {
-                    <a class="category-box" href="@Url.Action("Details", "Categories", new { id = category.IDCate.Trim() })">
-                        @if (category.PicCate != null)
-                        {
-                            <img src=@Url.Content(category.PicCate) />
-                        }
-                        <h3>@category.NameCate</h3>
-                    </a>
-                }
-            </div>
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
         </section>
-        <section>
-            @* products *@
-            <div class="w-auto d-flex flex-nowrap flex-row justify-content-between align-content-end">
-                <h2>Các sản phẩm bán chạy</h2>
-                <a href="@Url.Action("Index", "Products")">
-                    Xem thêm →
-                </a>
-            </div>
-            <div class="position-relative" id="product-slider">
-                <button class="slick-prev-prod slick-arrow"><</button>
-                <button class="slick-next-prod slick-arrow">></button>
-                <div class="slide-container">
-                    @*<div>
-                            <div class="container-wrap product">
-                                @foreach (var product in Model.Item1.Take(10))
-                                {
-                                    Html.RenderPartial("../Products/PartialProduct", product, ViewData);
-                                }
-                            </div>
-                        </div>*@
-                    @for (int i = 0; i <= Model.Item1.Count(); i++)
-                    {
-                        if (i % 2 == 0)
-                        {
-                            continue;
-                        }
-                        <div>
-                            <div class="container-wrap product">
-                                @foreach (var product in Model.Item1.Skip(i).Take(2))
-                                {
-                                    Html.RenderPartial("../Products/PartialProduct", product, ViewData);
-                                }
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
         </section>
     </div>
 </main>
