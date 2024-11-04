@@ -1,0 +1,22 @@
+on:
+  workflow_dispatch:
+
+name: Deploy website
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: aloalo.somee.com
+        server-dir: www.aloalo.somee.com/
+        username: foxeiz
+        password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
