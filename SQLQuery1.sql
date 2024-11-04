@@ -1,4 +1,5 @@
-﻿CREATE TABLE Khách_hàng
+﻿use DAPM
+CREATE TABLE Khách_hàng
 (
   ID_khách char(8),
   Họ_tên nvarchar(50),
@@ -41,7 +42,7 @@ CREATE TABLE Danh_mục
 
 CREATE TABLE Sản_phẩm
 (
-  ID_sản_phẩm char(6) ,
+  ID_sản_phẩm INT ,
   Giá_tiền money,
   số_lượng_tồn INT ,
   Thuế float,
@@ -75,7 +76,7 @@ CREATE TABLE Chi_tiết_đơn_hàng
   Số_lượng INT NOT NULL,
   Thành_tiền money,
   ID_đơn_hàng INT NOT NULL,
-  ID_sản_phẩm char(6) NOT NULL,
+  ID_sản_phẩm INT NOT NULL,
   ID_CTKM char(10),
   FOREIGN KEY (ID_đơn_hàng) REFERENCES Đơn_mua_hàng(ID_đơn_hàng),
   FOREIGN KEY (ID_sản_phẩm) REFERENCES Sản_phẩm(ID_sản_phẩm),
@@ -85,7 +86,7 @@ CREATE TABLE Chi_tiết_đơn_hàng
 CREATE TABLE Chi_tiết_CTKM
 (
   ID_CTKM char(10),
-  ID_sản_phẩm char(6) NOT NULL,
+  ID_sản_phẩm INT NOT NULL,
   PRIMARY KEY (ID_CTKM, ID_sản_phẩm),
   FOREIGN KEY (ID_CTKM) REFERENCES CTKM(ID_CTKM),
   FOREIGN KEY (ID_sản_phẩm) REFERENCES Sản_phẩm(ID_sản_phẩm)

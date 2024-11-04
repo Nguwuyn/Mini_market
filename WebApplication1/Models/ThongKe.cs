@@ -1,4 +1,4 @@
-﻿using anhemtoicodeweb.Models;
+﻿using WebApplication1.Models;
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Web;
 
-namespace anhemtoicodeweb.Models.ThongKe
+namespace WebApplication1.Models.ThongKe
 {
     public class ChiTiet
     {
@@ -79,7 +79,7 @@ namespace anhemtoicodeweb.Models.ThongKe
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ProductID == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
                                         new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));
@@ -144,7 +144,7 @@ namespace anhemtoicodeweb.Models.ThongKe
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ProductID == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
                                         new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));
@@ -203,7 +203,7 @@ namespace anhemtoicodeweb.Models.ThongKe
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ProductID == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
                                         new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));

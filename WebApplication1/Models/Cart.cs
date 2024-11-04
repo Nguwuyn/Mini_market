@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace anhemtoicodeweb.Models
+namespace WebApplication1.Models
 {
     public class CartItem
     {
         public int _quantity { get; set; }
-        public Product _product { get; set; }
+        public Sản_phẩm _product { get; set; }
     }
 
     public class Cart
@@ -17,9 +17,9 @@ namespace anhemtoicodeweb.Models
             get { return items; }
         }
 
-        public bool AddProductCart(Product product, int quantity = 1)
+        public bool AddProductCart(Sản_phẩm product, int quantity = 1)
         {
-            var item = Items.FirstOrDefault(s => s._product.ProductID == product.ProductID);
+            var item = Items.FirstOrDefault(s => s._product.ID_sản_phẩm == product.ID_sản_phẩm);
             if (item == null)
             {
                 items.Add(new CartItem
@@ -31,9 +31,9 @@ namespace anhemtoicodeweb.Models
             }
 
             var tempQ = quantity + item._quantity;
-            if (tempQ > product.InvQuantity)
+            if (tempQ > product.số_lượng_tồn)
             {
-                item._quantity = product.InvQuantity;
+                item._quantity = (int)product.số_lượng_tồn;
                 return false;
             }
             item._quantity = tempQ;
@@ -47,13 +47,13 @@ namespace anhemtoicodeweb.Models
 
         public decimal TotalMoney()
         {
-            var total = items.Sum(s => s._quantity * s._product.Price);
-            return total;
+            var total = items.Sum(s => s._quantity * s._product.Giá_tiền);
+            return (decimal)total;
         }
 
         public void UpdateQuantity(int id, int new_quantity)
         {
-            var item = Items.FirstOrDefault(s => s._product.ProductID == id);
+            var item = Items.FirstOrDefault(s => s._product.ID_sản_phẩm == id);
             if (item != null)
                 if (new_quantity == 0)
                 {
@@ -65,7 +65,7 @@ namespace anhemtoicodeweb.Models
 
         public void RemoveCartItem(int id)
         {
-            items.RemoveAll(s => s._product.ProductID == id);
+            items.RemoveAll(s => s._product.ID_sản_phẩm == id);
         }
 
         public void ClearCart()
