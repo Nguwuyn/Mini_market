@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DAPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Chi_tiết_CTKM">
+    <Key>
+      <PropertyRef Name="ID_CTKM" />
+      <PropertyRef Name="ID_sản_phẩm" />
+    </Key>
+    <Property Name="ID_CTKM" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="ID_sản_phẩm" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DAPM.dbo.Chi_tiết_đơn_hàng' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Chi_tiết_đơn_hàng">
+    <Key>
+      <PropertyRef Name="Số_lượng" />
+      <PropertyRef Name="Thành_tiền" />
+      <PropertyRef Name="ID_đơn_hàng" />
+      <PropertyRef Name="ID_sản_phẩm" />
+    </Key>
+    <Property Name="Số_lượng" Type="int" Nullable="false" />
+    <Property Name="Thành_tiền" Type="int" Nullable="false" />
+    <Property Name="ID_CTKM" Type="char" MaxLength="5" />
+    <Property Name="ID_đơn_hàng" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="ID_sản_phẩm" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DAPM.dbo.Chi_tiết_kiểm_kho' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Chi_tiết_kiểm_kho">
+    <Key>
+      <PropertyRef Name="SL_hệ_thống" />
+      <PropertyRef Name="SL_thực_tế" />
+      <PropertyRef Name="ID_kiểm_kho" />
+      <PropertyRef Name="ID_sản_phẩm" />
+    </Key>
+    <Property Name="SL_hệ_thống" Type="int" Nullable="false" />
+    <Property Name="SL_thực_tế" Type="int" Nullable="false" />
+    <Property Name="ID_kiểm_kho" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ID_sản_phẩm" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CTKM">
+    <Key>
+      <PropertyRef Name="ID_CTKM" />
+    </Key>
+    <Property Name="ID_CTKM" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Quy_cách" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Thời_lượng" Type="smallint" Nullable="false" />
+    <Property Name="Mô_tả" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Đơn_mua_hàng">
+    <Key>
+      <PropertyRef Name="ID_đơn_hàng" />
+    </Key>
+    <Property Name="ID_đơn_hàng" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="Số_lượng_sản_phẩm" Type="smallint" Nullable="false" />
+    <Property Name="Tổng_thành_tiền" Type="money" Nullable="false" />
+    <Property Name="Ngày_lập_đơn" Type="date" Nullable="false" />
+    <Property Name="Trạng_thái_đơn_hàng" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Họ_tên_người_nhận" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SĐT_người_nhận" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="Địa_chỉ_người_nhận" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ID_mã_giảm_giá" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="ID_khách" Type="char" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Khách_hàng">
+    <Key>
+      <PropertyRef Name="ID_khách" />
+    </Key>
+    <Property Name="ID_khách" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Tên_đăng_nhập" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Mật_khẩu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Họ_tên" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Địa_chỉ" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Số_điện_thoại" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kho">
+    <Key>
+      <PropertyRef Name="ID_kiểm_kho" />
+    </Key>
+    <Property Name="ID_kiểm_kho" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Ngày" Type="date" Nullable="false" />
+    <Property Name="Giờ" Type="time" Precision="7" Nullable="false" />
+    <Property Name="ID_nhân_viên" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="Tổng_số_lượng" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mã_giảm_giá">
+    <Key>
+      <PropertyRef Name="ID_mã_giảm_giá" />
+    </Key>
+    <Property Name="ID_mã_giảm_giá" Type="char" MaxLength="9" Nullable="false" />
+    <Property Name="Nội_dung" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Số_tiền_giảm" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nhân_viên">
+    <Key>
+      <PropertyRef Name="ID_nhân_viên" />
+    </Key>
+    <Property Name="ID_nhân_viên" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="TK_nhân_viên" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MK_nhân_viên" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Họ_tên_nhân_viên" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Năm_sinh" Type="smallint" Nullable="false" />
+    <Property Name="Chức_vụ" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="ID_đơn_hàng" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="ID_kiểm_kho" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sản_phẩm">
+    <Key>
+      <PropertyRef Name="ID_sản_phẩm" />
+    </Key>
+    <Property Name="ID_sản_phẩm" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="Giá_tiền" Type="money" Nullable="false" />
+    <Property Name="Số_lượng_tồn" Type="int" Nullable="false" />
+    <Property Name="Thuế" Type="float" Nullable="false" />
+    <Property Name="Hãng" Type="nvarchar" MaxLength="9" Nullable="false" />
+    <Property Name="Tên_sản_phẩm" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Danh_mục" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Đánh_giá" Type="smallint" Nullable="false" />
+    <Property Name="Hình_ảnh" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__Chi_tiết___ID_CT__45F365D3">
+    <End Role="CTKM" Type="Self.CTKM" Multiplicity="1" />
+    <End Role="Chi_tiết_CTKM" Type="Self.Chi_tiết_CTKM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CTKM">
+        <PropertyRef Name="ID_CTKM" />
+      </Principal>
+      <Dependent Role="Chi_tiết_CTKM">
+        <PropertyRef Name="ID_CTKM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_CT__4F7CD00D">
+    <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
+    <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CTKM">
+        <PropertyRef Name="ID_CTKM" />
+      </Principal>
+      <Dependent Role="Chi_tiết_đơn_hàng">
+        <PropertyRef Name="ID_CTKM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_đơ__5070F446">
+    <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="1" />
+    <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Đơn_mua_hàng">
+        <PropertyRef Name="ID_đơn_hàng" />
+      </Principal>
+      <Dependent Role="Chi_tiết_đơn_hàng">
+        <PropertyRef Name="ID_đơn_hàng" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_ki__3E52440B">
+    <End Role="Kho" Type="Self.Kho" Multiplicity="1" />
+    <End Role="Chi_tiết_kiểm_kho" Type="Self.Chi_tiết_kiểm_kho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kho">
+        <PropertyRef Name="ID_kiểm_kho" />
+      </Principal>
+      <Dependent Role="Chi_tiết_kiểm_kho">
+        <PropertyRef Name="ID_kiểm_kho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_sả__3F466844">
+    <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
+    <End Role="Chi_tiết_kiểm_kho" Type="Self.Chi_tiết_kiểm_kho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sản_phẩm">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Principal>
+      <Dependent Role="Chi_tiết_kiểm_kho">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_sả__46E78A0C">
+    <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
+    <End Role="Chi_tiết_CTKM" Type="Self.Chi_tiết_CTKM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sản_phẩm">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Principal>
+      <Dependent Role="Chi_tiết_CTKM">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chi_tiết___ID_sả__5165187F">
+    <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
+    <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sản_phẩm">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Principal>
+      <Dependent Role="Chi_tiết_đơn_hàng">
+        <PropertyRef Name="ID_sản_phẩm" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Đơn_mua_h__ID_kh__4AB81AF0">
+    <End Role="Khách_hàng" Type="Self.Khách_hàng" Multiplicity="1" />
+    <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khách_hàng">
+        <PropertyRef Name="ID_khách" />
+      </Principal>
+      <Dependent Role="Đơn_mua_hàng">
+        <PropertyRef Name="ID_khách" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Đơn_mua_h__ID_mã__49C3F6B7">
+    <End Role="Mã_giảm_giá" Type="Self.Mã_giảm_giá" Multiplicity="1" />
+    <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mã_giảm_giá">
+        <PropertyRef Name="ID_mã_giảm_giá" />
+      </Principal>
+      <Dependent Role="Đơn_mua_hàng">
+        <PropertyRef Name="ID_mã_giảm_giá" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nhân_viên__ID_đơ__5441852A">
+    <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="1" />
+    <End Role="Nhân_viên" Type="Self.Nhân_viên" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Đơn_mua_hàng">
+        <PropertyRef Name="ID_đơn_hàng" />
+      </Principal>
+      <Dependent Role="Nhân_viên">
+        <PropertyRef Name="ID_đơn_hàng" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Nhân_viên__ID_ki__5535A963">
+    <End Role="Kho" Type="Self.Kho" Multiplicity="1" />
+    <End Role="Nhân_viên" Type="Self.Nhân_viên" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kho">
+        <PropertyRef Name="ID_kiểm_kho" />
+      </Principal>
+      <Dependent Role="Nhân_viên">
+        <PropertyRef Name="ID_kiểm_kho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DAPMModelStoreContainer">
+    <EntitySet Name="Chi_tiết_CTKM" EntityType="Self.Chi_tiết_CTKM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CTKM" EntityType="Self.CTKM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Đơn_mua_hàng" EntityType="Self.Đơn_mua_hàng" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Khách_hàng" EntityType="Self.Khách_hàng" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kho" EntityType="Self.Kho" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mã_giảm_giá" EntityType="Self.Mã_giảm_giá" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nhân_viên" EntityType="Self.Nhân_viên" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sản_phẩm" EntityType="Self.Sản_phẩm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chi_tiết_đơn_hàng" EntityType="Self.Chi_tiết_đơn_hàng" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Chi_tiết_đơn_hàng].[Số_lượng] AS [Số_lượng], 
+    [Chi_tiết_đơn_hàng].[Thành_tiền] AS [Thành_tiền], 
+    [Chi_tiết_đơn_hàng].[ID_CTKM] AS [ID_CTKM], 
+    [Chi_tiết_đơn_hàng].[ID_đơn_hàng] AS [ID_đơn_hàng], 
+    [Chi_tiết_đơn_hàng].[ID_sản_phẩm] AS [ID_sản_phẩm]
+    FROM [dbo].[Chi_tiết_đơn_hàng] AS [Chi_tiết_đơn_hàng]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Chi_tiết_kiểm_kho" EntityType="Self.Chi_tiết_kiểm_kho" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Chi_tiết_kiểm_kho].[SL_hệ_thống] AS [SL_hệ_thống], 
+    [Chi_tiết_kiểm_kho].[SL_thực_tế] AS [SL_thực_tế], 
+    [Chi_tiết_kiểm_kho].[ID_kiểm_kho] AS [ID_kiểm_kho], 
+    [Chi_tiết_kiểm_kho].[ID_sản_phẩm] AS [ID_sản_phẩm]
+    FROM [dbo].[Chi_tiết_kiểm_kho] AS [Chi_tiết_kiểm_kho]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Chi_tiết___ID_CT__45F365D3" Association="Self.FK__Chi_tiết___ID_CT__45F365D3">
+      <End Role="CTKM" EntitySet="CTKM" />
+      <End Role="Chi_tiết_CTKM" EntitySet="Chi_tiết_CTKM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_CT__4F7CD00D" Association="Self.FK__Chi_tiết___ID_CT__4F7CD00D">
+      <End Role="CTKM" EntitySet="CTKM" />
+      <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_đơ__5070F446" Association="Self.FK__Chi_tiết___ID_đơ__5070F446">
+      <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+      <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_ki__3E52440B" Association="Self.FK__Chi_tiết___ID_ki__3E52440B">
+      <End Role="Kho" EntitySet="Kho" />
+      <End Role="Chi_tiết_kiểm_kho" EntitySet="Chi_tiết_kiểm_kho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_sả__3F466844" Association="Self.FK__Chi_tiết___ID_sả__3F466844">
+      <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+      <End Role="Chi_tiết_kiểm_kho" EntitySet="Chi_tiết_kiểm_kho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_sả__46E78A0C" Association="Self.FK__Chi_tiết___ID_sả__46E78A0C">
+      <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+      <End Role="Chi_tiết_CTKM" EntitySet="Chi_tiết_CTKM" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chi_tiết___ID_sả__5165187F" Association="Self.FK__Chi_tiết___ID_sả__5165187F">
+      <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+      <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Đơn_mua_h__ID_kh__4AB81AF0" Association="Self.FK__Đơn_mua_h__ID_kh__4AB81AF0">
+      <End Role="Khách_hàng" EntitySet="Khách_hàng" />
+      <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Đơn_mua_h__ID_mã__49C3F6B7" Association="Self.FK__Đơn_mua_h__ID_mã__49C3F6B7">
+      <End Role="Mã_giảm_giá" EntitySet="Mã_giảm_giá" />
+      <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nhân_viên__ID_đơ__5441852A" Association="Self.FK__Nhân_viên__ID_đơ__5441852A">
+      <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+      <End Role="Nhân_viên" EntitySet="Nhân_viên" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Nhân_viên__ID_ki__5535A963" Association="Self.FK__Nhân_viên__ID_ki__5535A963">
+      <End Role="Kho" EntitySet="Kho" />
+      <End Role="Nhân_viên" EntitySet="Nhân_viên" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
