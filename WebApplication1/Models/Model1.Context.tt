@@ -455,8 +455,8 @@ public class TypeMapper
     {
         ArgumentNotNull(enumMember, "enumMember");
         
-        var nameProperty = enumMember.GetType().GetProperty("Name");
-        return nameProperty == null ? null : (string)nameProperty.GetValue(enumMember, null);
+        var ProductNameperty = enumMember.GetType().GetProperty("Name");
+        return ProductNameperty == null ? null : (string)ProductNameperty.GetValue(enumMember, null);
     }
 
     public System.Collections.IEnumerable GetEnumMembers(EdmType enumType)

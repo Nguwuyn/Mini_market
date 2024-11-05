@@ -19,9 +19,9 @@ function postAddCart(id) {
         }
         bs5Utils.Snack.show('secondary', 'Thêm vào giỏ hàng thành công!', 2500, true);
         const div = document.getElementById("cart_number");
-        const quantity = Number(div.innerHTML)
+        const StockQuantity = Number(div.innerHTML)
         div.style.display = "flex";
-        div.innerHTML = quantity + 1;
+        div.innerHTML = StockQuantity + 1;
         return console.log("ok!")
     })
 }

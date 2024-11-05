@@ -12,19 +12,19 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Mã_giảm_giá
+    public partial class Category
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Mã_giảm_giá()
+        public Category()
         {
-            this.Đơn_mua_hàng = new HashSet<Đơn_mua_hàng>();
+            this.Products = new HashSet<Product>();
         }
     
-        public string ID_mã_giảm_giá { get; set; }
-        public string Nội_dung { get; set; }
-        public Nullable<double> Số_tiền_giảm { get; set; }
+        public int CategoryID { get; set; }
+        public string CategoryName { get; set; }
+        public string CategoryIllust { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Đơn_mua_hàng> Đơn_mua_hàng { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

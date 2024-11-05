@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Models.OrderPro
+﻿@model WebApplication1.Models.Order
 
 @{
     ViewBag.Title = "DeleteOrder";
@@ -12,43 +12,43 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Customer.NameCus)
+            @Html.DisplayNameFor(model => model.Customer.FullName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Customer.NameCus)
+            @Html.DisplayFor(model => model.Customer.FullName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.DateOrder)
+            @Html.DisplayNameFor(model => model.OrderDate)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DateOrder)
+            @Html.DisplayFor(model => model.OrderDate)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+            @Html.DisplayNameFor(model => model.RecipientPhone)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
+            @Html.DisplayFor(model => model.RecipientPhone)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AddressDelivery)
+            @Html.DisplayNameFor(model => model.RecipientAddress)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AddressDelivery)
+            @Html.DisplayFor(model => model.RecipientAddress)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TotalAmount)
+            @Html.DisplayNameFor(model => model.ProductQuantity)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TotalAmount)
+            @Html.DisplayFor(model => model.ProductQuantity)
         </dd>
 
         <dt>
@@ -58,29 +58,12 @@
         <dd>
             @Html.DisplayFor(model => model.TotalMoney)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.TotalTax)
+            @Html.DisplayNameFor(model => model.OrderStatus)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TotalTax)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalDiscount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TotalDiscount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.State)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.State)
+            @Html.DisplayFor(model => model.OrderStatus)
         </dd>
 
     </dl>

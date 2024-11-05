@@ -283,7 +283,7 @@
             <returns>The numeric input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.double})">
             <summary>Returns character data converted from numeric data.</summary>
             <returns>The input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
@@ -292,27 +292,27 @@
             <summary>Returns character data converted from numeric data.</summary>
             <returns>The numeric input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
-            <param name="length">The total length of the string. This includes decimal point, sign, digits, and spaces. The default is 10.</param>
+            <param name="length">The total length of the string. This includes double point, sign, digits, and spaces. The default is 10.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal},System.Nullable{System.Int32})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.double},System.Nullable{System.Int32})">
             <summary>Returns character data converted from numeric data.</summary>
             <returns>The input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
-            <param name="length">The total length of the string. This includes decimal point, sign, digits, and spaces. The default is 10.</param>
+            <param name="length">The total length of the string. This includes double point, sign, digits, and spaces. The default is 10.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>Returns character data converted from numeric data.</summary>
             <returns>The numeric input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
-            <param name="length">The total length of the string. This includes decimal point, sign, digits, and spaces. The default is 10.</param>
-            <param name="decimalArg">The number of places to the right of the decimal point.  decimal  must be less than or equal to 16. If  decimal  is more than 16 then the result is truncated to sixteen places to the right of the decimal point.</param>
+            <param name="length">The total length of the string. This includes double point, sign, digits, and spaces. The default is 10.</param>
+            <param name="decimalArg">The number of places to the right of the double point.  double  must be less than or equal to 16. If  double  is more than 16 then the result is truncated to sixteen places to the right of the double point.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.Decimal},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.StringConvert(System.Nullable{System.double},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>Returns character data converted from numeric data.</summary>
             <returns>The input expression converted to a string.</returns>
             <param name="number">A numeric expression.</param>
-            <param name="length">The total length of the string. This includes decimal point, sign, digits, and spaces. The default is 10.</param>
-            <param name="decimalArg">The number of places to the right of the decimal point.  decimal  must be less than or equal to 16. If  decimal  is more than 16 then the result is truncated to sixteen places to the right of the decimal point.</param>
+            <param name="length">The total length of the string. This includes double point, sign, digits, and spaces. The default is 10.</param>
+            <param name="decimalArg">The number of places to the right of the double point.  double  must be less than or equal to 16. If  double  is more than 16 then the result is truncated to sixteen places to the right of the double point.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Stuff(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
             <summary>Inserts a string into another string. It deletes a specified length of characters in the target string at the start position and then inserts the second string into the target string at the start position.</summary>
@@ -332,7 +332,7 @@
             <returns>The angle, in radians, defined by the input cosine value.</returns>
             <param name="arg1">The cosine of an angle.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Acos(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Acos(System.Nullable{System.double})">
             <summary>A mathematical function that returns the angle, in radians, whose cosine is the specified numerical value. This angle is called the arccosine.</summary>
             <returns>An angle, measured in radians.</returns>
             <param name="arg1">The cosine of an angle.</param>
@@ -342,7 +342,7 @@
             <returns>An angle, measured in radians.</returns>
             <param name="arg">The sine of an angle.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Asin(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Asin(System.Nullable{System.double})">
             <summary>A mathematical function that returns the angle, in radians, whose sine is the specified numerical value. This angle is called the arcsine.</summary>
             <returns>An angle, measured in radians.</returns>
             <param name="arg">The sine of an angle.</param>
@@ -352,7 +352,7 @@
             <returns>An angle, measured in radians.</returns>
             <param name="arg">The tangent of an angle.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan(System.Nullable{System.double})">
             <summary>A mathematical function that returns the angle, in radians, whose tangent is the specified numerical value. This angle is called the arctangent.</summary>
             <returns>An angle, measured in radians.</returns>
             <param name="arg">The tangent of an angle.</param>
@@ -363,7 +363,7 @@
             <param name="arg1">The y-coordinate of a point.</param>
             <param name="arg2">The x-coordinate of a point.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan2(System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Atan2(System.Nullable{System.double},System.Nullable{System.double})">
             <summary>Returns the positive angle, in radians, between the positive x-axis and the ray from the origin through the point (x, y), where x and y are the two specified numerical values. The first parameter passed to the function is the y-value and the second parameter is the x-value.</summary>
             <returns>An angle, measured in radians.</returns>
             <param name="arg1">The y-coordinate of a point.</param>
@@ -374,7 +374,7 @@
             <returns>The trigonometric cosine of the specified angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cos(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cos(System.Nullable{System.double})">
             <summary>Returns the trigonometric cosine of the specified angle, in radians, in the specified expression.</summary>
             <returns>The trigonometric cosine of the specified angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
@@ -384,7 +384,7 @@
             <returns>The trigonometric cotangent of the specified angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cot(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Cot(System.Nullable{System.double})">
             <summary>A mathematical function that returns the trigonometric cotangent of the specified angle, in radians.</summary>
             <returns>The trigonometric cotangent of the specified angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
@@ -399,7 +399,7 @@
             <returns>The specified angle converted to degrees.</returns>
             <param name="arg1">An angle, measured in radians.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Degrees(System.Nullable{System.double})">
             <summary>Returns the corresponding angle in degrees for an angle specified in radians.</summary>
             <returns>The specified angle converted to degrees.</returns>
             <param name="arg1">An angle, measured in radians.</param>
@@ -414,7 +414,7 @@
             <returns>The constant e raised to the power of the input value.</returns>
             <param name="arg">The input value.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Exp(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Exp(System.Nullable{System.double})">
             <summary>Returns the exponential value of the specified float expression.</summary>
             <returns>The constant e raised to the power of the input value.</returns>
             <param name="arg">The input value.</param>
@@ -424,7 +424,7 @@
             <returns>The natural logarithm of the input value.</returns>
             <param name="arg">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log(System.Nullable{System.double})">
             <summary>Returns the natural logarithm of the specified input value.</summary>
             <returns>The natural logarithm of the input value.</returns>
             <param name="arg">A numeric expression.</param>
@@ -434,7 +434,7 @@
             <returns>The base-10 logarithm of the input value.</returns>
             <param name="arg">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log10(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Log10(System.Nullable{System.double})">
             <summary>Returns the base-10 logarithm of the specified input value.</summary>
             <returns>The base-10 logarithm of the input value.</returns>
             <param name="arg">A numeric expression.</param>
@@ -453,7 +453,7 @@
             <returns>The radian measure of the specified angle.</returns>
             <param name="arg">The angle, measured in degrees</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Radians(System.Nullable{System.double})">
             <summary>Returns the radian measure corresponding to the specified angle in degrees.</summary>
             <returns>The radian measure of the specified angle.</returns>
             <param name="arg">The angle, measured in degrees.</param>
@@ -482,7 +482,7 @@
             <returns>The sign of the input expression.</returns>
             <param name="arg">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sign(System.Nullable{System.double})">
             <summary>Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</summary>
             <returns>The sign of the input expression.</returns>
             <param name="arg">A numeric expression.</param>
@@ -492,7 +492,7 @@
             <returns>The sign of the input expression.</returns>
             <param name="arg">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sin(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Sin(System.Nullable{System.double})">
             <summary>Returns the trigonometric sine of the specified angle.</summary>
             <returns>The trigonometric sine of the input expression.</returns>
             <param name="arg">An angle, measured in radians.</param>
@@ -507,7 +507,7 @@
             <returns>The square root of the input value.</returns>
             <param name="arg">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.SquareRoot(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.SquareRoot(System.Nullable{System.double})">
             <summary>Returns the square root of the specified number.</summary>
             <returns>The square root of the input value.</returns>
             <param name="arg">A numeric expression.</param>
@@ -517,7 +517,7 @@
             <returns>The square of the input value.</returns>
             <param name="arg1">A numeric expression.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Square(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Square(System.Nullable{System.double})">
             <summary>Returns the square of the specified number.</summary>
             <returns>The square of the input value.</returns>
             <param name="arg1">A numeric expression.</param>
@@ -527,7 +527,7 @@
             <returns>The tangent of the input angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Tan(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Tan(System.Nullable{System.double})">
             <summary>Returns the trigonometric tangent of the input expression.</summary>
             <returns>The tangent of the input angle.</returns>
             <param name="arg">An angle, measured in radians.</param>
@@ -740,7 +740,7 @@
             <returns>The number of bytes in the input value.</returns>
             <param name="arg">The value to be examined for data length.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.DataLength(System.Nullable{System.double})">
             <summary>Returns the number of bytes used to represent any expression.</summary>
             <returns>The number of bytes in the input value.</returns>
             <param name="arg">The value to be examined for data length.</param>
@@ -785,7 +785,7 @@
             <returns>The checksum computed over the input value.</returns>
             <param name="arg1">The value for which the checksum is calculated.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.double})">
             <summary>Returns the checksum value computed over the input argument.</summary>
             <returns>The checksum computed over the input value.</returns>
             <param name="arg1">The value for which the checksum is calculated.</param>
@@ -832,7 +832,7 @@
             <param name="arg1">The value for which the checksum is calculated.</param>
             <param name="arg2">The value for which the checksum is calculated.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.double},System.Nullable{System.double})">
             <summary>Returns the checksum value computed over the input arguments.</summary>
             <returns>The checksum computed over the input values.</returns>
             <param name="arg1">The value for which the checksum is calculated.</param>
@@ -888,7 +888,7 @@
             <param name="arg2">The value for which the checksum is calculated.</param>
             <param name="arg3">The value for which the checksum is calculated.</param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.SqlServer.SqlFunctions.Checksum(System.Nullable{System.double},System.Nullable{System.double},System.Nullable{System.double})">
             <summary>Returns the checksum value computed over the input arguments.</summary>
             <returns>The checksum computed over the input values.</returns>
             <param name="arg1">The value for which the checksum is calculated.</param>
@@ -1192,11 +1192,11 @@
             </summary>
             <param name="renameTableOperation"> The operation to produce SQL for. </param>
         </member>
-        <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.RenameProcedureOperation)">
+        <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.ReProductNamecedureOperation)">
             <summary>
             Generates the specified rename procedure operation.
             </summary>
-            <param name="renameProcedureOperation">The rename procedure operation.</param>
+            <param name="reProductNamecedureOperation">The rename procedure operation.</param>
         </member>
         <member name="M:System.Data.Entity.SqlServer.SqlServerMigrationSqlGenerator.Generate(System.Data.Entity.Migrations.Model.MoveProcedureOperation)">
             <summary>
@@ -1676,10 +1676,10 @@
         </member>
         <member name="P:System.Data.Entity.SqlServer.SqlProviderServices.TruncateDecimalsToScale">
             <summary>
-            Get or sets a value indicating whether <see cref="T:System.Decimal"/> parameter values are truncated to 
-            the scale (number of decimal places) defined for their corresponding columns when they are sent 
+            Get or sets a value indicating whether <see cref="T:System.double"/> parameter values are truncated to 
+            the scale (number of double places) defined for their corresponding columns when they are sent 
             to the database. A value of <c>true</c> indicates that <see cref="T:System.Data.SqlClient.SqlParameter"/> objects 
-            created for <see cref="T:System.Decimal"/> columns will have their <see cref="P:System.Data.SqlClient.SqlParameter.Scale"/> 
+            created for <see cref="T:System.double"/> columns will have their <see cref="P:System.Data.SqlClient.SqlParameter.Scale"/> 
             properties set, which will cause the parameter values to be truncated. If set to <c>false</c> 
             then the <see cref="P:System.Data.SqlClient.SqlParameter.Scale"/> properties will not be set, avoiding the truncation 
             behavior of <see cref="T:System.Data.SqlClient.SqlParameter"/> and allowing SQL Server to round values if necessary. 

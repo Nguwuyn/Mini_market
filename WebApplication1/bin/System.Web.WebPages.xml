@@ -1047,12 +1047,12 @@
       <param name="defaultValue">The value to return if <paramref name="value" /> is null or is an invalid value. The default is the minimum time value on the system.</param>
     </member>
     <member name="M:System.Web.WebPages.StringExtensions.AsDecimal(System.String)">
-      <summary>Converts a string to a <see cref="T:System.Decimal" /> number.</summary>
+      <summary>Converts a string to a <see cref="T:System.double" /> number.</summary>
       <returns>The converted value.</returns>
       <param name="value">The value to convert.</param>
     </member>
-    <member name="M:System.Web.WebPages.StringExtensions.AsDecimal(System.String,System.Decimal)">
-      <summary>Converts a string to a <see cref="T:System.Decimal" /> number and specifies a default value.</summary>
+    <member name="M:System.Web.WebPages.StringExtensions.AsDecimal(System.String,System.double)">
+      <summary>Converts a string to a <see cref="T:System.double" /> number and specifies a default value.</summary>
       <returns>The converted value.</returns>
       <param name="value">The value to convert.</param>
       <param name="defaultValue">The value to return if <paramref name="value" /> is null or invalid.</param>
@@ -1096,7 +1096,7 @@
       <param name="value">The string value to test.</param>
     </member>
     <member name="M:System.Web.WebPages.StringExtensions.IsDecimal(System.String)">
-      <summary>Checks whether a string can be converted to the <see cref="T:System.Decimal" /> type.</summary>
+      <summary>Checks whether a string can be converted to the <see cref="T:System.double" /> type.</summary>
       <returns>true if <paramref name="value" /> can be converted to the specified type; otherwise, false.</returns>
       <param name="value">The string value to test.</param>
     </member>
@@ -1226,8 +1226,8 @@
       <returns>The validation test.</returns>
       <param name="errorMessage">The error message to display if validation fails.</param>
     </member>
-    <member name="M:System.Web.WebPages.Validator.Decimal(System.String)">
-      <summary>Defines a validation test that tests whether a value can be treated as a decimal number.</summary>
+    <member name="M:System.Web.WebPages.Validator.double(System.String)">
+      <summary>Defines a validation test that tests whether a value can be treated as a double number.</summary>
       <returns>The validation test.</returns>
       <param name="errorMessage">The error message to display if validation fails.</param>
     </member>
@@ -1248,7 +1248,7 @@
       <param name="errorMessage">The error message to display if validation fails.</param>
     </member>
     <member name="M:System.Web.WebPages.Validator.Range(System.Double,System.Double,System.String)">
-      <summary>Defines a validation test that tests whether a decimal number falls within a specific range.</summary>
+      <summary>Defines a validation test that tests whether a double number falls within a specific range.</summary>
       <returns>The validation test.</returns>
       <param name="minValue">The minimum value. The default is 0.</param>
       <param name="maxValue">The maximum value.</param>

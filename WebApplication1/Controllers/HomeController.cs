@@ -1,10 +1,6 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
 using WebApplication1.Models.ThongKe;
-=======
-﻿using WebApplication1.Models;
-using WebApplication1.Models.ThongKe;
->>>>>>> main
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,21 +12,21 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly Model1 database = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
         public ActionResult Index()
         {
-            IEnumerable<Sản_phẩm> productList = database.Products.OrderByDescending(x => x.NamePro).ToList();
-            IEnumerable<Category> categoriesList = database.Categories.OrderByDescending(x => x.NameCate).ToList();
-            var tuple = new Tuple<IEnumerable<Sản_phẩm>, IEnumerable<Category>>(productList, categoriesList);
+            IEnumerable<Product> productList = db.Products.OrderByDescending(x => x.ProductName).ToList();
+            IEnumerable<Category> categoriesList = db.Categories.OrderByDescending(x => x.CategoryName).ToList();
+            var tuple = new Tuple<IEnumerable<Product>, IEnumerable<Category>>(productList, categoriesList);
             return View(tuple);
         }
 
-        private void SearchInCategory(string query, ref List<Sản_phẩm> searchQuery)
+        private void SearchInCategory(string query, ref List<Product> searchQuery)
         {
             string norm_name;
-            foreach (var item in database.Categories)
+            foreach (var item in db.Categories)
             {
-                norm_name = NormalizeDiacriticalCharacters(item.NameCate);
+                norm_name = NormalizeDiacriticalCharacters(item.CategoryName);
                 if (norm_name.Contains(query))
                 {
                     foreach (var prod in item.Products)
@@ -54,12 +50,12 @@ namespace WebApplication1.Controllers
                 return View();
             }
             query = NormalizeDiacriticalCharacters(query);
-            List<Sản_phẩm> searchQuery = new List<Sản_phẩm>();
+            List<Product> searchQuery = new List<Product>();
 
             string norm_name;
-            foreach (var item in database.Products)
+            foreach (var item in db.Products)
             {
-                norm_name = NormalizeDiacriticalCharacters(item.NamePro);
+                norm_name = NormalizeDiacriticalCharacters(item.ProductName);
                 if (norm_name.Contains(query))
                 {
                     searchQuery.Add(item);

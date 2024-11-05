@@ -13,36 +13,36 @@
         <h4>Chỉnh sửa hãng</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.IDCate)
+        @Html.HiddenFor(model => model.CategoryID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Id, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CategoryID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Id, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Id, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CategoryID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NameCate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CategoryName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NameCate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NameCate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CategoryName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CategoryName, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PicCate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CategoryIllust, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PicCate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PicCate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CategoryIllust, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CategoryIllust, "", new { @class = "text-danger" })
             </div>
-            @*<img style="width: 10vw; margin-top: 20px" src="@Url.Content(Model.PicCate)" id="preview-img" />*@
+            @*<img style="width: 10vw; margin-top: 20px" src="@Url.Content(Model.CategoryIllust)" id="preview-img" />*@
         </div>
 
         <div class="form-group">
             <div class="col-md-10">
-                <img style="width: 10vw; margin-top: 20px" src="@Url.Content(Model.PicCate)" id="preview-img" />
+                <img style="width: 10vw; margin-top: 20px" src="@Url.Content(Model.CategoryIllust)" id="preview-img" />
             </div>
         </div>
 
@@ -65,7 +65,7 @@
                     $(previewImg).attr('src', e.target.result);
                 }
                 reader.readAsDataURL(UploadImage.files[0]);
-                document.getElementById("ImagePro").value = `~/Image/logoforcategory/${UploadImage.files[0].name}`;
+                document.getElementById("ProductImg").value = `~/Image/logoforcategory/${UploadImage.files[0].name}`;
             }
         }
     </script>

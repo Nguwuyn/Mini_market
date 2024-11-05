@@ -1,120 +1,101 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DAPMModelStoreContainer" CdmEntityContainer="DAPMEntities">
-    <EntitySetMapping Name="CTKMs">
-      <EntityTypeMapping TypeName="DAPMModel.CTKM">
-        <MappingFragment StoreEntitySet="CTKM">
-          <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
-          <ScalarProperty Name="Quy_cách" ColumnName="Quy_cách" />
-          <ScalarProperty Name="Thời_lượng" ColumnName="Thời_lượng" />
-          <ScalarProperty Name="Mô_tả" ColumnName="Mô_tả" />
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="DAPMModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Đơn_mua_hàng">
-      <EntityTypeMapping TypeName="DAPMModel.Đơn_mua_hàng">
-        <MappingFragment StoreEntitySet="Đơn_mua_hàng">
-          <ScalarProperty Name="ID_đơn_hàng" ColumnName="ID_đơn_hàng" />
-          <ScalarProperty Name="Số_lượng_sản_phẩm" ColumnName="Số_lượng_sản_phẩm" />
-          <ScalarProperty Name="Tổng_thành_tiền" ColumnName="Tổng_thành_tiền" />
-          <ScalarProperty Name="Ngày_lập_đơn" ColumnName="Ngày_lập_đơn" />
-          <ScalarProperty Name="Trạng_thái_đơn_hàng" ColumnName="Trạng_thái_đơn_hàng" />
-          <ScalarProperty Name="Họ_tên_người_nhận" ColumnName="Họ_tên_người_nhận" />
-          <ScalarProperty Name="SĐT_người_nhận" ColumnName="SĐT_người_nhận" />
-          <ScalarProperty Name="Địa_chỉ_người_nhận" ColumnName="Địa_chỉ_người_nhận" />
-          <ScalarProperty Name="ID_mã_giảm_giá" ColumnName="ID_mã_giảm_giá" />
-          <ScalarProperty Name="ID_khách" ColumnName="ID_khách" />
+    <EntitySetMapping Name="Coupons">
+      <EntityTypeMapping TypeName="DAPMModel.Coupon">
+        <MappingFragment StoreEntitySet="Coupon">
+          <ScalarProperty Name="CouponID" ColumnName="CouponID" />
+          <ScalarProperty Name="CouponDescription" ColumnName="CouponDescription" />
+          <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Khách_hàng">
-      <EntityTypeMapping TypeName="DAPMModel.Khách_hàng">
-        <MappingFragment StoreEntitySet="Khách_hàng">
-          <ScalarProperty Name="ID_khách" ColumnName="ID_khách" />
-          <ScalarProperty Name="Tên_đăng_nhập" ColumnName="Tên_đăng_nhập" />
-          <ScalarProperty Name="Mật_khẩu" ColumnName="Mật_khẩu" />
-          <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
-          <ScalarProperty Name="Địa_chỉ" ColumnName="Địa_chỉ" />
-          <ScalarProperty Name="Số_điện_thoại" ColumnName="Số_điện_thoại" />
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DAPMModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="CusAddress" ColumnName="CusAddress" />
+          <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="CusPassword" ColumnName="CusPassword" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Khoes">
-      <EntityTypeMapping TypeName="DAPMModel.Kho">
-        <MappingFragment StoreEntitySet="Kho">
-          <ScalarProperty Name="ID_kiểm_kho" ColumnName="ID_kiểm_kho" />
-          <ScalarProperty Name="Ngày" ColumnName="Ngày" />
-          <ScalarProperty Name="Giờ" ColumnName="Giờ" />
-          <ScalarProperty Name="ID_nhân_viên" ColumnName="ID_nhân_viên" />
-          <ScalarProperty Name="Tổng_số_lượng" ColumnName="Tổng_số_lượng" />
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DAPMModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeePassword" ColumnName="EmployeePassword" />
+          <ScalarProperty Name="EmployeeFullName" ColumnName="EmployeeFullName" />
+          <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Mã_giảm_giá">
-      <EntityTypeMapping TypeName="DAPMModel.Mã_giảm_giá">
-        <MappingFragment StoreEntitySet="Mã_giảm_giá">
-          <ScalarProperty Name="ID_mã_giảm_giá" ColumnName="ID_mã_giảm_giá" />
-          <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
-          <ScalarProperty Name="Số_tiền_giảm" ColumnName="Số_tiền_giảm" />
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="DAPMModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="RecipientFullName" ColumnName="RecipientFullName" />
+          <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+          <ScalarProperty Name="RecipientAddress" ColumnName="RecipientAddress" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="CouponID" ColumnName="CouponID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Nhân_viên">
-      <EntityTypeMapping TypeName="DAPMModel.Nhân_viên">
-        <MappingFragment StoreEntitySet="Nhân_viên">
-          <ScalarProperty Name="ID_nhân_viên" ColumnName="ID_nhân_viên" />
-          <ScalarProperty Name="TK_nhân_viên" ColumnName="TK_nhân_viên" />
-          <ScalarProperty Name="MK_nhân_viên" ColumnName="MK_nhân_viên" />
-          <ScalarProperty Name="Họ_tên_nhân_viên" ColumnName="Họ_tên_nhân_viên" />
-          <ScalarProperty Name="Năm_sinh" ColumnName="Năm_sinh" />
-          <ScalarProperty Name="Chức_vụ" ColumnName="Chức_vụ" />
-          <ScalarProperty Name="ID_đơn_hàng" ColumnName="ID_đơn_hàng" />
-          <ScalarProperty Name="ID_kiểm_kho" ColumnName="ID_kiểm_kho" />
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DAPMModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Sản_phẩm">
-      <EntityTypeMapping TypeName="DAPMModel.Sản_phẩm">
-        <MappingFragment StoreEntitySet="Sản_phẩm">
-          <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
-          <ScalarProperty Name="Giá_tiền" ColumnName="Giá_tiền" />
-          <ScalarProperty Name="Số_lượng_tồn" ColumnName="Số_lượng_tồn" />
-          <ScalarProperty Name="Thuế" ColumnName="Thuế" />
-          <ScalarProperty Name="Hãng" ColumnName="Hãng" />
-          <ScalarProperty Name="Tên_sản_phẩm" ColumnName="Tên_sản_phẩm" />
-          <ScalarProperty Name="Danh_mục" ColumnName="Danh_mục" />
-          <ScalarProperty Name="Đánh_giá" ColumnName="Đánh_giá" />
-          <ScalarProperty Name="Hình_ảnh" ColumnName="Hình_ảnh" />
+    <EntitySetMapping Name="Promotions">
+      <EntityTypeMapping TypeName="DAPMModel.Promotion">
+        <MappingFragment StoreEntitySet="Promotion">
+          <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+          <ScalarProperty Name="Specification" ColumnName="Specification" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Chi_tiết_đơn_hàng">
-      <EntityTypeMapping TypeName="DAPMModel.Chi_tiết_đơn_hàng">
-        <MappingFragment StoreEntitySet="Chi_tiết_đơn_hàng">
-          <ScalarProperty Name="Số_lượng" ColumnName="Số_lượng" />
-          <ScalarProperty Name="Thành_tiền" ColumnName="Thành_tiền" />
-          <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
-          <ScalarProperty Name="ID_đơn_hàng" ColumnName="ID_đơn_hàng" />
-          <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="DAPMModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetails">
+          <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Chi_tiết_kiểm_kho">
-      <EntityTypeMapping TypeName="DAPMModel.Chi_tiết_kiểm_kho">
-        <MappingFragment StoreEntitySet="Chi_tiết_kiểm_kho">
-          <ScalarProperty Name="SL_hệ_thống" ColumnName="SL_hệ_thống" />
-          <ScalarProperty Name="SL_thực_tế" ColumnName="SL_thực_tế" />
-          <ScalarProperty Name="ID_kiểm_kho" ColumnName="ID_kiểm_kho" />
-          <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <AssociationSetMapping Name="Chi_tiết_CTKM" TypeName="DAPMModel.Chi_tiết_CTKM" StoreEntitySet="Chi_tiết_CTKM">
-      <EndProperty Name="CTKM">
-        <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
+    <AssociationSetMapping Name="CampaignProductDetails" TypeName="DAPMModel.CampaignProductDetails" StoreEntitySet="CampaignProductDetails">
+      <EndProperty Name="Promotion">
+        <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
       </EndProperty>
-      <EndProperty Name="Sản_phẩm">
-        <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
+      <EndProperty Name="Products">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

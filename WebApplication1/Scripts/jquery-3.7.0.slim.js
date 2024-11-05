@@ -833,7 +833,7 @@ function find( selector, context, results, seed ) {
 
 							// Support: IE 9 only
 							// getElementById can match elements by name instead of ID
-							if ( elem.id === m ) {
+							if ( elem.CategoryID === m ) {
 								push.call( results, elem );
 								return results;
 							}
@@ -848,7 +848,7 @@ function find( selector, context, results, seed ) {
 						// getElementById can match elements by name instead of ID
 						if ( newContext && ( elem = newContext.getElementById( m ) ) &&
 							find.contains( context, elem ) &&
-							elem.id === m ) {
+							elem.CategoryID === m ) {
 
 							push.call( results, elem );
 							return results;
@@ -1143,7 +1143,7 @@ function setDocument( node ) {
 	// The broken getElementById methods don't pick up programmatically-set names,
 	// so use a roundabout getElementsByName test
 	support.getById = assert( function( el ) {
-		documentElement.appendChild( el ).id = jQuery.expando;
+		documentElement.appendChild( el ).CategoryID = jQuery.expando;
 		return !document.getElementsByName ||
 			!document.getElementsByName( jQuery.expando ).length;
 	} );
@@ -1181,20 +1181,20 @@ function setDocument( node ) {
 
 	// ID filter and find
 	if ( support.getById ) {
-		Expr.filter.ID = function( id ) {
+		Expr.filter.CategoryID = function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
 				return elem.getAttribute( "id" ) === attrId;
 			};
 		};
-		Expr.find.ID = function( id, context ) {
+		Expr.find.CategoryID = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var elem = context.getElementById( id );
 				return elem ? [ elem ] : [];
 			}
 		};
 	} else {
-		Expr.filter.ID =  function( id ) {
+		Expr.filter.CategoryID =  function( id ) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem ) {
 				var node = typeof elem.getAttributeNode !== "undefined" &&
@@ -1205,7 +1205,7 @@ function setDocument( node ) {
 
 		// Support: IE 6 - 7 only
 		// getElementById is not reliable as a find shortcut
-		Expr.find.ID = function( id, context ) {
+		Expr.find.CategoryID = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var node, i, elems,
 					elem = context.getElementById( id );
@@ -1920,7 +1920,7 @@ Expr = jQuery.expr = {
 		// Miscellaneous
 		target: function( elem ) {
 			var hash = window.location && window.location.hash;
-			return hash && hash.slice( 1 ) === elem.id;
+			return hash && hash.slice( 1 ) === elem.CategoryID;
 		},
 
 		root: function( elem ) {
@@ -2612,7 +2612,7 @@ function select( selector, context, results, seed ) {
 		if ( tokens.length > 2 && ( token = tokens[ 0 ] ).type === "ID" &&
 				context.nodeType === 9 && documentIsHTML && Expr.relative[ tokens[ 1 ].type ] ) {
 
-			context = ( Expr.find.ID(
+			context = ( Expr.find.CategoryID(
 				token.matches[ 0 ].replace( runescape, funescape ),
 				context
 			) || [] )[ 0 ];
@@ -3741,7 +3741,7 @@ jQuery.extend( {
 				!remaining );
 
 			// Use .then() to unwrap secondary thenables (cf. gh-3000)
-			if ( primary.state() === "pending" ||
+			if ( primary.OrderStatus() === "pending" ||
 				isFunction( resolveValues[ i ] && resolveValues[ i ].then ) ) {
 
 				return primary.then();

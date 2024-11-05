@@ -10,7 +10,7 @@ namespace WebApplication1.Models.ThongKe
 {
     public class ChiTiet
     {
-        public ChiTiet(int idsp, int? tongSo, decimal? tongThu, string tenSP)
+        public ChiTiet(int idsp, int? tongSo, double? tongThu, string tenSP)
         {
             IDSP = idsp;
             TongSo = tongSo;
@@ -22,26 +22,26 @@ namespace WebApplication1.Models.ThongKe
         public string TenSP { get; set; }
         public int? TongSo { get; set; }
         public string DonViTinh { get; set; }
-        public decimal? TongThu { get; set; }
+        public double? TongThu { get; set; }
     }
 
     public class DanhSachChiTiet
     {
         public DanhSachChiTiet() { }
-        public DanhSachChiTiet(decimal tongThu, List<ChiTiet> chiTiet)
+        public DanhSachChiTiet(double tongThu, List<ChiTiet> chiTiet)
         {
             TongThu = tongThu;
             ChiTiet = chiTiet;
         }
 
-        public decimal TongThu { get; set; }
+        public double TongThu { get; set; }
         public List<ChiTiet> ChiTiet { get; set; } = new List<ChiTiet>();
     }
 
     public class ThongKeNgay
     {
         public ThongKeNgay() { }
-        public ThongKeNgay(decimal tongDoanhThu, int tongKhacHang, int tongDatHang)
+        public ThongKeNgay(double tongDoanhThu, int tongKhacHang, int tongDatHang)
         {
             TongDoanhThu = tongDoanhThu;
             TongKhacHang = tongKhacHang;
@@ -50,39 +50,39 @@ namespace WebApplication1.Models.ThongKe
             ChiTietSanPham = new DanhSachChiTiet();
         }
 
-        public decimal TongDoanhThu { get; set; }
+        public double TongDoanhThu { get; set; }
         public int TongKhacHang { get; set; }
         public int TongDatHang { get; set; }
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeNgay UseDB(Model1 db)
+        public static ThongKeNgay UseDB(DAPMEntities db)
         {
             var self = new ThongKeNgay();
 
-            db.OrderProes.Where(x => x.DateOrder.Day == DateTime.Now.Day).ForEach(item =>
+            db.Orders.Where(x => x.OrderDate.Day == DateTime.Now.Day).ForEach(item =>
             {
                 self.TongDoanhThu += item.TotalMoney;
                 self.TongKhacHang += 1;
-                db.OrderDetails.Where(x => x.IDOrder == item.ID)
+                db.OrderDetails.Where(x => x.OrderID == item.OrderID)
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += x.TotalPrice;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
-                            sp => sp.IDSP == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                            sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.Quantity;
-                                sp.TongThu += x.Total;
+                                sp.TongSo += x.ProductQuantity;
+                                sp.TongThu += x.TotalPrice;
                                 return true;
                             }, false);
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));
+                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
                                 });
                         }
                     });
@@ -94,7 +94,7 @@ namespace WebApplication1.Models.ThongKe
     public class ThongKeThang
     {
         public ThongKeThang() { }
-        public ThongKeThang(decimal tongDoanhThu, int tongKhacHang, int tongDatHang)
+        public ThongKeThang(double tongDoanhThu, int tongKhacHang, int tongDatHang)
         {
             TongDoanhThu = tongDoanhThu;
             TongKhacHang = tongKhacHang;
@@ -103,13 +103,13 @@ namespace WebApplication1.Models.ThongKe
             ChiTietSanPham = new DanhSachChiTiet();
         }
 
-        public decimal TongDoanhThu { get; set; }
+        public double TongDoanhThu { get; set; }
         public int TongKhacHang { get; set; }
         public int TongDatHang { get; set; }
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeThang UseDB(Model1 db, int? monthGet = null, int? yearGet = null)
+        public static ThongKeThang UseDB(DAPMEntities db, int? monthGet = null, int? yearGet = null)
         {
             var self = new ThongKeThang();
 
@@ -125,29 +125,29 @@ namespace WebApplication1.Models.ThongKe
                 year = yearGet.Value;
             }
 
-            db.OrderProes.Where(x => x.DateOrder.Month == month && x.DateOrder.Year == year).ForEach(item =>
+            db.Orders.Where(x => x.OrderDate.Month == month && x.OrderDate.Year == year).ForEach(item =>
             {
                 self.TongDoanhThu += item.TotalMoney;
                 self.TongKhacHang += 1;
-                db.OrderDetails.Where(x => x.IDOrder == item.ID)
+                db.OrderDetails.Where(x => x.OrderID == item.OrderID)
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += x.TotalPrice;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
-                            sp => sp.IDSP == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                            sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.Quantity;
-                                sp.TongThu += x.Total;
+                                sp.TongSo += x.ProductQuantity;
+                                sp.TongThu += x.TotalPrice;
                                 return true;
                             }, false);
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));
+                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
                                 });
                         }
                     });
@@ -159,7 +159,7 @@ namespace WebApplication1.Models.ThongKe
     public class ThongKeNam
     {
         public ThongKeNam() { }
-        public ThongKeNam(decimal tongDoanhThu, int tongKhacHang, int tongDatHang)
+        public ThongKeNam(double tongDoanhThu, int tongKhacHang, int tongDatHang)
         {
             TongDoanhThu = tongDoanhThu;
             TongKhacHang = tongKhacHang;
@@ -168,13 +168,13 @@ namespace WebApplication1.Models.ThongKe
             ChiTietSanPham = new DanhSachChiTiet();
         }
 
-        public decimal TongDoanhThu { get; set; }
+        public double TongDoanhThu { get; set; }
         public int TongKhacHang { get; set; }
         public int TongDatHang { get; set; }
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeNam UseDB(Model1 db, int? yearGet = null)
+        public static ThongKeNam UseDB(DAPMEntities db, int? yearGet = null)
         {
             var self = new ThongKeNam();
 
@@ -184,29 +184,29 @@ namespace WebApplication1.Models.ThongKe
                 year = yearGet.Value;
             }
 
-            db.OrderProes.Where(x => x.DateOrder.Year == year).ForEach(item =>
+            db.Orders.Where(x => x.OrderDate.Year == year).ForEach(item =>
             {
                 self.TongDoanhThu += item.TotalMoney;
                 self.TongKhacHang += 1;
-                db.OrderDetails.Where(x => x.IDOrder == item.ID)
+                db.OrderDetails.Where(x => x.OrderID == item.OrderID)
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += x.TotalPrice;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
-                            sp => sp.IDSP == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                            sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.Quantity;
-                                sp.TongThu += x.Total;
+                                sp.TongSo += x.ProductQuantity;
+                                sp.TongThu += x.TotalPrice;
                                 return true;
                             }, false);
                         if (!isSet)
                         {
                             db.Products.Where(
-                                sp => sp.ID_sản_phẩm == x.IDProduct).FirstOrDefault().IfNotNull(sp =>
+                                sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.IDProduct, x.Quantity, x.Total, sp.NamePro));
+                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
                                 });
                         }
                     });

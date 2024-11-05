@@ -12,20 +12,22 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Nhân_viên
+    public partial class Promotion
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Nhân_viên()
+        public Promotion()
         {
-            this.Đơn_mua_hàng = new HashSet<Đơn_mua_hàng>();
+            this.OrderDetails = new HashSet<OrderDetail>();
+            this.Products = new HashSet<Product>();
         }
     
-        public string ID_nhân_viên { get; set; }
-        public string Họ_tên_nhân_viên { get; set; }
-        public Nullable<int> Năm_sinh { get; set; }
-        public Nullable<int> ID_chức_vụ { get; set; }
+        public int CampaignID { get; set; }
+        public string Specification { get; set; }
+        public int Duration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Đơn_mua_hàng> Đơn_mua_hàng { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

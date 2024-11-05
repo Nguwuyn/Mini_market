@@ -12,16 +12,16 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Chi_tiết_đơn_hàng
+    public partial class OrderDetail
     {
-        public int Số_lượng { get; set; }
-        public Nullable<decimal> Thành_tiền { get; set; }
-        public int ID_đơn_hàng { get; set; }
-        public int ID_sản_phẩm { get; set; }
-        public string ID_CTKM { get; set; }
+        public int ProductQuantity { get; set; }
+        public int TotalPrice { get; set; }
+        public int OrderID { get; set; }
+        public int ProductID { get; set; }
+        public int CampaignID { get; set; }
     
-        public virtual CTKM CTKM { get; set; }
-        public virtual Đơn_mua_hàng Đơn_mua_hàng { get; set; }
-        public virtual Sản_phẩm Sản_phẩm { get; set; }
+        public virtual Order Order { get; set; }
+        public virtual Product Product { get; set; }
+        public virtual Promotion Promotion { get; set; }
     }
 }

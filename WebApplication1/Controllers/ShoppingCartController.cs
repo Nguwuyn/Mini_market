@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
-=======
-﻿using anhemtoicodeweb.Models;
->>>>>>> main
 using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
@@ -12,17 +9,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-
-<<<<<<< HEAD
 namespace WebApplication1.Controllers
-=======
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
 {
     public class ShoppingCartController : Controller
     {
         // GET: ShoppingCart
-        private readonly Model1 database = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
         public ActionResult Index()
         {
             if (Session["Cart"] == null)
@@ -34,9 +26,9 @@ namespace anhemtoicodeweb.Controllers
             int _id = (int?)Session["UserId"] ?? -1;
             if (_id > -1)
             {
-                Customer _cus = database.Customers.FirstOrDefault(x => x.IDCus == _id);
-                TempData["Address"] = _cus.AddressName;
-                TempData["PhoneNumber"] = _cus.PhoneCus;
+                Customer _cus = db.Customers.FirstOrDefault(x => x.CustomerID == _id);
+                TempData["Address"] = _cus.CusAddress;
+                TempData["RecipientPhone"] = _cus.RecipientPhone;
             }
             return View(cart);
         }
@@ -64,7 +56,7 @@ namespace anhemtoicodeweb.Controllers
                 }
             }
 
-            var _pro = database.Products.SingleOrDefault(s => s.ProductID == id);
+            var _pro = db.Products.SingleOrDefault(s => s.ProductID == id);
             if (_pro == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.NotFound);
@@ -113,97 +105,82 @@ namespace anhemtoicodeweb.Controllers
             {
                 Cart cart = Session["Cart"] as Cart;
                 int _userId = (int)Session["UserId"];
-                var _user = database.Customers.FirstOrDefault(x => x.IDCus == _userId);
+                var _user = db.Customers.FirstOrDefault(x => x.CustomerID == _userId);
 
                 if (cart.Items.Count() == 0)
                 {
                     return RedirectToAction("Index");
                 }
 
-                if (form["AddressDelivery"] == "")
+                if (form["RecipientAddress"] == "")
                 {
-                    if (_user.AddressName == null || _user.AddressName == "")
+                    if (_user.CusAddress == null || _user.CusAddress == "")
                     {
                         TempData["Error"] = "Bạn cần phải nhập địa chỉ giao hàng";
                         return RedirectToAction("Index");
                     }
-                    form["AddressDelivery"] = _user.AddressName;
+                    form["RecipientAddress"] = _user.CusAddress;
                 }
 
-                if (form["PhoneNumber"] == "")
+                if (form["RecipientPhone"] == "")
                 {
-                    if (_user.PhoneCus == null || _user.PhoneCus == "")
+                    if (_user.RecipientPhone == null || _user.RecipientPhone == "")
                     {
                         TempData["Error"] = "Bạn cần phải nhập số điện thoại để liên hệ khi giao hàng";
                         return RedirectToAction("Index");
                     }
-                    form["PhoneNumber"] = _user.PhoneCus;
+                    form["RecipientPhone"] = _user.RecipientPhone;
                 }
 
                 if (form["CodeCustomer"] == null)
                 {
-                    form["CodeCustomer"] = _user.IDCus.ToString();
+                    form["CodeCustomer"] = _user.CustomerID.ToString();
                 }
 
-                if (_user.AddressName == null)
+                if (_user.CusAddress == null)
                 {
-                    _user.AddressName = form["AddressDelivery"];
-                    database.Entry<Customer>(_user).State = EntityState.Modified;
+                    _user.CusAddress = form["RecipientAddress"];
+                    db.Entry<Customer>(_user).State = EntityState.Modified;
                 }
 
-                OrderPro _order = new OrderPro(); //Bang Hoa Don San pham
+                Order _order = new Order(); //Bang Hoa Don San pham
 
-                _order.DateOrder = DateTime.Now;
-                _order.AddressDelivery = form["AddressDelivery"];
-                _order.PhoneNumber = form["PhoneNumber"];
-                _order.IDCus = int.Parse(form["CodeCustomer"]);
-                _order.State = "Đang xử lý";
+                _order.OrderDate = DateTime.Now;
+                _order.RecipientAddress = form["RecipientAddress"];
+                _order.RecipientPhone = form["RecipientPhone"];
+                _order.CustomerID = int.Parse(form["CodeCustomer"]);
+                _order.OrderStatus = "Đang xử lý";
 
-                decimal totalDiscount = 0;
-                decimal totalPrice = 0;
-                decimal totalTax = 0;
+                int totalPrice = 0;
                 int totalQuantity = 0;
 
                 foreach (var item in cart.Items)
                 {
                     var prodTotal = (item._quantity * item._product.Price);
-                    var tax = prodTotal * item._product.Tax;
-                    var discount = item._product.Discount;
-                    if (discount >= 0 && discount <= 1)
-                    {
-                        discount = prodTotal * discount;
-                    }
-
+                    var tax = (int)(prodTotal * item._product.Tax);
                     OrderDetail _order_detail = new OrderDetail
                     {
-                        IDProduct = item._product.ProductID,
-                        IDOrder = _order.ID,
-
-                        Quantity = item._quantity,
-                        UnitPrice = item._product.Price,
-                        Total = prodTotal - discount + tax,
-                        Discount = item._product.Discount,
-                        Tax = item._product.Tax,
+                        ProductID = item._product.ProductID,
+                        OrderID = _order.OrderID,
+                        ProductQuantity = item._quantity,
+                        ItemPrice = item._product.Price,
+                        TotalPrice = prodTotal + tax,
                     };
 
                     totalQuantity += item._quantity;
-                    totalDiscount += _order_detail.Discount;
-                    totalPrice += _order_detail.Total;
-                    totalTax += _order_detail.Tax;
-                    database.OrderDetails.Add(_order_detail);
+                    totalPrice += _order_detail.TotalPrice;
+                    db.OrderDetails.Add(_order_detail);
 
-                    var _prod = database.Products.Find(item._product.ProductID);
-                    _prod.InvQuantity = Math.Max(_prod.InvQuantity - item._quantity, 0);
-                    database.Entry(_prod).State = EntityState.Modified;
+                    var _prod = db.Products.Find(item._product.ProductID);
+                    _prod.StockQuantity = Math.Max(_prod.StockQuantity - item._quantity, 0);
+                    db.Entry(_prod).State = EntityState.Modified;
                 }
 
                 _order.TotalMoney = totalPrice;
-                _order.TotalTax = totalTax;
-                _order.TotalDiscount = totalDiscount;
-                _order.TotalAmount = totalQuantity;
+                _order.ProductQuantity = totalQuantity;
 
-                database.OrderProes.Add(_order);
-                database.SaveChanges();
+                db.Orders.Add(_order);
+                db.SaveChanges();
                 cart.ClearCart();
                 return View("CheckOutSuccess", _order);
             }
@@ -216,7 +193,7 @@ namespace anhemtoicodeweb.Controllers
         public ActionResult BuyNow(int id)
         {
             Cart cart = GetCart();
-            var _pro = database.Products.SingleOrDefault(s => s.ProductID == id);
+            var _pro = db.Products.SingleOrDefault(s => s.ProductID == id);
             if (_pro != null)
             {
                 cart.AddProductCart(_pro);
@@ -226,17 +203,17 @@ namespace anhemtoicodeweb.Controllers
                     return RedirectToAction("Index");
                 }
                 int _userId = (int)Session["UserId"];
-                var _user = database.Customers.FirstOrDefault(x => x.IDCus == _userId);
+                var _user = db.Customers.FirstOrDefault(x => x.CustomerID == _userId);
                 FormCollection form = new FormCollection();
-                form["AddressDelivery"] = _user.AddressName;
-                form["CodeCustomer"] = _user.IDCus.ToString();
+                form["RecipientAddress"] = _user.CusAddress;
+                form["CodeCustomer"] = _user.CustomerID.ToString();
                 return RedirectToAction("CheckOut", "ShoppingCart", form);
             }
             TempData["Error"] = "Sản phẩm không tồn tại hoặc đã bị xóa";
             return RedirectToAction("Index", "Products");
         }
 
-        public ActionResult CheckOutSuccess(OrderPro _order)
+        public ActionResult CheckOutSuccess(Order _order)
         {
             return View(_order);
         }
@@ -248,7 +225,7 @@ namespace anhemtoicodeweb.Controllers
                 return View();
             }
 
-            OrderPro _order = database.OrderProes.Where(x => x.ID == id).FirstOrDefault();
+            Order _order = db.Orders.Where(x => x.OrderID == id).FirstOrDefault();
             if (_order == null)
             {
                 return RedirectToAction("Index", "Home");
@@ -264,7 +241,7 @@ namespace anhemtoicodeweb.Controllers
                 return View();
             }
 
-            OrderPro _order = database.OrderProes.Where(x => x.ID == id).FirstOrDefault();
+            Order _order = db.Orders.Where(x => x.OrderID == id).FirstOrDefault();
             if (_order == null)
             {
                 return RedirectToAction("Index", "Home");
@@ -280,19 +257,19 @@ namespace anhemtoicodeweb.Controllers
                 "Đã hủy",
             };
 
-            ViewBag.State = l.Select(x => new SelectListItem { Text = x, Value = x, Selected = (x == _order.State) }).ToList();
+            ViewBag.State = l.Select(x => new SelectListItem { Text = x, Value = x, Selected = (x == _order.OrderStatus) }).ToList();
             return View(_order);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditOrder([Bind(Include = "ID,DateOrder,IDCus,PhoneNumber,AddressDelivery,TotalAmount,TotalMoney,TotalTax,TotalDiscount,State")] OrderPro orderPro)
+        public ActionResult EditOrder([Bind(Include = "OrderID,ProductQuantity,TotalMoney,OrderDate,OrderStatus,RecipientFullName,RecipientPhone,RecipientAddress,CustomerID,EmployeeID,CouponID,FinalTotal")] Order Order)
         {
             if (ModelState.IsValid)
             {
-                database.Entry(orderPro).State = EntityState.Modified;
-                database.SaveChanges();
-                return RedirectToAction("CheckOrder", new { id = orderPro.ID });
+                db.Entry(Order).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("CheckOrder", new { id = Order.OrderID });
             }
 
             var l = new List<String>()
@@ -305,9 +282,9 @@ namespace anhemtoicodeweb.Controllers
                 "Đã hủy",
             };
 
-            ViewBag.State = l.Select(x => new SelectListItem { Text = x, Value = x, Selected = (x == orderPro.State) }).ToList();
+            ViewBag.State = l.Select(x => new SelectListItem { Text = x, Value = x, Selected = (x == Order.OrderStatus) }).ToList();
 
-            return View(orderPro);
+            return View(Order);
         }
 
         public ActionResult DeleteOrder(int? id)
@@ -316,23 +293,23 @@ namespace anhemtoicodeweb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderPro orderPro = database.OrderProes.Find(id);
-            if (orderPro == null)
+            Order Order = db.Orders.Find(id);
+            if (Order == null)
             {
                 return HttpNotFound();
             }
-            return View(orderPro);
+            return View(Order);
         }
 
         [HttpPost, ActionName("DeleteOrder")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteOrderConfirmed(int id)
         {
-            OrderPro orderPro = database.OrderProes.Find(id);
-            database.OrderDetails.Where(x => x.IDOrder == orderPro.ID).ForEach(x => database.OrderDetails.Remove(x));
-            database.OrderProes.Remove(orderPro);
-            database.SaveChanges();
-            return RedirectToAction("Details", "Customers", new { id = orderPro.IDCus });
+            Order Order = db.Orders.Find(id);
+            db.OrderDetails.Where(x => x.OrderID == Order.OrderID).ForEach(x => db.OrderDetails.Remove(x));
+            db.Orders.Remove(Order);
+            db.SaveChanges();
+            return RedirectToAction("Details", "Customers", new { id = Order.CustomerID });
         }
 
         public ActionResult CancelOrder(int? id)
@@ -341,23 +318,23 @@ namespace anhemtoicodeweb.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderPro orderPro = database.OrderProes.Find(id);
-            if (orderPro == null)
+            Order Order = db.Orders.Find(id);
+            if (Order == null)
             {
                 return HttpNotFound();
             }
-            return View(orderPro);
+            return View(Order);
         }
 
         [HttpPost, ActionName("CancelOrder")]
         [ValidateAntiForgeryToken]
         public ActionResult CancelOrderConfirmed(int id)
         {
-            OrderPro orderPro = database.OrderProes.Find(id);
-            orderPro.State = "Đang hủy";
-            database.Entry(orderPro).State = EntityState.Modified;
-            database.SaveChanges();
-            return RedirectToAction("CheckOrder", new { id = orderPro.ID });
+            Order Order = db.Orders.Find(id);
+            Order.OrderStatus = "Đang hủy";
+            db.Entry(Order).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("CheckOrder", new { id = Order.OrderID });
         }
     }
 }

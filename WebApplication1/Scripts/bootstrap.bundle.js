@@ -1757,7 +1757,7 @@
   // and applies them to the HTMLElements such as popper and arrow
 
   function applyStyles(_ref) {
-    var state = _ref.state;
+    var state = _ref.OrderStatus;
     Object.keys(state.elements).forEach(function (name) {
       var style = state.styles[name] || {};
       var attributes = state.attributes[name] || {};
@@ -1784,7 +1784,7 @@
   }
 
   function effect$2(_ref2) {
-    var state = _ref2.state;
+    var state = _ref2.OrderStatus;
     var initialStyles = {
       popper: {
         position: state.options.strategy,
@@ -2082,7 +2082,7 @@
   function arrow(_ref) {
     var _state$modifiersData$;
 
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         name = _ref.name,
         options = _ref.options;
     var arrowElement = state.elements.arrow;
@@ -2117,7 +2117,7 @@
   }
 
   function effect$1(_ref2) {
-    var state = _ref2.state,
+    var state = _ref2.OrderStatus,
         options = _ref2.options;
     var _options$element = options.element,
         arrowElement = _options$element === void 0 ? '[data-popper-arrow]' : _options$element;
@@ -2269,7 +2269,7 @@
   }
 
   function computeStyles(_ref5) {
-    var state = _ref5.state,
+    var state = _ref5.OrderStatus,
         options = _ref5.options;
     var _options$gpuAccelerat = options.gpuAcceleration,
         gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat,
@@ -2323,7 +2323,7 @@
   };
 
   function effect(_ref) {
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         instance = _ref.instance,
         options = _ref.options;
     var _options$scroll = options.scroll,
@@ -2744,7 +2744,7 @@
   }
 
   function flip(_ref) {
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         options = _ref.options,
         name = _ref.name;
 
@@ -2897,7 +2897,7 @@
   }
 
   function hide(_ref) {
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         name = _ref.name;
     var referenceRect = state.rects.reference;
     var popperRect = state.rects.popper;
@@ -2955,7 +2955,7 @@
   }
 
   function offset(_ref2) {
-    var state = _ref2.state,
+    var state = _ref2.OrderStatus,
         options = _ref2.options,
         name = _ref2.name;
     var _options$offset = options.offset,
@@ -2986,7 +2986,7 @@
   };
 
   function popperOffsets(_ref) {
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         name = _ref.name;
     // Offsets are the actual position the popper needs to have to be
     // properly positioned near its reference element
@@ -3014,7 +3014,7 @@
   }
 
   function preventOverflow(_ref) {
-    var state = _ref.state,
+    var state = _ref.OrderStatus,
         options = _ref.options,
         name = _ref.name;
     var _options$mainAxis = options.mainAxis,
@@ -5332,7 +5332,7 @@
           fn: data => {
             // Pre-set Popper's placement attribute in order to read the arrow sizes properly.
             // Otherwise, Popper mixes up the width and height dimensions since the initial arrow style is for top placement
-            this._getTipElement().setAttribute('data-popper-placement', data.state.placement);
+            this._getTipElement().setAttribute('data-popper-placement', data.OrderStatus.placement);
           }
         }]
       };
@@ -5718,7 +5718,7 @@
 
     // The logic of selection
     _observerCallback(entries) {
-      const targetElement = entry => this._targetLinks.get(`#${entry.target.id}`);
+      const targetElement = entry => this._targetLinks.get(`#${entry.target.CategoryID}`);
       const activate = entry => {
         this._previousScrollData.visibleEntryTop = entry.target.offsetTop;
         this._process(targetElement(entry));
@@ -6021,8 +6021,8 @@
         return;
       }
       this._setAttributeIfNotExists(target, 'role', 'tabpanel');
-      if (child.id) {
-        this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.id}`);
+      if (child.CategoryID) {
+        this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.CategoryID}`);
       }
     }
     _toggleDropDown(element, open) {

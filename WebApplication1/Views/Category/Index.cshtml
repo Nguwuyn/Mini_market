@@ -14,10 +14,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Id)
+            @Html.DisplayNameFor(model => model.CategoryID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NameCate)
+            @Html.DisplayNameFor(model => model.CategoryName)
         </th>
         <th></th>
     </tr>
@@ -26,15 +26,15 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.CategoryID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NameCate)
+                @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.IDCate.Trim() }) |
-                @Html.ActionLink("Chi tiết", "Details", new { id = item.IDCate.Trim() }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.IDCate.Trim() })
+                @Html.ActionLink("Sửa", "Edit", new { id = item.CategoryID.ToString().Trim() }) |
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.CategoryID.ToString().Trim() }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.CategoryID.ToString().Trim() })
             </td>
         </tr>
     }

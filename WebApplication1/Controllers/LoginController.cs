@@ -1,20 +1,13 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
 using System.Linq;
 using System.Web.Mvc;
 
 namespace WebApplication1.Controllers
-=======
-﻿using anhemtoicodeweb.Models;
-using System.Linq;
-using System.Web.Mvc;
-
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
 {
     public class LoginController : Controller
     {
-        private readonly Model1 database = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
 
         // GET: LoginUser
         public ActionResult Index()
@@ -30,7 +23,7 @@ namespace anhemtoicodeweb.Controllers
         [HttpPost]
         public ActionResult Index(Customer _user)
         {
-            var check = database.Customers.Where(s => s.NameCus == _user.NameCus && s.PasswordCus == _user.PasswordCus).FirstOrDefault();
+            var check = db.Customers.Where(s => s.Username == _user.Username && s.CusPassword == _user.CusPassword).FirstOrDefault();
             if (check == null)
             {
                 ViewBag.ErrorInfo = "Thông tin đăng nhập bị sai. Vui lòng kiểm tra";
@@ -38,10 +31,10 @@ namespace anhemtoicodeweb.Controllers
             }
             else
             {
-                database.Configuration.ValidateOnSaveEnabled = false;
-                Session["UserId"] = check.IDCus;
-                Session["NameCus"] = check.NameCus;
-                Session["IsAdmin"] = (database.AdminUsers.Where(s => s.NameUser == check.NameCus && s.IDCus == check.IDCus).FirstOrDefault() != null);
+                db.Configuration.ValidateOnSaveEnabled = false;
+                Session["UserId"] = check.CustomerID;
+                Session["FullName"] = check.FullName;
+                Session["IsAdmin"] = check.Username == "Admin";
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -62,17 +55,12 @@ namespace anhemtoicodeweb.Controllers
         {
             if (ModelState.IsValid)
             {
-                var check = database.Customers.Where(s => s.IDCus == _user.IDCus || s.NameCus == _user.NameCus).FirstOrDefault();
+                var check = db.Customers.Where(s => s.CustomerID == _user.CustomerID || s.Username == _user.Username).FirstOrDefault();
                 if (check == null)
                 {
-                    if (_user.ConfirmPasswordCus != _user.PasswordCus)
-                    {
-                        ViewBag.ErrorRegister = "Password nhập lại không đúng.";
-                        return View();
-                    }
-                    database.Configuration.ValidateOnSaveEnabled = false;
-                    database.Customers.Add(_user);
-                    database.SaveChanges();
+                    db.Configuration.ValidateOnSaveEnabled = false;
+                    db.Customers.Add(_user);
+                    db.SaveChanges();
                     return RedirectToAction("Index");
                 }
                 else

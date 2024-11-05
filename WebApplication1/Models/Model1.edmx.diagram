@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="706d069b88a54070b63080b4c4883282" Name="Diagram1">
-        <EntityTypeShape EntityType="DAPMModel.CTKM" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Danh_mục" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Đơn_mua_hàng" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Khách_hàng" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Mã_giảm_giá" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Nhân_viên" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Sản_phẩm" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DAPMModel.Chi_tiết_đơn_hàng" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_CT__4D94879B" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Sản_phẩm__ID_dan__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_đơ__4BAC3F29" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Đơn_mua_h__ID_kh__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Đơn_mua_h__ID_mã__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Đơn_mua_h__ID_nh__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.FK__Chi_tiết___ID_sả__4CA06362" ManuallyRouted="false" />
-        <AssociationConnector Association="DAPMModel.Chi_tiết_CTKM" ManuallyRouted="false" />
+      <Diagram DiagramId="22c21c7f2f4c484597a8088b8306a8f1" Name="Diagram1">
+        <EntityTypeShape EntityType="DAPMModel.Category" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Coupon" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Customer" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Employee" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Order" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Product" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.Promotion" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DAPMModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="DAPMModel.FK__Products__Catego__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Orders__CouponID__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Orders__Customer__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__Orders__Employee__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__OrderDeta__Order__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__OrderDeta__Produ__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.FK__OrderDeta__Campa__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="DAPMModel.CampaignProductDetails" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -11,21 +11,25 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Khách_hàng
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Khách_hàng()
+        public Customer()
         {
-            this.Đơn_mua_hàng = new HashSet<Đơn_mua_hàng>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public string ID_khách { get; set; }
-        public string Họ_tên { get; set; }
-        public string Địa_chỉ { get; set; }
-        public string Số_điện_thoại { get; set; }
-    
+        public int CustomerID { get; set; }
+        public string FullName { get; set; }
+        public string CusAddress { get; set; }
+        public string CusPhone { get; set; }
+        public string Username { get; set; }
+        public string CusPassword { get; set; }
+        [NotMapped]
+        public string ReCusPassword { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Đơn_mua_hàng> Đơn_mua_hàng { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

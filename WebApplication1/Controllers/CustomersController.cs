@@ -1,22 +1,16 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
-=======
-﻿using anhemtoicodeweb.Models;
->>>>>>> main
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
-<<<<<<< HEAD
 namespace WebApplication1.Controllers
-=======
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
+
 {
     public class CustomersController : Controller
     {
-        private readonly Model1 db = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
 
         public ActionResult Index()
         {
@@ -46,7 +40,7 @@ namespace anhemtoicodeweb.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var customer = db.Customers.Where(x => x.IDCus == id).FirstOrDefault();
+            var customer = db.Customers.Where(x => x.CustomerID == id).FirstOrDefault();
             if (customer == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.NotFound);
@@ -67,7 +61,7 @@ namespace anhemtoicodeweb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDCus,NameCus,PhoneCus,EmailCus,AddressName,PasswordCus")] Customer customer)
+        public ActionResult Create([Bind(Include = "CustomerID,FullName,CusPhone,EmailCus,CusAddress,CusPassword")] Customer customer)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -106,7 +100,7 @@ namespace anhemtoicodeweb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDCus,NameCus,PhoneCus,EmailCus,AddressName,PasswordCus")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FullName,CusPhone,EmailCus,CusAddress,CusPassword")] Customer customer)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {

@@ -5,257 +5,262 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DAPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Chi_tiết_CTKM">
+        <EntityType Name="CampaignProductDetails">
           <Key>
-            <PropertyRef Name="ID_CTKM" />
-            <PropertyRef Name="ID_sản_phẩm" />
+            <PropertyRef Name="CampaignID" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ID_CTKM" Type="char" MaxLength="10" Nullable="false" />
-          <Property Name="ID_sản_phẩm" Type="int" Nullable="false" />
+          <Property Name="CampaignID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Coupon">
+          <Key>
+            <PropertyRef Name="CouponID" />
+          </Key>
+          <Property Name="CouponID" Type="int" Nullable="false" />
+          <Property Name="CouponDescription" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DiscountAmount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CusAddress" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="RecipientPhone" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="15" />
+          <Property Name="CusPassword" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="EmployeePassword" Type="nvarchar" MaxLength="6" />
+          <Property Name="EmployeeFullName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthYear" Type="int" Nullable="false" />
+          <Property Name="PositionID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DAPM.dbo.Chi_tiết_đơn_hàng' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Chi_tiết_đơn_hàng">
+warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OrderDetails">
           <Key>
-            <PropertyRef Name="Số_lượng" />
-            <PropertyRef Name="ID_đơn_hàng" />
-            <PropertyRef Name="ID_sản_phẩm" />
+            <PropertyRef Name="ProductQuantity" />
+            <PropertyRef Name="TotalPrice" />
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="Số_lượng" Type="int" Nullable="false" />
-          <Property Name="Thành_tiền" Type="money" />
-          <Property Name="ID_đơn_hàng" Type="int" Nullable="false" />
-          <Property Name="ID_sản_phẩm" Type="int" Nullable="false" />
-          <Property Name="ID_CTKM" Type="char" MaxLength="10" />
+          <Property Name="ProductQuantity" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="CampaignID" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="CTKM">
+        <EntityType Name="Orders">
           <Key>
-            <PropertyRef Name="ID_CTKM" />
+            <PropertyRef Name="OrderID" />
           </Key>
-          <Property Name="ID_CTKM" Type="char" MaxLength="10" Nullable="false" />
-          <Property Name="Quy_cách" Type="char" MaxLength="4" />
-          <Property Name="Thời_lượng" Type="int" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="ProductQuantity" Type="int" Nullable="false" />
+          <Property Name="TotalMoney" Type="int" Nullable="false" />
+          <Property Name="OrderDate" Type="date" Nullable="false" />
+          <Property Name="OrderStatus" Type="int" Nullable="false" />
+          <Property Name="RecipientFullName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="RecipientPhone" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="RecipientAddress" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="CouponID" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Danh_mục">
+        <EntityType Name="Products">
           <Key>
-            <PropertyRef Name="ID_danh_mục" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ID_danh_mục" Type="int" Nullable="false" />
-          <Property Name="Tên_danh_mục" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="StockQuantity" Type="int" Nullable="false" />
+          <Property Name="Tax" Type="float" Nullable="false" />
+          <Property Name="Manufacturer" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Đơn_mua_hàng">
+        <EntityType Name="Promotion">
           <Key>
-            <PropertyRef Name="ID_đơn_hàng" />
+            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="ID_đơn_hàng" Type="int" Nullable="false" />
-          <Property Name="Số_lượng_sản_phẩm" Type="int" Nullable="false" />
-          <Property Name="Tổng_thành_tiền" Type="int" Nullable="false" />
-          <Property Name="Ngày_lập_đơn" Type="date" />
-          <Property Name="Trạng_thái_đơn_hàng" Type="char" MaxLength="2" />
-          <Property Name="Họ_tên_người_nhận" Type="nvarchar" MaxLength="50" />
-          <Property Name="SĐT_người_nhận" Type="char" MaxLength="10" />
-          <Property Name="Địa_chỉ_người_nhận" Type="nvarchar" MaxLength="200" />
-          <Property Name="ID_khách" Type="char" MaxLength="8" Nullable="false" />
-          <Property Name="ID_nhân_viên" Type="char" MaxLength="3" Nullable="false" />
-          <Property Name="ID_mã_giảm_giá" Type="char" MaxLength="10" />
+          <Property Name="CampaignID" Type="int" Nullable="false" />
+          <Property Name="Specification" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Duration" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Khách_hàng">
-          <Key>
-            <PropertyRef Name="ID_khách" />
-          </Key>
-          <Property Name="ID_khách" Type="char" MaxLength="8" Nullable="false" />
-          <Property Name="Họ_tên" Type="nvarchar" MaxLength="50" />
-          <Property Name="Địa_chỉ" Type="nvarchar" MaxLength="200" />
-          <Property Name="Số_điện_thoại" Type="char" MaxLength="10" />
-        </EntityType>
-        <EntityType Name="Mã_giảm_giá">
-          <Key>
-            <PropertyRef Name="ID_mã_giảm_giá" />
-          </Key>
-          <Property Name="ID_mã_giảm_giá" Type="char" MaxLength="10" Nullable="false" />
-          <Property Name="Nội_dung" Type="nvarchar" MaxLength="100" />
-          <Property Name="Số_tiền_giảm" Type="float" />
-        </EntityType>
-        <EntityType Name="Nhân_viên">
-          <Key>
-            <PropertyRef Name="ID_nhân_viên" />
-          </Key>
-          <Property Name="ID_nhân_viên" Type="char" MaxLength="3" Nullable="false" />
-          <Property Name="Họ_tên_nhân_viên" Type="nvarchar" MaxLength="50" />
-          <Property Name="Năm_sinh" Type="int" />
-          <Property Name="ID_chức_vụ" Type="int" />
-        </EntityType>
-        <EntityType Name="Sản_phẩm">
-          <Key>
-            <PropertyRef Name="ID_sản_phẩm" />
-          </Key>
-          <Property Name="ID_sản_phẩm" Type="int" Nullable="false" />
-          <Property Name="Giá_tiền" Type="money" />
-          <Property Name="số_lượng_tồn" Type="int" />
-          <Property Name="Thuế" Type="float" />
-          <Property Name="Hãng" Type="nvarchar" MaxLength="15" />
-          <Property Name="ID_danh_mục" Type="int" Nullable="false" />
-        </EntityType>
-        <Association Name="FK__Chi_tiết___ID_CT__4D94879B">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__CampaignP__Campa__4CA06362">
+          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
+          <End Role="CampaignProductDetails" Type="Self.CampaignProductDetails" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CTKM">
-              <PropertyRef Name="ID_CTKM" />
+            <Principal Role="Promotion">
+              <PropertyRef Name="CampaignID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_CTKM" />
+            <Dependent Role="CampaignProductDetails">
+              <PropertyRef Name="CampaignID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_CT__5070F446">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="1" />
-          <End Role="Chi_tiết_CTKM" Type="Self.Chi_tiết_CTKM" Multiplicity="*" />
+        <Association Name="FK__CampaignP__Produ__4D94879B">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="CampaignProductDetails" Type="Self.CampaignProductDetails" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CTKM">
-              <PropertyRef Name="ID_CTKM" />
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
             </Principal>
-            <Dependent Role="Chi_tiết_CTKM">
-              <PropertyRef Name="ID_CTKM" />
+            <Dependent Role="CampaignProductDetails">
+              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_đơ__4BAC3F29">
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Campa__49C3F6B7">
+          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_đơn_hàng" />
+            <Principal Role="Promotion">
+              <PropertyRef Name="CampaignID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_đơn_hàng" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="CampaignID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_sả__4CA06362">
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Order__47DBAE45">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Sản_phẩm">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="OrderID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_sả__5165187F">
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
-          <End Role="Chi_tiết_CTKM" Type="Self.Chi_tiết_CTKM" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Produ__48CFD27E">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Sản_phẩm">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
             </Principal>
-            <Dependent Role="Chi_tiết_CTKM">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_kh__440B1D61">
-          <End Role="Khách_hàng" Type="Self.Khách_hàng" Multiplicity="1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__Orders__CouponID__45F365D3">
+          <End Role="Coupon" Type="Self.Coupon" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Khách_hàng">
-              <PropertyRef Name="ID_khách" />
+            <Principal Role="Coupon">
+              <PropertyRef Name="CouponID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_khách" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="CouponID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_mã__45F365D3">
-          <End Role="Mã_giảm_giá" Type="Self.Mã_giảm_giá" Multiplicity="0..1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__Orders__Customer__440B1D61">
+          <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Mã_giảm_giá">
-              <PropertyRef Name="ID_mã_giảm_giá" />
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_mã_giảm_giá" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_nh__44FF419A">
-          <End Role="Nhân_viên" Type="Self.Nhân_viên" Multiplicity="1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__Orders__Employee__44FF419A">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Nhân_viên">
-              <PropertyRef Name="ID_nhân_viên" />
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_nhân_viên" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="EmployeeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Sản_phẩm__ID_dan__412EB0B6">
-          <End Role="Danh_mục" Type="Self.Danh_mục" Multiplicity="1" />
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="*" />
+        <Association Name="FK__Products__Catego__412EB0B6">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Danh_mục">
-              <PropertyRef Name="ID_danh_mục" />
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
             </Principal>
-            <Dependent Role="Sản_phẩm">
-              <PropertyRef Name="ID_danh_mục" />
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DAPMModelStoreContainer">
-          <EntitySet Name="Chi_tiết_CTKM" EntityType="Self.Chi_tiết_CTKM" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CTKM" EntityType="Self.CTKM" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Danh_mục" EntityType="Self.Danh_mục" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Đơn_mua_hàng" EntityType="Self.Đơn_mua_hàng" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Khách_hàng" EntityType="Self.Khách_hàng" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Mã_giảm_giá" EntityType="Self.Mã_giảm_giá" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Nhân_viên" EntityType="Self.Nhân_viên" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Sản_phẩm" EntityType="Self.Sản_phẩm" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Chi_tiết_đơn_hàng" EntityType="Self.Chi_tiết_đơn_hàng" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="CampaignProductDetails" EntityType="Self.CampaignProductDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Coupon" EntityType="Self.Coupon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Promotion" EntityType="Self.Promotion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [Chi_tiết_đơn_hàng].[Số_lượng] AS [Số_lượng], 
-    [Chi_tiết_đơn_hàng].[Thành_tiền] AS [Thành_tiền], 
-    [Chi_tiết_đơn_hàng].[ID_đơn_hàng] AS [ID_đơn_hàng], 
-    [Chi_tiết_đơn_hàng].[ID_sản_phẩm] AS [ID_sản_phẩm], 
-    [Chi_tiết_đơn_hàng].[ID_CTKM] AS [ID_CTKM]
-    FROM [dbo].[Chi_tiết_đơn_hàng] AS [Chi_tiết_đơn_hàng]</DefiningQuery>
+    [OrderDetails].[ProductQuantity] AS [ProductQuantity], 
+    [OrderDetails].[TotalPrice] AS [TotalPrice], 
+    [OrderDetails].[OrderID] AS [OrderID], 
+    [OrderDetails].[ProductID] AS [ProductID], 
+    [OrderDetails].[CampaignID] AS [CampaignID]
+    FROM [dbo].[OrderDetails] AS [OrderDetails]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Chi_tiết___ID_CT__4D94879B" Association="Self.FK__Chi_tiết___ID_CT__4D94879B">
-            <End Role="CTKM" EntitySet="CTKM" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <AssociationSet Name="FK__CampaignP__Campa__4CA06362" Association="Self.FK__CampaignP__Campa__4CA06362">
+            <End Role="Promotion" EntitySet="Promotion" />
+            <End Role="CampaignProductDetails" EntitySet="CampaignProductDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_CT__5070F446" Association="Self.FK__Chi_tiết___ID_CT__5070F446">
-            <End Role="CTKM" EntitySet="CTKM" />
-            <End Role="Chi_tiết_CTKM" EntitySet="Chi_tiết_CTKM" />
+          <AssociationSet Name="FK__CampaignP__Produ__4D94879B" Association="Self.FK__CampaignP__Produ__4D94879B">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="CampaignProductDetails" EntitySet="CampaignProductDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_đơ__4BAC3F29" Association="Self.FK__Chi_tiết___ID_đơ__4BAC3F29">
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <AssociationSet Name="FK__OrderDeta__Campa__49C3F6B7" Association="Self.FK__OrderDeta__Campa__49C3F6B7">
+            <End Role="Promotion" EntitySet="Promotion" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_sả__4CA06362" Association="Self.FK__Chi_tiết___ID_sả__4CA06362">
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <AssociationSet Name="FK__OrderDeta__Order__47DBAE45" Association="Self.FK__OrderDeta__Order__47DBAE45">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_sả__5165187F" Association="Self.FK__Chi_tiết___ID_sả__5165187F">
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
-            <End Role="Chi_tiết_CTKM" EntitySet="Chi_tiết_CTKM" />
+          <AssociationSet Name="FK__OrderDeta__Produ__48CFD27E" Association="Self.FK__OrderDeta__Produ__48CFD27E">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_kh__440B1D61" Association="Self.FK__Đơn_mua_h__ID_kh__440B1D61">
-            <End Role="Khách_hàng" EntitySet="Khách_hàng" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__Orders__CouponID__45F365D3" Association="Self.FK__Orders__CouponID__45F365D3">
+            <End Role="Coupon" EntitySet="Coupon" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_mã__45F365D3" Association="Self.FK__Đơn_mua_h__ID_mã__45F365D3">
-            <End Role="Mã_giảm_giá" EntitySet="Mã_giảm_giá" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__Orders__Customer__440B1D61" Association="Self.FK__Orders__Customer__440B1D61">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_nh__44FF419A" Association="Self.FK__Đơn_mua_h__ID_nh__44FF419A">
-            <End Role="Nhân_viên" EntitySet="Nhân_viên" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__Orders__Employee__44FF419A" Association="Self.FK__Orders__Employee__44FF419A">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Sản_phẩm__ID_dan__412EB0B6" Association="Self.FK__Sản_phẩm__ID_dan__412EB0B6">
-            <End Role="Danh_mục" EntitySet="Danh_mục" />
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+          <AssociationSet Name="FK__Products__Catego__412EB0B6" Association="Self.FK__Products__Catego__412EB0B6">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -263,230 +268,235 @@ warning 6002: The table/view 'DAPM.dbo.Chi_tiết_đơn_hàng' does not have a p
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DAPMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="CTKM">
+        <EntityType Name="Category">
           <Key>
-            <PropertyRef Name="ID_CTKM" />
+            <PropertyRef Name="CategoryID" />
           </Key>
-          <Property Name="ID_CTKM" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Quy_cách" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-          <Property Name="Thời_lượng" Type="Int32" />
-          <NavigationProperty Name="Chi_tiết_đơn_hàng" Relationship="Self.FK__Chi_tiết___ID_CT__4D94879B" FromRole="CTKM" ToRole="Chi_tiết_đơn_hàng" />
-          <NavigationProperty Name="Sản_phẩm" Relationship="Self.Chi_tiết_CTKM" FromRole="CTKM" ToRole="Sản_phẩm" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__412EB0B6" FromRole="Categories" ToRole="Products" />
         </EntityType>
-        <EntityType Name="Danh_mục">
+        <EntityType Name="Coupon">
           <Key>
-            <PropertyRef Name="ID_danh_mục" />
+            <PropertyRef Name="CouponID" />
           </Key>
-          <Property Name="ID_danh_mục" Type="Int32" Nullable="false" />
-          <Property Name="Tên_danh_mục" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Sản_phẩm" Relationship="Self.FK__Sản_phẩm__ID_dan__412EB0B6" FromRole="Danh_mục" ToRole="Sản_phẩm" />
+          <Property Name="CouponID" Type="Int32" Nullable="false" />
+          <Property Name="CouponDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DiscountAmount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Coupon" ToRole="Orders" />
         </EntityType>
-        <EntityType Name="Đơn_mua_hàng">
+        <EntityType Name="Customer">
           <Key>
-            <PropertyRef Name="ID_đơn_hàng" />
+            <PropertyRef Name="CustomerID" />
           </Key>
-          <Property Name="ID_đơn_hàng" Type="Int32" Nullable="false" />
-          <Property Name="Số_lượng_sản_phẩm" Type="Int32" Nullable="false" />
-          <Property Name="Tổng_thành_tiền" Type="Int32" Nullable="false" />
-          <Property Name="Ngày_lập_đơn" Type="DateTime" Precision="0" />
-          <Property Name="Trạng_thái_đơn_hàng" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
-          <Property Name="Họ_tên_người_nhận" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="SĐT_người_nhận" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <Property Name="Địa_chỉ_người_nhận" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="ID_khách" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="ID_nhân_viên" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="ID_mã_giảm_giá" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Chi_tiết_đơn_hàng" Relationship="Self.FK__Chi_tiết___ID_đơ__4BAC3F29" FromRole="Đơn_mua_hàng" ToRole="Chi_tiết_đơn_hàng" />
-          <NavigationProperty Name="Khách_hàng" Relationship="Self.FK__Đơn_mua_h__ID_kh__440B1D61" FromRole="Đơn_mua_hàng" ToRole="Khách_hàng" />
-          <NavigationProperty Name="Mã_giảm_giá" Relationship="Self.FK__Đơn_mua_h__ID_mã__45F365D3" FromRole="Đơn_mua_hàng" ToRole="Mã_giảm_giá" />
-          <NavigationProperty Name="Nhân_viên" Relationship="Self.FK__Đơn_mua_h__ID_nh__44FF419A" FromRole="Đơn_mua_hàng" ToRole="Nhân_viên" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CusAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RecipientPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="CusPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Customer__440B1D61" FromRole="Customers" ToRole="Orders" />
         </EntityType>
-        <EntityType Name="Khách_hàng">
+        <EntityType Name="Employee">
           <Key>
-            <PropertyRef Name="ID_khách" />
+            <PropertyRef Name="EmployeeID" />
           </Key>
-          <Property Name="ID_khách" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Họ_tên" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Địa_chỉ" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Số_điện_thoại" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="Đơn_mua_hàng" Relationship="Self.FK__Đơn_mua_h__ID_kh__440B1D61" FromRole="Khách_hàng" ToRole="Đơn_mua_hàng" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeePassword" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BirthYear" Type="Int32" Nullable="false" />
+          <Property Name="PositionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Employee__44FF419A" FromRole="Employees" ToRole="Orders" />
         </EntityType>
-        <EntityType Name="Mã_giảm_giá">
+        <EntityType Name="Order">
           <Key>
-            <PropertyRef Name="ID_mã_giảm_giá" />
+            <PropertyRef Name="OrderID" />
           </Key>
-          <Property Name="ID_mã_giảm_giá" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Nội_dung" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Số_tiền_giảm" Type="Double" />
-          <NavigationProperty Name="Đơn_mua_hàng" Relationship="Self.FK__Đơn_mua_h__ID_mã__45F365D3" FromRole="Mã_giảm_giá" ToRole="Đơn_mua_hàng" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductQuantity" Type="Int32" Nullable="false" />
+          <Property Name="TotalMoney" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="OrderStatus" Type="Int32" Nullable="false" />
+          <Property Name="RecipientFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RecipientPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="RecipientAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="CouponID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Coupon" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Orders" ToRole="Coupon" />
+          <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__Customer__440B1D61" FromRole="Orders" ToRole="Customers" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK__Orders__Employee__44FF419A" FromRole="Orders" ToRole="Employees" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__47DBAE45" FromRole="Orders" ToRole="OrderDetails" />
         </EntityType>
-        <EntityType Name="Nhân_viên">
+        <EntityType Name="Product">
           <Key>
-            <PropertyRef Name="ID_nhân_viên" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="ID_nhân_viên" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Họ_tên_nhân_viên" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Năm_sinh" Type="Int32" />
-          <Property Name="ID_chức_vụ" Type="Int32" />
-          <NavigationProperty Name="Đơn_mua_hàng" Relationship="Self.FK__Đơn_mua_h__ID_nh__44FF419A" FromRole="Nhân_viên" ToRole="Đơn_mua_hàng" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="StockQuantity" Type="Int32" Nullable="false" />
+          <Property Name="Tax" Type="Double" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__412EB0B6" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__48CFD27E" FromRole="Products" ToRole="OrderDetails" />
+          <NavigationProperty Name="Promotions" Relationship="Self.CampaignProductDetails" FromRole="Products" ToRole="Promotion" />
         </EntityType>
-        <EntityType Name="Sản_phẩm">
+        <EntityType Name="Promotion">
           <Key>
-            <PropertyRef Name="ID_sản_phẩm" />
+            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="ID_sản_phẩm" Type="Int32" Nullable="false" />
-          <Property Name="Giá_tiền" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="số_lượng_tồn" Type="Int32" />
-          <Property Name="Thuế" Type="Double" />
-          <Property Name="Hãng" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
-          <Property Name="ID_danh_mục" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Danh_mục" Relationship="Self.FK__Sản_phẩm__ID_dan__412EB0B6" FromRole="Sản_phẩm" ToRole="Danh_mục" />
-          <NavigationProperty Name="Chi_tiết_đơn_hàng" Relationship="Self.FK__Chi_tiết___ID_sả__4CA06362" FromRole="Sản_phẩm" ToRole="Chi_tiết_đơn_hàng" />
-          <NavigationProperty Name="CTKMs" Relationship="Self.Chi_tiết_CTKM" FromRole="Sản_phẩm" ToRole="CTKM" />
+          <Property Name="CampaignID" Type="Int32" Nullable="false" />
+          <Property Name="Specification" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Campa__49C3F6B7" FromRole="Promotion" ToRole="OrderDetails" />
+          <NavigationProperty Name="Products" Relationship="Self.CampaignProductDetails" FromRole="Promotion" ToRole="Products" />
         </EntityType>
-        <EntityType Name="Chi_tiết_đơn_hàng">
+        <EntityType Name="OrderDetail">
           <Key>
-            <PropertyRef Name="Số_lượng" />
-            <PropertyRef Name="ID_đơn_hàng" />
-            <PropertyRef Name="ID_sản_phẩm" />
+            <PropertyRef Name="ProductQuantity" />
+            <PropertyRef Name="TotalPrice" />
+            <PropertyRef Name="OrderID" />
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="Số_lượng" Type="Int32" Nullable="false" />
-          <Property Name="Thành_tiền" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ID_đơn_hàng" Type="Int32" Nullable="false" />
-          <Property Name="ID_sản_phẩm" Type="Int32" Nullable="false" />
-          <Property Name="ID_CTKM" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="CTKM" Relationship="Self.FK__Chi_tiết___ID_CT__4D94879B" FromRole="Chi_tiết_đơn_hàng" ToRole="CTKM" />
-          <NavigationProperty Name="Đơn_mua_hàng" Relationship="Self.FK__Chi_tiết___ID_đơ__4BAC3F29" FromRole="Chi_tiết_đơn_hàng" ToRole="Đơn_mua_hàng" />
-          <NavigationProperty Name="Sản_phẩm" Relationship="Self.FK__Chi_tiết___ID_sả__4CA06362" FromRole="Chi_tiết_đơn_hàng" ToRole="Sản_phẩm" />
+          <Property Name="ProductQuantity" Type="Int32" Nullable="false" />
+          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="CampaignID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__47DBAE45" FromRole="OrderDetails" ToRole="Orders" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__48CFD27E" FromRole="OrderDetails" ToRole="Products" />
+          <NavigationProperty Name="Promotion" Relationship="Self.FK__OrderDeta__Campa__49C3F6B7" FromRole="OrderDetails" ToRole="Promotion" />
         </EntityType>
-        <Association Name="FK__Chi_tiết___ID_CT__4D94879B">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="0..1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__Products__Catego__412EB0B6">
+          <End Role="Categories" Type="Self.Category" Multiplicity="1" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="CTKM">
-              <PropertyRef Name="ID_CTKM" />
+            <Principal Role="Categories">
+              <PropertyRef Name="CategoryID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_CTKM" />
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Sản_phẩm__ID_dan__412EB0B6">
-          <End Role="Danh_mục" Type="Self.Danh_mục" Multiplicity="1" />
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="*" />
+        <Association Name="FK__Orders__CouponID__45F365D3">
+          <End Role="Coupon" Type="Self.Coupon" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Danh_mục">
-              <PropertyRef Name="ID_danh_mục" />
+            <Principal Role="Coupon">
+              <PropertyRef Name="CouponID" />
             </Principal>
-            <Dependent Role="Sản_phẩm">
-              <PropertyRef Name="ID_danh_mục" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="CouponID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_đơ__4BAC3F29">
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__Orders__Customer__440B1D61">
+          <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_đơn_hàng" />
+            <Principal Role="Customers">
+              <PropertyRef Name="CustomerID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_đơn_hàng" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="CustomerID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_kh__440B1D61">
-          <End Role="Khách_hàng" Type="Self.Khách_hàng" Multiplicity="1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__Orders__Employee__44FF419A">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Khách_hàng">
-              <PropertyRef Name="ID_khách" />
+            <Principal Role="Employees">
+              <PropertyRef Name="EmployeeID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_khách" />
+            <Dependent Role="Orders">
+              <PropertyRef Name="EmployeeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_mã__45F365D3">
-          <End Role="Mã_giảm_giá" Type="Self.Mã_giảm_giá" Multiplicity="0..1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Order__47DBAE45">
+          <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Mã_giảm_giá">
-              <PropertyRef Name="ID_mã_giảm_giá" />
+            <Principal Role="Orders">
+              <PropertyRef Name="OrderID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_mã_giảm_giá" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="OrderID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Đơn_mua_h__ID_nh__44FF419A">
-          <End Role="Nhân_viên" Type="Self.Nhân_viên" Multiplicity="1" />
-          <End Role="Đơn_mua_hàng" Type="Self.Đơn_mua_hàng" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Produ__48CFD27E">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Nhân_viên">
-              <PropertyRef Name="ID_nhân_viên" />
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
             </Principal>
-            <Dependent Role="Đơn_mua_hàng">
-              <PropertyRef Name="ID_nhân_viên" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="ProductID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Chi_tiết___ID_sả__4CA06362">
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="1" />
-          <End Role="Chi_tiết_đơn_hàng" Type="Self.Chi_tiết_đơn_hàng" Multiplicity="*" />
+        <Association Name="FK__OrderDeta__Campa__49C3F6B7">
+          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
+          <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Sản_phẩm">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Principal Role="Promotion">
+              <PropertyRef Name="CampaignID" />
             </Principal>
-            <Dependent Role="Chi_tiết_đơn_hàng">
-              <PropertyRef Name="ID_sản_phẩm" />
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="CampaignID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="Chi_tiết_CTKM">
-          <End Role="CTKM" Type="Self.CTKM" Multiplicity="*" />
-          <End Role="Sản_phẩm" Type="Self.Sản_phẩm" Multiplicity="*" />
+        <Association Name="CampaignProductDetails">
+          <End Role="Promotion" Type="Self.Promotion" Multiplicity="*" />
+          <End Role="Products" Type="Self.Product" Multiplicity="*" />
         </Association>
         <EntityContainer Name="DAPMEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CTKMs" EntityType="Self.CTKM" />
-          <EntitySet Name="Danh_mục" EntityType="Self.Danh_mục" />
-          <EntitySet Name="Đơn_mua_hàng" EntityType="Self.Đơn_mua_hàng" />
-          <EntitySet Name="Khách_hàng" EntityType="Self.Khách_hàng" />
-          <EntitySet Name="Mã_giảm_giá" EntityType="Self.Mã_giảm_giá" />
-          <EntitySet Name="Nhân_viên" EntityType="Self.Nhân_viên" />
-          <EntitySet Name="Sản_phẩm" EntityType="Self.Sản_phẩm" />
-          <EntitySet Name="Chi_tiết_đơn_hàng" EntityType="Self.Chi_tiết_đơn_hàng" />
-          <AssociationSet Name="FK__Chi_tiết___ID_CT__4D94879B" Association="Self.FK__Chi_tiết___ID_CT__4D94879B">
-            <End Role="CTKM" EntitySet="CTKMs" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <EntitySet Name="Categories" EntityType="Self.Category" />
+          <EntitySet Name="Coupons" EntityType="Self.Coupon" />
+          <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Promotions" EntityType="Self.Promotion" />
+          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+          <AssociationSet Name="FK__Products__Catego__412EB0B6" Association="Self.FK__Products__Catego__412EB0B6">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Sản_phẩm__ID_dan__412EB0B6" Association="Self.FK__Sản_phẩm__ID_dan__412EB0B6">
-            <End Role="Danh_mục" EntitySet="Danh_mục" />
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+          <AssociationSet Name="FK__Orders__CouponID__45F365D3" Association="Self.FK__Orders__CouponID__45F365D3">
+            <End Role="Coupon" EntitySet="Coupons" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_đơ__4BAC3F29" Association="Self.FK__Chi_tiết___ID_đơ__4BAC3F29">
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <AssociationSet Name="FK__Orders__Customer__440B1D61" Association="Self.FK__Orders__Customer__440B1D61">
+            <End Role="Customers" EntitySet="Customers" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_kh__440B1D61" Association="Self.FK__Đơn_mua_h__ID_kh__440B1D61">
-            <End Role="Khách_hàng" EntitySet="Khách_hàng" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__Orders__Employee__44FF419A" Association="Self.FK__Orders__Employee__44FF419A">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_mã__45F365D3" Association="Self.FK__Đơn_mua_h__ID_mã__45F365D3">
-            <End Role="Mã_giảm_giá" EntitySet="Mã_giảm_giá" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__OrderDeta__Order__47DBAE45" Association="Self.FK__OrderDeta__Order__47DBAE45">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Đơn_mua_h__ID_nh__44FF419A" Association="Self.FK__Đơn_mua_h__ID_nh__44FF419A">
-            <End Role="Nhân_viên" EntitySet="Nhân_viên" />
-            <End Role="Đơn_mua_hàng" EntitySet="Đơn_mua_hàng" />
+          <AssociationSet Name="FK__OrderDeta__Produ__48CFD27E" Association="Self.FK__OrderDeta__Produ__48CFD27E">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__Chi_tiết___ID_sả__4CA06362" Association="Self.FK__Chi_tiết___ID_sả__4CA06362">
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
-            <End Role="Chi_tiết_đơn_hàng" EntitySet="Chi_tiết_đơn_hàng" />
+          <AssociationSet Name="FK__OrderDeta__Campa__49C3F6B7" Association="Self.FK__OrderDeta__Campa__49C3F6B7">
+            <End Role="Promotion" EntitySet="Promotions" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="Chi_tiết_CTKM" Association="Self.Chi_tiết_CTKM">
-            <End Role="CTKM" EntitySet="CTKMs" />
-            <End Role="Sản_phẩm" EntitySet="Sản_phẩm" />
+          <AssociationSet Name="CampaignProductDetails" Association="Self.CampaignProductDetails">
+            <End Role="Promotion" EntitySet="Promotions" />
+            <End Role="Products" EntitySet="Products" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -495,98 +505,101 @@ warning 6002: The table/view 'DAPM.dbo.Chi_tiết_đơn_hàng' does not have a p
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="DAPMModelStoreContainer" CdmEntityContainer="DAPMEntities">
-          <EntitySetMapping Name="CTKMs">
-            <EntityTypeMapping TypeName="DAPMModel.CTKM">
-              <MappingFragment StoreEntitySet="CTKM">
-                <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
-                <ScalarProperty Name="Quy_cách" ColumnName="Quy_cách" />
-                <ScalarProperty Name="Thời_lượng" ColumnName="Thời_lượng" />
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="DAPMModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Danh_mục">
-            <EntityTypeMapping TypeName="DAPMModel.Danh_mục">
-              <MappingFragment StoreEntitySet="Danh_mục">
-                <ScalarProperty Name="ID_danh_mục" ColumnName="ID_danh_mục" />
-                <ScalarProperty Name="Tên_danh_mục" ColumnName="Tên_danh_mục" />
+          <EntitySetMapping Name="Coupons">
+            <EntityTypeMapping TypeName="DAPMModel.Coupon">
+              <MappingFragment StoreEntitySet="Coupon">
+                <ScalarProperty Name="CouponID" ColumnName="CouponID" />
+                <ScalarProperty Name="CouponDescription" ColumnName="CouponDescription" />
+                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Đơn_mua_hàng">
-            <EntityTypeMapping TypeName="DAPMModel.Đơn_mua_hàng">
-              <MappingFragment StoreEntitySet="Đơn_mua_hàng">
-                <ScalarProperty Name="ID_đơn_hàng" ColumnName="ID_đơn_hàng" />
-                <ScalarProperty Name="Số_lượng_sản_phẩm" ColumnName="Số_lượng_sản_phẩm" />
-                <ScalarProperty Name="Tổng_thành_tiền" ColumnName="Tổng_thành_tiền" />
-                <ScalarProperty Name="Ngày_lập_đơn" ColumnName="Ngày_lập_đơn" />
-                <ScalarProperty Name="Trạng_thái_đơn_hàng" ColumnName="Trạng_thái_đơn_hàng" />
-                <ScalarProperty Name="Họ_tên_người_nhận" ColumnName="Họ_tên_người_nhận" />
-                <ScalarProperty Name="SĐT_người_nhận" ColumnName="SĐT_người_nhận" />
-                <ScalarProperty Name="Địa_chỉ_người_nhận" ColumnName="Địa_chỉ_người_nhận" />
-                <ScalarProperty Name="ID_khách" ColumnName="ID_khách" />
-                <ScalarProperty Name="ID_nhân_viên" ColumnName="ID_nhân_viên" />
-                <ScalarProperty Name="ID_mã_giảm_giá" ColumnName="ID_mã_giảm_giá" />
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DAPMModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="CusAddress" ColumnName="CusAddress" />
+                <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="CusPassword" ColumnName="CusPassword" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Khách_hàng">
-            <EntityTypeMapping TypeName="DAPMModel.Khách_hàng">
-              <MappingFragment StoreEntitySet="Khách_hàng">
-                <ScalarProperty Name="ID_khách" ColumnName="ID_khách" />
-                <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
-                <ScalarProperty Name="Địa_chỉ" ColumnName="Địa_chỉ" />
-                <ScalarProperty Name="Số_điện_thoại" ColumnName="Số_điện_thoại" />
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="DAPMModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="EmployeePassword" ColumnName="EmployeePassword" />
+                <ScalarProperty Name="EmployeeFullName" ColumnName="EmployeeFullName" />
+                <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Mã_giảm_giá">
-            <EntityTypeMapping TypeName="DAPMModel.Mã_giảm_giá">
-              <MappingFragment StoreEntitySet="Mã_giảm_giá">
-                <ScalarProperty Name="ID_mã_giảm_giá" ColumnName="ID_mã_giảm_giá" />
-                <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
-                <ScalarProperty Name="Số_tiền_giảm" ColumnName="Số_tiền_giảm" />
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DAPMModel.Order">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+                <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+                <ScalarProperty Name="RecipientFullName" ColumnName="RecipientFullName" />
+                <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
+                <ScalarProperty Name="RecipientAddress" ColumnName="RecipientAddress" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CouponID" ColumnName="CouponID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Nhân_viên">
-            <EntityTypeMapping TypeName="DAPMModel.Nhân_viên">
-              <MappingFragment StoreEntitySet="Nhân_viên">
-                <ScalarProperty Name="ID_nhân_viên" ColumnName="ID_nhân_viên" />
-                <ScalarProperty Name="Họ_tên_nhân_viên" ColumnName="Họ_tên_nhân_viên" />
-                <ScalarProperty Name="Năm_sinh" ColumnName="Năm_sinh" />
-                <ScalarProperty Name="ID_chức_vụ" ColumnName="ID_chức_vụ" />
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="DAPMModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+                <ScalarProperty Name="Tax" ColumnName="Tax" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Sản_phẩm">
-            <EntityTypeMapping TypeName="DAPMModel.Sản_phẩm">
-              <MappingFragment StoreEntitySet="Sản_phẩm">
-                <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
-                <ScalarProperty Name="Giá_tiền" ColumnName="Giá_tiền" />
-                <ScalarProperty Name="số_lượng_tồn" ColumnName="số_lượng_tồn" />
-                <ScalarProperty Name="Thuế" ColumnName="Thuế" />
-                <ScalarProperty Name="Hãng" ColumnName="Hãng" />
-                <ScalarProperty Name="ID_danh_mục" ColumnName="ID_danh_mục" />
+          <EntitySetMapping Name="Promotions">
+            <EntityTypeMapping TypeName="DAPMModel.Promotion">
+              <MappingFragment StoreEntitySet="Promotion">
+                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+                <ScalarProperty Name="Specification" ColumnName="Specification" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Chi_tiết_đơn_hàng">
-            <EntityTypeMapping TypeName="DAPMModel.Chi_tiết_đơn_hàng">
-              <MappingFragment StoreEntitySet="Chi_tiết_đơn_hàng">
-                <ScalarProperty Name="Số_lượng" ColumnName="Số_lượng" />
-                <ScalarProperty Name="Thành_tiền" ColumnName="Thành_tiền" />
-                <ScalarProperty Name="ID_đơn_hàng" ColumnName="ID_đơn_hàng" />
-                <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
-                <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="DAPMModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetails">
+                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Chi_tiết_CTKM" TypeName="DAPMModel.Chi_tiết_CTKM" StoreEntitySet="Chi_tiết_CTKM">
-            <EndProperty Name="CTKM">
-              <ScalarProperty Name="ID_CTKM" ColumnName="ID_CTKM" />
+          <AssociationSetMapping Name="CampaignProductDetails" TypeName="DAPMModel.CampaignProductDetails" StoreEntitySet="CampaignProductDetails">
+            <EndProperty Name="Promotion">
+              <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
             </EndProperty>
-            <EndProperty Name="Sản_phẩm">
-              <ScalarProperty Name="ID_sản_phẩm" ColumnName="ID_sản_phẩm" />
+            <EndProperty Name="Products">
+              <ScalarProperty Name="ProductID" ColumnName="ProductID" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

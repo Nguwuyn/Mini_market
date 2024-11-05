@@ -453,7 +453,7 @@
       <summary>Gets a collection of defined routes for the application.</summary>
       <returns>A collection of defined routes for the application.</returns>
     </member>
-    <member name="P:System.Web.Mvc.AreaRegistrationContext.State">
+    <member name="P:System.Web.Mvc.AreaRegistrationContext.OrderStatus">
       <summary>Gets an object that contains user-defined information to pass to the area.</summary>
       <returns>An object that contains user-defined information to pass to the area.</returns>
     </member>
@@ -10155,7 +10155,7 @@
     <member name="T:System.Web.Mvc.Html.NameExtensions">
       <summary>Gets the HTML ID and name attributes of the <see cref="T:System.Web.Mvc.HtmlHelper" /> string.</summary>
     </member>
-    <member name="M:System.Web.Mvc.Html.NameExtensions.Id(System.Web.Mvc.HtmlHelper,System.String)">
+    <member name="M:System.Web.Mvc.Html.NameExtensions.CategoryID(System.Web.Mvc.HtmlHelper,System.String)">
       <summary>Gets the ID of the <see cref="T:System.Web.Mvc.HtmlHelper" /> string.</summary>
       <returns>The HTML ID attribute value for the object that is represented by the expression.</returns>
       <param name="html">The HTML helper instance that this method extends.</param>
@@ -11269,7 +11269,7 @@
       <param name="routeDirection">The route direction.</param>
     </member>
     <member name="T:System.Web.Mvc.Routing.Constraints.DecimalRouteConstraint">
-      <summary>Constrains a route parameter to represent only decimal values.</summary>
+      <summary>Constrains a route parameter to represent only double values.</summary>
     </member>
     <member name="M:System.Web.Mvc.Routing.Constraints.DecimalRouteConstraint.#ctor">
       <summary>Initializes a new instance of the <see cref="T:System.Web.Mvc.Routing.Constraints.DecimalRouteConstraint" /> class.</summary>

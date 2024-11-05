@@ -12,26 +12,26 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Sản_phẩm
+    public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sản_phẩm()
+        public Product()
         {
-            this.Chi_tiết_đơn_hàng = new HashSet<Chi_tiết_đơn_hàng>();
-            this.CTKMs = new HashSet<CTKM>();
+            this.OrderDetails = new HashSet<OrderDetail>();
+            this.Promotions = new HashSet<Promotion>();
         }
     
-        public int ID_sản_phẩm { get; set; }
-        public Nullable<decimal> Giá_tiền { get; set; }
-        public Nullable<int> số_lượng_tồn { get; set; }
-        public Nullable<double> Thuế { get; set; }
-        public string Hãng { get; set; }
-        public int ID_danh_mục { get; set; }
+        public int ProductID { get; set; }
+        public int Price { get; set; }
+        public int StockQuantity { get; set; }
+        public double Tax { get; set; }
+        public string Manufacturer { get; set; }
+        public int CategoryID { get; set; }
     
-        public virtual Danh_mục Danh_mục { get; set; }
+        public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_tiết_đơn_hàng> Chi_tiết_đơn_hàng { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CTKM> CTKMs { get; set; }
+        public virtual ICollection<Promotion> Promotions { get; set; }
     }
 }

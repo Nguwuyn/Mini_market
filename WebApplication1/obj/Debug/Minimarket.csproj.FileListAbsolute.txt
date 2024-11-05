@@ -110,7 +110,6 @@ C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.IO.Com
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.Net.Http.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.Net.Sockets.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
@@ -130,20 +129,6 @@ C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\vbc.exe.confi
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\vbc.rsp
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\VBCSCompiler.exe
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\Antlr3.Runtime.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\EntityFramework.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\EntityFramework.SqlServer.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\Newtonsoft.Json.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.Helpers.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.Mvc.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.Optimization.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.Razor.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.WebPages.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.WebPages.Razor.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\WebGrease.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\EntityFramework.xml
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\EntityFramework.SqlServer.xml
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\System.Web.Helpers.xml
@@ -159,12 +144,6 @@ C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\bin\Microsoft.CodeDom.Pr
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.AssemblyReference.cache
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.Up2Date
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.dll
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.pdb
-=======
-<<<<<<< HEAD
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.AssemblyReference.cache
-C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\Minimarket.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Admin\Source\Repos\Mini_market\WebApplication1\obj\Debug\WebApplication1.pdb
 =======

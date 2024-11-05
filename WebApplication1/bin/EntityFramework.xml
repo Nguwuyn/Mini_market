@@ -1984,16 +1984,16 @@
             <param name="value">The value to be converted.</param>
             <returns>The converted value.</returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDecimal(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.FromDecimal(System.Nullable{System.double})">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) decimal value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified (nullable) double value.
             </summary>
             <returns>
-            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified decimal value.
+            A <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbExpression" /> that represents the specified double value.
             </returns>
-            <param name="value">The decimal value on which the returned expression should be based.</param>
+            <param name="value">The double value on which the returned expression should be based.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.Decimal})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.DbExpression.op_Implicit(System.Nullable{System.double})~System.Data.Entity.Core.Common.CommandTrees.DbExpression">
             <summary>
             Enables implicit casting from <see cref="T:System.Nullable`1"/>.
             </summary>
@@ -8375,14 +8375,14 @@
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Round(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Round' function with the specified argument, which must each have a single, double or decimal result type. The result type of the expression is the same as the result type of value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Round' function with the specified argument, which must each have a single, double or double result type. The result type of the expression is the same as the result type of value.
             </summary>
             <returns>A new DbFunctionExpression that rounds the specified argument to the nearest integer value.</returns>
             <param name="value">An expression that specifies the numeric value to round.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Round(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Round' function with the specified arguments, which must have a single, double or decimal, and integer result types. The result type of the expression is the same as the result type of value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Round' function with the specified arguments, which must have a single, double or double, and integer result types. The result type of the expression is the same as the result type of value.
             </summary>
             <returns>A new DbFunctionExpression that rounds the specified argument to the nearest integer value, with precision as specified by digits.</returns>
             <param name="value">An expression that specifies the numeric value to round.</param>
@@ -8390,14 +8390,14 @@
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Floor(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Floor' function with the specified argument, which must each have a single, double or decimal result type. The result type of the expression is the same as the result type of value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Floor' function with the specified argument, which must each have a single, double or double result type. The result type of the expression is the same as the result type of value.
             </summary>
             <returns>A new DbFunctionExpression that returns the largest integer value not greater than value.</returns>
             <param name="value">An expression that specifies the numeric value.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Ceiling(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Ceiling' function with the specified argument, which must each have a single, double or decimal result type. The result type of the expression is the same as the result type of value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Ceiling' function with the specified argument, which must each have a single, double or double result type. The result type of the expression is the same as the result type of value.
             </summary>
             <returns>A new DbFunctionExpression that returns the smallest integer value not less than than value.</returns>
             <param name="value">An expression that specifies the numeric value.</param>
@@ -8411,7 +8411,7 @@
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.EdmFunctions.Truncate(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Truncate' function with the specified arguments, which must have a single, double or decimal, and integer result types. The result type of the expression is the same as the result type of value.
+            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Truncate' function with the specified arguments, which must have a single, double or double, and integer result types. The result type of the expression is the same as the result type of value.
             </summary>
             <returns>A new DbFunctionExpression that truncates the specified argument to the nearest integer value, with precision as specified by digits.</returns>
             <param name="value">An expression that specifies the numeric value to truncate.</param>
@@ -10883,14 +10883,14 @@
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.IDbConnectionInterceptor.StateGetting(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext{System.Data.ConnectionState})">
             <summary>
-            Called before <see cref="P:System.Data.Common.DbConnection.State"/> is retrieved.
+            Called before <see cref="P:System.Data.Common.DbConnection.OrderStatus"/> is retrieved.
             </summary>
             <param name="connection">The connection.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
         </member>
         <member name="M:System.Data.Entity.Infrastructure.Interception.IDbConnectionInterceptor.StateGot(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext{System.Data.ConnectionState})">
             <summary>
-            Called after <see cref="P:System.Data.Common.DbConnection.State"/> is retrieved.
+            Called after <see cref="P:System.Data.Common.DbConnection.OrderStatus"/> is retrieved.
             </summary>
             <param name="connection">The connection.</param>
             <param name="interceptionContext">Contextual information associated with the call.</param>
@@ -12443,7 +12443,7 @@
             Sends <see cref="M:System.Data.Entity.Infrastructure.Interception.IDbConnectionInterceptor.StateGetting(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext{System.Data.ConnectionState})"/> and
             <see cref="M:System.Data.Entity.Infrastructure.Interception.IDbConnectionInterceptor.StateGot(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.Interception.DbConnectionInterceptionContext{System.Data.ConnectionState})"/> to any <see cref="T:System.Data.Entity.Infrastructure.Interception.IDbConnectionInterceptor"/>
             registered on <see cref="T:System.Data.Entity.Infrastructure.Interception.DbInterception"/> before/after
-            getting <see cref="P:System.Data.Common.DbConnection.State"/>.
+            getting <see cref="P:System.Data.Common.DbConnection.OrderStatus"/>.
             </summary>
             <remarks>
             Note that the value of the property is returned by this method. The result is not available
@@ -13901,7 +13901,7 @@
         <member name="M:System.Data.Entity.Infrastructure.TransactionRow.GetHashCode">
             <inheritdoc />
         </member>
-        <member name="P:System.Data.Entity.Infrastructure.TransactionRow.Id">
+        <member name="P:System.Data.Entity.Infrastructure.TransactionRow.CategoryID">
             <summary>
             A unique id assigned to a transaction object.
             </summary>
@@ -13983,9 +13983,9 @@
              <param name="outParameter">A value indicating whether the parameter is an output parameter.</param>
              <returns> The newly constructed parameter definition. </returns>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Builders.ParameterBuilder.Decimal(System.Nullable{System.Byte},System.Nullable{System.Byte},System.Nullable{System.Decimal},System.String,System.String,System.String,System.Boolean)">
+        <member name="M:System.Data.Entity.Migrations.Builders.ParameterBuilder.double(System.Nullable{System.Byte},System.Nullable{System.Byte},System.Nullable{System.double},System.String,System.String,System.String,System.Boolean)">
              <summary>
-             Creates a new parameter definition to pass Decimal data.
+             Creates a new parameter definition to pass double data.
             
              Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
              (such as the end user of an application). If input is accepted from such sources it should be validated 
@@ -14520,7 +14520,7 @@
             Gets a value indicating if this operation may result in data loss. Always returns false.
             </summary>
         </member>
-        <member name="T:System.Data.Entity.Migrations.Model.RenameProcedureOperation">
+        <member name="T:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation">
              <summary>
              Represents renaming a stored procedure in the database.
             
@@ -14529,9 +14529,9 @@
              before being passed to these APIs to protect against SQL injection attacks etc.
              </summary>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Model.RenameProcedureOperation.#ctor(System.String,System.String,System.Object)">
+        <member name="M:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation.#ctor(System.String,System.String,System.Object)">
              <summary>
-             Initializes a new instance of the <see cref="T:System.Data.Entity.Migrations.Model.RenameProcedureOperation"/> class.
+             Initializes a new instance of the <see cref="T:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation"/> class.
             
              Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
              (such as the end user of an application). If input is accepted from such sources it should be validated 
@@ -14541,7 +14541,7 @@
              <param name="newName">The new name for the stored procedure.</param>
              <param name="anonymousArguments"> Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'. </param>
         </member>
-        <member name="P:System.Data.Entity.Migrations.Model.RenameProcedureOperation.Name">
+        <member name="P:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation.Name">
             <summary>
             Gets the name of the stored procedure to rename.
             </summary>
@@ -14549,7 +14549,7 @@
             The name of the stored procedure to rename.
             </value>
         </member>
-        <member name="P:System.Data.Entity.Migrations.Model.RenameProcedureOperation.NewName">
+        <member name="P:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation.NewName">
             <summary>
             Gets the new name for the stored procedure.
             </summary>
@@ -14557,12 +14557,12 @@
             The new name for the stored procedure.
             </value>
         </member>
-        <member name="P:System.Data.Entity.Migrations.Model.RenameProcedureOperation.Inverse">
+        <member name="P:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation.Inverse">
             <summary>
             Gets an operation that will revert this operation.
             </summary>
         </member>
-        <member name="P:System.Data.Entity.Migrations.Model.RenameProcedureOperation.IsDestructiveChange">
+        <member name="P:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation.IsDestructiveChange">
             <summary>
             Gets a value indicating if this operation may result in data loss. Always returns false.
             </summary>
@@ -14644,13 +14644,13 @@
         <member name="P:System.Data.Entity.Migrations.Model.PropertyModel.Precision">
             <summary>
             Gets or sets the precision for this property model.
-            Only valid for decimal data types.
+            Only valid for double data types.
             </summary>
         </member>
         <member name="P:System.Data.Entity.Migrations.Model.PropertyModel.Scale">
             <summary>
             Gets or sets the scale for this property model.
-            Only valid for decimal data types.
+            Only valid for double data types.
             </summary>
         </member>
         <member name="P:System.Data.Entity.Migrations.Model.PropertyModel.DefaultValue">
@@ -15237,7 +15237,7 @@
             Configures the primary key property(s) for this entity type.
             </summary>
             <typeparam name="TProperty"> The type of the key. </typeparam>
-            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t =&gt; t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t =&gt; new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t =&gt; t.CategoryID VB.Net: Function(t) t.CategoryID If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t =&gt; new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
             <returns>
             The same <see cref="T:System.Data.Entity.ModelConfiguration.Configuration.ConventionTypeConfiguration`1"/> instance so that multiple calls can be chained.
             </returns>
@@ -18171,16 +18171,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Decimal})">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.double})">
             <summary>
-            Asynchronously computes the sum of a sequence of <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the sum of a sequence of <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of <see cref="T:System.Decimal"/> values to calculate the sum of.
+            A sequence of <see cref="T:System.double"/> values to calculate the sum of.
             </param>
             <returns>
             A task that represents the asynchronous operation.
@@ -18199,16 +18199,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Decimal},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.double},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the sum of a sequence of <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the sum of a sequence of <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of <see cref="T:System.Decimal"/> values to calculate the sum of.
+            A sequence of <see cref="T:System.double"/> values to calculate the sum of.
             </param>
             <param name="cancellationToken">
             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
@@ -18230,16 +18230,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Nullable{System.double}})">
             <summary>
-            Asynchronously computes the sum of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the sum of a sequence of nullable <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of nullable <see cref="T:System.Decimal"/> values to calculate the sum of.
+            A sequence of nullable <see cref="T:System.double"/> values to calculate the sum of.
             </param>
             <returns>
             A task that represents the asynchronous operation.
@@ -18258,16 +18258,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Nullable{System.Decimal}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync(System.Linq.IQueryable{System.Nullable{System.double}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the sum of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the sum of a sequence of nullable <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of nullable <see cref="T:System.Decimal"/> values to calculate the sum of.
+            A sequence of nullable <see cref="T:System.double"/> values to calculate the sum of.
             </param>
             <param name="cancellationToken">
             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
@@ -18292,7 +18292,7 @@
             The number of elements in
             <paramref name="source"/>
             is larger than
-            <see cref="F:System.Decimal.MaxValue"/>
+            <see cref="F:System.double.MaxValue"/>
             .
             </exception>
         </member>
@@ -18936,9 +18936,9 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.double}})">
             <summary>
-            Asynchronously computes the sum of the sequence of <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the sum of the sequence of <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -18974,13 +18974,13 @@
             The number of elements in
             <paramref name="source"/>
             is larger than
-            <see cref="F:System.Decimal.MaxValue"/>
+            <see cref="F:System.double.MaxValue"/>
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.double}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the sum of the sequence of <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the sum of the sequence of <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -19019,13 +19019,13 @@
             The number of elements in
             <paramref name="source"/>
             is larger than
-            <see cref="F:System.Decimal.MaxValue"/>
+            <see cref="F:System.double.MaxValue"/>
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.double}}})">
             <summary>
-            Asynchronously computes the sum of the sequence of nullable <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the sum of the sequence of nullable <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -19061,13 +19061,13 @@
             The number of elements in
             <paramref name="source"/>
             is larger than
-            <see cref="F:System.Decimal.MaxValue"/>
+            <see cref="F:System.double.MaxValue"/>
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.SumAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.double}}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the sum of the sequence of nullable <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the sum of the sequence of nullable <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -19106,7 +19106,7 @@
             The number of elements in
             <paramref name="source"/>
             is larger than
-            <see cref="F:System.Decimal.MaxValue"/>
+            <see cref="F:System.double.MaxValue"/>
             .
             </exception>
         </member>
@@ -19614,16 +19614,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Decimal})">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.double})">
             <summary>
-            Asynchronously computes the average of a sequence of <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the average of a sequence of <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of <see cref="T:System.Decimal"/> values to calculate the average of.
+            A sequence of <see cref="T:System.double"/> values to calculate the average of.
             </param>
             <returns>
             A task that represents the asynchronous operation.
@@ -19646,16 +19646,16 @@
             contains no elements.
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Decimal},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.double},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the average of a sequence of <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the average of a sequence of <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of <see cref="T:System.Decimal"/> values to calculate the average of.
+            A sequence of <see cref="T:System.double"/> values to calculate the average of.
             </param>
             <param name="cancellationToken">
             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
@@ -19681,16 +19681,16 @@
             contains no elements.
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Nullable{System.double}})">
             <summary>
-            Asynchronously computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the average of a sequence of nullable <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of nullable <see cref="T:System.Decimal"/> values to calculate the average of.
+            A sequence of nullable <see cref="T:System.double"/> values to calculate the average of.
             </param>
             <returns>
             A task that represents the asynchronous operation.
@@ -19709,16 +19709,16 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Nullable{System.Decimal}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync(System.Linq.IQueryable{System.Nullable{System.double}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values.
+            Asynchronously computes the average of a sequence of nullable <see cref="T:System.double"/> values.
             </summary>
             <remarks>
             Multiple active operations on the same context instance are not supported.  Use 'await' to ensure
             that any asynchronous operations have completed before calling another method on this context.
             </remarks>
             <param name="source">
-            A sequence of nullable <see cref="T:System.Decimal"/> values to calculate the average of.
+            A sequence of nullable <see cref="T:System.double"/> values to calculate the average of.
             </param>
             <param name="cancellationToken">
             A <see cref="T:System.Threading.CancellationToken"/> to observe while waiting for the task to complete.
@@ -20324,9 +20324,9 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.double}})">
             <summary>
-            Asynchronously computes the average of a sequence of <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the average of a sequence of <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -20361,9 +20361,9 @@
             contains no elements.
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.double}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the average of a sequence of <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the average of a sequence of <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -20401,9 +20401,9 @@
             contains no elements.
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.double}}})">
             <summary>
-            Asynchronously computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the average of a sequence of nullable <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -20434,9 +20434,9 @@
             .
             </exception>
         </member>
-        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}},System.Threading.CancellationToken)">
+        <member name="M:System.Data.Entity.QueryableExtensions.AverageAsync``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.double}}},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously computes the average of a sequence of nullable <see cref="T:System.Decimal"/> values that is obtained
+            Asynchronously computes the average of a sequence of nullable <see cref="T:System.double"/> values that is obtained
             by invoking a projection function on each element of the input sequence.
             </summary>
             <remarks>
@@ -20658,7 +20658,7 @@
             The functions are retained here only to help in the migration of older EF apps to EF6.
             </remarks>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDev EDM function to calculate
             the standard deviation of the collection.
@@ -20670,7 +20670,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDev EDM function to calculate
             the standard deviation of the collection.
@@ -20754,7 +20754,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDevP EDM function to calculate
             the standard deviation for the population.
@@ -20766,7 +20766,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDevP EDM function to calculate
             the standard deviation for the population.
@@ -20850,7 +20850,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Var(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Var(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Var EDM function to calculate
             the variance of the collection.
@@ -20862,7 +20862,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Var(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Var(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Var EDM function to calculate
             the variance of the collection.
@@ -20946,7 +20946,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.VarP(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.VarP(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical VarP EDM function to calculate
             the variance for the population.
@@ -20958,7 +20958,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.VarP(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.VarP(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical VarP EDM function to calculate
             the variance for the population.
@@ -21803,7 +21803,7 @@
             <param name="digits"> The number of digits to preserve. </param>
             <returns> The truncated value. </returns>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Truncate(System.Nullable{System.Decimal},System.Nullable{System.Int32})">
+        <member name="M:System.Data.Entity.Core.Objects.EntityFunctions.Truncate(System.Nullable{System.double},System.Nullable{System.Int32})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Truncate EDM function to
             truncate the given value to the number of specified digits.
@@ -26054,7 +26054,7 @@
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.Configuration.ConventionPrimitivePropertyConfiguration.HasPrecision(System.Byte,System.Byte)">
             <summary>
-            Configures the precision and scale of the <see cref="T:System.Decimal"/> property.
+            Configures the precision and scale of the <see cref="T:System.double"/> property.
             </summary>
             <param name="precision"> The precision of the property. </param>
             <param name="scale"> The scale of the property. </param>
@@ -26063,7 +26063,7 @@
             </returns>
             <remarks>
             Calling this will have no effect once it has been configured.
-            This method will throw if the property is not a <see cref="T:System.Decimal"/>.
+            This method will throw if the property is not a <see cref="T:System.double"/>.
             </remarks>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.Configuration.ConventionPrimitivePropertyConfiguration.IsRowVersion">
@@ -27021,7 +27021,7 @@
             <returns>The value of the Database property of the underlying data provider.</returns>
             <exception cref="T:System.InvalidOperationException">The underlying data provider is not known. </exception>
         </member>
-        <member name="P:System.Data.Entity.Core.EntityClient.EntityConnection.State">
+        <member name="P:System.Data.Entity.Core.EntityClient.EntityConnection.OrderStatus">
             <summary>
             Gets the state of the EntityConnection, which is set up to track the state of the underlying
             database connection that is wrapped by this EntityConnection.
@@ -27243,7 +27243,7 @@
         </member>
         <member name="M:System.Data.Entity.Core.EntityClient.EntityDataReader.GetDecimal(System.Int32)">
             <summary>
-            Gets the value of the specified column as a <see cref="T:System.Decimal" /> object.
+            Gets the value of the specified column as a <see cref="T:System.double" /> object.
             </summary>
             <returns>The value of the specified column.</returns>
             <param name="ordinal">The zero-based column ordinal.</param>
@@ -27525,7 +27525,7 @@
             </param>
             <param name="isNullable">true to indicate that the parameter accepts null values; otherwise, false.</param>
             <param name="precision">The number of digits used to represent the value.</param>
-            <param name="scale">The number of decimal places to which value is resolved.</param>
+            <param name="scale">The number of double places to which value is resolved.</param>
             <param name="sourceColumn">The name of the source column.</param>
             <param name="sourceVersion">
             One of the <see cref="T:System.Data.DataRowVersion" /> values.
@@ -27568,12 +27568,12 @@
         </member>
         <member name="P:System.Data.Entity.Core.EntityClient.EntityParameter.Scale">
             <summary>
-            Gets or sets the number of decimal places to which
+            Gets or sets the number of double places to which
             <see
                 cref="P:System.Data.Entity.Core.EntityClient.EntityParameter.Value" />
             is resolved.
             </summary>
-            <returns>The number of decimal places to which value is resolved.</returns>
+            <returns>The number of double places to which value is resolved.</returns>
         </member>
         <member name="P:System.Data.Entity.Core.EntityClient.EntityParameter.Value">
             <summary>Gets or sets the value of the parameter.</summary>
@@ -31765,9 +31765,9 @@
             DateTime Type Kind
             </summary>
         </member>
-        <member name="F:System.Data.Entity.Core.Metadata.Edm.PrimitiveTypeKind.Decimal">
+        <member name="F:System.Data.Entity.Core.Metadata.Edm.PrimitiveTypeKind.double">
             <summary>
-            Decimal Type Kind
+            double Type Kind
             </summary>
         </member>
         <member name="F:System.Data.Entity.Core.Metadata.Edm.PrimitiveTypeKind.Double">
@@ -32199,7 +32199,7 @@
             The simple type that defines the units of measurement of the <see cref="T:System." />DateTime object.
             </param>
             <param name="precision">
-            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of double places supported. For example a precision of 3 means the granularity supported is milliseconds.
             </param>
         </member>
         <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDateTimeOffsetTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Nullable{System.Byte})">
@@ -32211,7 +32211,7 @@
             </returns>
             <param name="primitiveType">The simple type that defines the units of measurement of the offset.</param>
             <param name="precision">
-            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of double places supported. For example a precision of 3 means the granularity supported is milliseconds.
             </param>
         </member>
         <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateTimeTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Nullable{System.Byte})">
@@ -32225,15 +32225,15 @@
             The simple type that defines the units of measurement of the <see cref="T:System." />DateTime object.
             </param>
             <param name="precision">
-            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of decimal places supported. For example a precision of 3 means the granularity supported is milliseconds.
+            The degree of granularity of the <see cref="T:System." />DateTimeOffset in fractions of a second, based on the number of double places supported. For example a precision of 3 means the granularity supported is milliseconds.
             </param>
         </member>
         <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDecimalTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType,System.Byte,System.Byte)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a decimal type by using the specified facet values.
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a double type by using the specified facet values.
             </summary>
             <returns>
-            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a decimal type by using the specified facet values.
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a double type by using the specified facet values.
             </returns>
             <param name="primitiveType">
             A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
@@ -32242,18 +32242,18 @@
             object is created.
             </param>
             <param name="precision">
-            The precision of the decimal type as type <see cref="T:System.Byte" />.
+            The precision of the double type as type <see cref="T:System.Byte" />.
             </param>
             <param name="scale">
-            The scale of the decimal type as type <see cref="T:System.Byte" />.
+            The scale of the double type as type <see cref="T:System.Byte" />.
             </param>
         </member>
         <member name="M:System.Data.Entity.Core.Metadata.Edm.TypeUsage.CreateDecimalTypeUsage(System.Data.Entity.Core.Metadata.Edm.PrimitiveType)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a decimal type with unbounded precision and scale facet values.
+            Creates a <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object to describe a double type with unbounded precision and scale facet values.
             </summary>
             <returns>
-            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a decimal type with unbounded precision and scale facet values.
+            A <see cref="T:System.Data.Entity.Core.Metadata.Edm.TypeUsage" /> object describing a double type with unbounded precision and scale facet values.
             </returns>
             <param name="primitiveType">
             A <see cref="T:System.Data.Entity.Core.Metadata.Edm.PrimitiveType" /> for which the
@@ -33448,8 +33448,8 @@
             <param name="i">The ordinal of the field.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDecimal(System.Int32)">
-            <summary>Retrieves the field value as a decimal.</summary>
-            <returns>The field value as a decimal.</returns>
+            <summary>Retrieves the field value as a double.</summary>
+            <returns>The field value as a double.</returns>
             <param name="i">The ordinal of the field.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.GetDouble(System.Int32)">
@@ -33567,7 +33567,7 @@
             <param name="ordinal">The ordinal of the field.</param>
             <param name="value">The value of the field.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDecimal(System.Int32,System.Decimal)">
+        <member name="M:System.Data.Entity.Core.Objects.DbUpdatableDataRecord.SetDecimal(System.Int32,System.double)">
             <summary>Sets the value of a field in a record.</summary>
             <param name="ordinal">The ordinal of the field.</param>
             <param name="value">The value of the field.</param>
@@ -34034,50 +34034,50 @@
             The nullable <see cref="T:System.DateTimeOffset" /> value.
             </param>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Decimal,System.String)">
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.double,System.String)">
             <summary>
-            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            Makes sure the <see cref="T:System.double" /> value being set for a property is valid.
             </summary>
             <returns>
-            The <see cref="T:System.Decimal" /> value being set.
+            The <see cref="T:System.double" /> value being set.
             </returns>
             <param name="value">
-            The <see cref="T:System.Decimal" /> value.
+            The <see cref="T:System.double" /> value.
             </param>
             <param name="propertyName">The name of the property that is being validated.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Decimal)">
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.double)">
             <summary>
-            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            Makes sure the <see cref="T:System.double" /> value being set for a property is valid.
             </summary>
             <returns>
-            The <see cref="T:System.Decimal" /> value being set.
+            The <see cref="T:System.double" /> value being set.
             </returns>
             <param name="value">
-            The <see cref="T:System.Decimal" /> value.
+            The <see cref="T:System.double" /> value.
             </param>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Decimal},System.String)">
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.double},System.String)">
             <summary>
-            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            Makes sure the <see cref="T:System.double" /> value being set for a property is valid.
             </summary>
             <returns>
-            The nullable <see cref="T:System.Decimal" /> value being set.
+            The nullable <see cref="T:System.double" /> value being set.
             </returns>
             <param name="value">
-            The nullable <see cref="T:System.Decimal" /> value.
+            The nullable <see cref="T:System.double" /> value.
             </param>
             <param name="propertyName">The name of the property that is being validated.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.Decimal})">
+        <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Nullable{System.double})">
             <summary>
-            Makes sure the <see cref="T:System.Decimal" /> value being set for a property is valid.
+            Makes sure the <see cref="T:System.double" /> value being set for a property is valid.
             </summary>
             <returns>
-            The nullable <see cref="T:System.Decimal" /> value being set.
+            The nullable <see cref="T:System.double" /> value being set.
             </returns>
             <param name="value">
-            The nullable <see cref="T:System.Decimal" /> value.
+            The nullable <see cref="T:System.double" /> value.
             </param>
         </member>
         <member name="M:System.Data.Entity.Core.Objects.DataClasses.StructuralObject.SetValidValue(System.Double,System.String)">
@@ -35751,7 +35751,7 @@
             <param name="state">
             The <see cref="T:System.Data.Entity.EntityState" /> value to set for the
             <see
-                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.State" />
+                cref="P:System.Data.Entity.Core.Objects.ObjectStateEntry.OrderStatus" />
             property of the entry.
             </param>
         </member>
@@ -35818,7 +35818,7 @@
             The <see cref="T:System.Data.Entity.Core.Metadata.Edm.EntitySetBase" /> for the object or relationship.
             </returns>
         </member>
-        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.State">
+        <member name="P:System.Data.Entity.Core.Objects.ObjectStateEntry.OrderStatus">
             <summary>
             Gets the state of the <see cref="T:System.Data.Entity.Core.Objects.ObjectStateEntry" />.
             </summary>
@@ -38505,7 +38505,7 @@
             Note that this class was called EntityFunctions in some previous versions of Entity Framework.
             </remarks>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.DbFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDev EDM function to calculate
             the standard deviation of the collection.
@@ -38517,7 +38517,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.DbFunctions.StandardDeviation(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDev EDM function to calculate
             the standard deviation of the collection.
@@ -38601,7 +38601,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.DbFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDevP EDM function to calculate
             the standard deviation for the population.
@@ -38613,7 +38613,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.DbFunctions.StandardDeviationP(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical StDevP EDM function to calculate
             the standard deviation for the population.
@@ -38697,7 +38697,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The standard deviation for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.Var(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.DbFunctions.Var(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Var EDM function to calculate
             the variance of the collection.
@@ -38709,7 +38709,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.Var(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.DbFunctions.Var(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Var EDM function to calculate
             the variance of the collection.
@@ -38793,7 +38793,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.VarP(System.Collections.Generic.IEnumerable{System.Decimal})">
+        <member name="M:System.Data.Entity.DbFunctions.VarP(System.Collections.Generic.IEnumerable{System.double})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical VarP EDM function to calculate
             the variance for the population.
@@ -38805,7 +38805,7 @@
             <param name="collection"> The collection over which to perform the calculation. </param>
             <returns> The variance for the population. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.VarP(System.Collections.Generic.IEnumerable{System.Nullable{System.Decimal}})">
+        <member name="M:System.Data.Entity.DbFunctions.VarP(System.Collections.Generic.IEnumerable{System.Nullable{System.double}})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical VarP EDM function to calculate
             the variance for the population.
@@ -39650,7 +39650,7 @@
             <param name="digits"> The number of digits to preserve. </param>
             <returns> The truncated value. </returns>
         </member>
-        <member name="M:System.Data.Entity.DbFunctions.Truncate(System.Nullable{System.Decimal},System.Nullable{System.Int32})">
+        <member name="M:System.Data.Entity.DbFunctions.Truncate(System.Nullable{System.double},System.Nullable{System.Int32})">
             <summary>
             When used as part of a LINQ to Entities query, this method invokes the canonical Truncate EDM function to
             truncate the given value to the number of specified digits.
@@ -39980,9 +39980,9 @@
              <param name="annotations"> Custom annotations usually from the Code First model. </param>
              <returns> The newly constructed column definition. </returns>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.Decimal(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.Byte},System.Nullable{System.Decimal},System.String,System.String,System.String,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
+        <member name="M:System.Data.Entity.Migrations.Builders.ColumnBuilder.double(System.Nullable{System.Boolean},System.Nullable{System.Byte},System.Nullable{System.Byte},System.Nullable{System.double},System.String,System.String,System.String,System.Boolean,System.Collections.Generic.IDictionary{System.String,System.Data.Entity.Infrastructure.Annotations.AnnotationValues})">
              <summary>
-             Creates a new column definition to store Decimal data.
+             Creates a new column definition to store double data.
             
              Entity Framework Migrations APIs are not designed to accept input provided by untrusted sources 
              (such as the end user of an application). If input is accepted from such sources it should be validated 
@@ -40232,7 +40232,7 @@
              (such as the end user of an application). If input is accepted from such sources it should be validated 
              before being passed to these APIs to protect against SQL injection attacks etc.
              </summary>
-             <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+             <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.CategoryID VB.Net: Function(t) t.CategoryID If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
              <param name="name"> The name of the primary key. If null is supplied, a default name will be generated. </param>
              <param name="clustered"> A value indicating whether or not this is a clustered primary key. </param>
              <param name="anonymousArguments"> Additional arguments that may be processed by providers. Use anonymous type syntax to specify arguments e.g. 'new { SampleArgument = "MyValue" }'. </param>
@@ -41707,9 +41707,9 @@
             <param name="defaultValue"> The value to be used as the default. </param>
             <returns> Code representing the default value. </returns>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Decimal)">
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.double)">
             <summary>
-            Generates code to specify the default value for a <see cref="T:System.Decimal"/> column.
+            Generates code to specify the default value for a <see cref="T:System.double"/> column.
             </summary>
             <param name="defaultValue"> The value to be used as the default. </param>
             <returns> Code representing the default value. </returns>
@@ -41798,11 +41798,11 @@
             <param name="renameTableOperation"> The operation to generate code for. </param>
             <param name="writer"> Text writer to add the generated code to. </param>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+        <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.ReProductNamecedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
             <summary>
-            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameProcedureOperation"/>.
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation"/>.
             </summary>
-            <param name="renameProcedureOperation">The operation to generate code for.</param>
+            <param name="reProductNamecedureOperation">The operation to generate code for.</param>
             <param name="writer">Text writer to add the generated code to.</param>
         </member>
         <member name="M:System.Data.Entity.Migrations.Design.CSharpMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
@@ -42353,9 +42353,9 @@
             <param name="defaultValue"> The value to be used as the default. </param>
             <returns> Code representing the default value. </returns>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Decimal)">
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.double)">
             <summary>
-            Generates code to specify the default value for a <see cref="T:System.Decimal"/> column.
+            Generates code to specify the default value for a <see cref="T:System.double"/> column.
             </summary>
             <param name="defaultValue"> The value to be used as the default. </param>
             <returns> Code representing the default value. </returns>
@@ -42444,11 +42444,11 @@
             <param name="renameTableOperation"> The operation to generate code for. </param>
             <param name="writer"> Text writer to add the generated code to. </param>
         </member>
-        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameProcedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
+        <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.ReProductNamecedureOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
             <summary>
-            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.RenameProcedureOperation"/>.
+            Generates code to perform a <see cref="T:System.Data.Entity.Migrations.Model.ReProductNamecedureOperation"/>.
             </summary>
-            <param name="renameProcedureOperation">The operation to generate code for.</param>
+            <param name="reProductNamecedureOperation">The operation to generate code for.</param>
             <param name="writer">Text writer to add the generated code to.</param>
         </member>
         <member name="M:System.Data.Entity.Migrations.Design.VisualBasicMigrationCodeGenerator.Generate(System.Data.Entity.Migrations.Model.RenameColumnOperation,System.Data.Entity.Migrations.Utilities.IndentedTextWriter)">
@@ -42762,7 +42762,7 @@
             Provides additional metadata about a code-based migration.
             </summary>
         </member>
-        <member name="P:System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.Id">
+        <member name="P:System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.CategoryID">
             <summary>
             Gets the unique identifier for the migration.
             </summary>
@@ -49788,7 +49788,7 @@
             </summary>
             <value> The entity. </value>
         </member>
-        <member name="P:System.Data.Entity.Infrastructure.DbEntityEntry.State">
+        <member name="P:System.Data.Entity.Infrastructure.DbEntityEntry.OrderStatus">
             <summary>
             Gets or sets the state of the entity.
             </summary>
@@ -50082,7 +50082,7 @@
             </summary>
             <value> The entity. </value>
         </member>
-        <member name="P:System.Data.Entity.Infrastructure.DbEntityEntry`1.State">
+        <member name="P:System.Data.Entity.Infrastructure.DbEntityEntry`1.OrderStatus">
             <summary>
             Gets or sets the state of the entity.
             </summary>
@@ -50526,7 +50526,7 @@
             <param name="context"> The context. </param>
             <returns> The hash string. </returns>
         </member>
-        <member name="P:System.Data.Entity.Infrastructure.EdmMetadata.Id">
+        <member name="P:System.Data.Entity.Infrastructure.EdmMetadata.CategoryID">
             <summary>
             Gets or sets the ID of the metadata entity, which is currently always 1.
             </summary>
@@ -50841,16 +50841,16 @@
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
         </member>
-        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.StructuralTypeConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Decimal}})">
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.StructuralTypeConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.double}})">
             <summary>
-            Configures a <see cref="T:System.decimal" /> property that is defined on this type.
+            Configures a <see cref="T:System.double" /> property that is defined on this type.
             </summary>
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
         </member>
-        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.StructuralTypeConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Nullable{System.Decimal}}})">
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.StructuralTypeConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Nullable{System.double}}})">
             <summary>
-            Configures a <see cref="T:System.decimal?" /> property that is defined on this type.
+            Configures a <see cref="T:System.double?" /> property that is defined on this type.
             </summary>
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
@@ -51087,7 +51087,7 @@
             included in a mapping fragment will be configured.
             </summary>
             <typeparam name="TObject"> An anonymous type including the properties to be mapped. </typeparam>
-            <param name="propertiesExpression"> A lambda expression to an anonymous type that contains the properties to be mapped. C#: t => new { t.Id, t.Property1, t.Property2 } VB.Net: Function(t) New With { p.Id, t.Property1, t.Property2 } </param>
+            <param name="propertiesExpression"> A lambda expression to an anonymous type that contains the properties to be mapped. C#: t => new { t.CategoryID, t.Property1, t.Property2 } VB.Net: Function(t) New With { p.CategoryID, t.Property1, t.Property2 } </param>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1.Property``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
             <summary>
@@ -51133,16 +51133,16 @@
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
         </member>
-        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Decimal}})">
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.double}})">
             <summary>
-            Configures a <see cref="T:System.decimal" /> property that is included in this mapping fragment.
+            Configures a <see cref="T:System.double" /> property that is included in this mapping fragment.
             </summary>
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
         </member>
-        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Nullable{System.Decimal}}})">
+        <member name="M:System.Data.Entity.ModelConfiguration.Configuration.EntityMappingConfiguration`1.Property(System.Linq.Expressions.Expression{System.Func{`0,System.Nullable{System.double}}})">
             <summary>
-            Configures a <see cref="T:System.decimal?" /> property that is included in this mapping fragment.
+            Configures a <see cref="T:System.double?" /> property that is included in this mapping fragment.
             </summary>
             <param name="propertyExpression"> A lambda expression representing the property to be configured. C#: t => t.MyProperty VB.Net: Function(t) t.MyProperty </param>
             <returns> A configuration object that can be used to configure the property. </returns>
@@ -52343,7 +52343,7 @@
         </member>
         <member name="T:System.Data.Entity.ModelConfiguration.Configuration.DecimalPropertyConfiguration">
             <summary>
-            Used to configure a <see cref="T:System.decimal"/> property of an entity type or complex type.
+            Used to configure a <see cref="T:System.double"/> property of an entity type or complex type.
             This configuration functionality is available via the Code First Fluent API, see <see cref="T:System.Data.Entity.DbModelBuilder"/>.
             </summary>
         </member>
@@ -52358,7 +52358,7 @@
             <summary>
             Configures the property to be required.
             The database column used to store this property will be non-nullable.
-            <see cref="T:System.decimal" /> properties are required by default.
+            <see cref="T:System.double" /> properties are required by default.
             </summary>
             <returns> The same DecimalPropertyConfiguration instance so that multiple calls can be chained. </returns>
         </member>
@@ -52706,7 +52706,7 @@
         </member>
         <member name="T:System.Data.Entity.ModelConfiguration.Conventions.DecimalPropertyConvention">
             <summary>
-            Convention to set precision to 18 and scale to 2 for decimal properties.
+            Convention to set precision to 18 and scale to 2 for double properties.
             </summary>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.Conventions.DecimalPropertyConvention.#ctor">
@@ -52927,7 +52927,7 @@
             Configures the primary key property(s) for this entity type.
             </summary>
             <typeparam name="TKey"> The type of the key. </typeparam>
-            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.CategoryID VB.Net: Function(t) t.CategoryID If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
             <returns> The same EntityTypeConfiguration instance so that multiple calls can be chained. </returns>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasKey``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Action{System.Data.Entity.ModelConfiguration.Configuration.PrimaryKeyIndexConfiguration})">
@@ -52935,7 +52935,7 @@
             Configures the primary key property(s) for this entity type.
             </summary>
             <typeparam name="TKey"> The type of the key. </typeparam>
-            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.Id VB.Net: Function(t) t.Id If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <param name="keyExpression"> A lambda expression representing the property to be used as the primary key. C#: t => t.CategoryID VB.Net: Function(t) t.CategoryID If the primary key is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
             <param name="buildAction"> A builder to configure the key. </param>       
             <returns> The same EntityTypeConfiguration instance so that multiple calls can be chained. </returns>
         </member>
@@ -52944,7 +52944,7 @@
             Configures index property(s) for this entity type.
             </summary>
             <typeparam name="TIndex"> The type of the index. </typeparam>
-            <param name="indexExpression"> A lambda expression representing the property to apply an index to. C#: t => t.Id VB.Net: Function(t) t.Id If the index is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
+            <param name="indexExpression"> A lambda expression representing the property to apply an index to. C#: t => t.CategoryID VB.Net: Function(t) t.CategoryID If the index is made up of multiple properties then specify an anonymous type including the properties. C#: t => new { t.Id1, t.Id2 } VB.Net: Function(t) New With { t.Id1, t.Id2 } </param>
             <returns> The IndexConfiguration instance so that the index can be further configured. </returns>
         </member>
         <member name="M:System.Data.Entity.ModelConfiguration.EntityTypeConfiguration`1.HasEntitySetName(System.String)">

@@ -86,7 +86,7 @@
         </member>
         <member name="M:Newtonsoft.Json.Bson.BsonReader.Close">
             <summary>
-            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.State.Closed"/>.
+            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.OrderStatus.Closed"/>.
             If <see cref="P:Newtonsoft.Json.JsonReader.CloseInput"/> is set to <c>true</c>, the underlying <see cref="T:System.IO.Stream"/> is also closed.
             </summary>
         </member>
@@ -267,11 +267,11 @@
             </summary>
             <param name="value">The <see cref="T:System.SByte"/> value to write.</param>
         </member>
-        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.Decimal)">
+        <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.double)">
             <summary>
-            Writes a <see cref="T:System.Decimal"/> value.
+            Writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
         </member>
         <member name="M:Newtonsoft.Json.Bson.BsonWriter.WriteValue(System.DateTime)">
             <summary>
@@ -1164,9 +1164,9 @@
             Floating point numbers are parsed to <see cref="F:Newtonsoft.Json.FloatParseHandling.Double"/>.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.FloatParseHandling.Decimal">
+        <member name="F:Newtonsoft.Json.FloatParseHandling.double">
             <summary>
-            Floating point numbers are parsed to <see cref="F:Newtonsoft.Json.FloatParseHandling.Decimal"/>.
+            Floating point numbers are parsed to <see cref="F:Newtonsoft.Json.FloatParseHandling.double"/>.
             </summary>
         </member>
         <member name="T:Newtonsoft.Json.Formatting">
@@ -1266,7 +1266,7 @@
             Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the object.
             </summary>
         </member>
-        <member name="P:Newtonsoft.Json.JsonContainerAttribute.Id">
+        <member name="P:Newtonsoft.Json.JsonContainerAttribute.CategoryID">
             <summary>
             Gets or sets the id.
             </summary>
@@ -1535,12 +1535,12 @@
             <param name="value">The value to convert.</param>
             <returns>A JSON string representation of the <see cref="T:System.SByte"/>.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Decimal)">
+        <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.double)">
             <summary>
-            Converts the <see cref="T:System.Decimal"/> to its JSON string representation.
+            Converts the <see cref="T:System.double"/> to its JSON string representation.
             </summary>
             <param name="value">The value to convert.</param>
-            <returns>A JSON string representation of the <see cref="T:System.Decimal"/>.</returns>
+            <returns>A JSON string representation of the <see cref="T:System.double"/>.</returns>
         </member>
         <member name="M:Newtonsoft.Json.JsonConvert.ToString(System.Guid)">
             <summary>
@@ -2419,11 +2419,11 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonReader.ReadAsDecimalAsync(System.Threading.CancellationToken)">
             <summary>
-            Asynchronously reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Asynchronously reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the asynchronous read. The <see cref="P:System.Threading.Tasks.Task`1.Result"/>
-            property returns the <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>. This result will be <c>null</c> at the end of an array.</returns>
+            property returns the <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>The default behaviour is to execute synchronously, returning an already-completed task. Derived
             classes can override this behaviour for true asynchronicity.</remarks>
         </member>
@@ -2457,72 +2457,72 @@
             <remarks>The default behaviour is to execute synchronously, returning an already-completed task. Derived
             classes can override this behaviour for true asynchronicity.</remarks>
         </member>
-        <member name="T:Newtonsoft.Json.JsonReader.State">
+        <member name="T:Newtonsoft.Json.JsonReader.OrderStatus">
             <summary>
             Specifies the state of the reader.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Start">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Start">
             <summary>
             A <see cref="T:Newtonsoft.Json.JsonReader"/> read method has not been called.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Complete">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Complete">
             <summary>
             The end of the file has been reached successfully.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Property">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Property">
             <summary>
             Reader is at a property.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.ObjectStart">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.ObjectStart">
             <summary>
             Reader is at the start of an object.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Object">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Object">
             <summary>
             Reader is in an object.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.ArrayStart">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.ArrayStart">
             <summary>
             Reader is at the start of an array.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Array">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Array">
             <summary>
             Reader is in an array.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Closed">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Closed">
             <summary>
             The <see cref="M:Newtonsoft.Json.JsonReader.Close"/> method has been called.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.PostValue">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.PostValue">
             <summary>
             Reader has just read a value.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.ConstructorStart">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.ConstructorStart">
             <summary>
             Reader is at the start of a constructor.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Constructor">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Constructor">
             <summary>
             Reader is in a constructor.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Error">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Error">
             <summary>
             An error occurred that prevents the read operation from continuing.
             </summary>
         </member>
-        <member name="F:Newtonsoft.Json.JsonReader.State.Finished">
+        <member name="F:Newtonsoft.Json.JsonReader.OrderStatus.Finished">
             <summary>
             The end of the file has been reached successfully.
             </summary>
@@ -2657,9 +2657,9 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonReader.ReadAsDecimal">
             <summary>
-            Reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
-            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>. This method will return <c>null</c> at the end of an array.</returns>
+            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>. This method will return <c>null</c> at the end of an array.</returns>
         </member>
         <member name="M:Newtonsoft.Json.JsonReader.ReadAsDateTime">
             <summary>
@@ -2712,7 +2712,7 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonReader.Close">
             <summary>
-            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.State.Closed"/>.
+            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.OrderStatus.Closed"/>.
             If <see cref="P:Newtonsoft.Json.JsonReader.CloseInput"/> is set to <c>true</c>, the source is also closed.
             </summary>
         </member>
@@ -3486,11 +3486,11 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonTextReader.ReadAsDecimalAsync(System.Threading.CancellationToken)">
             <summary>
-            Asynchronously reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Asynchronously reads the next JSON token from the source as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> that represents the asynchronous read. The <see cref="P:System.Threading.Tasks.Task`1.Result"/>
-            property returns the <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>. This result will be <c>null</c> at the end of an array.</returns>
+            property returns the <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>. This result will be <c>null</c> at the end of an array.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task.</remarks>
         </member>
@@ -3586,9 +3586,9 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonTextReader.ReadAsDecimal">
             <summary>
-            Reads the next JSON token from the underlying <see cref="T:System.IO.TextReader"/> as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Reads the next JSON token from the underlying <see cref="T:System.IO.TextReader"/> as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
-            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>. This method will return <c>null</c> at the end of an array.</returns>
+            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>. This method will return <c>null</c> at the end of an array.</returns>
         </member>
         <member name="M:Newtonsoft.Json.JsonTextReader.ReadAsDouble">
             <summary>
@@ -3598,7 +3598,7 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonTextReader.Close">
             <summary>
-            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.State.Closed"/>.
+            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.OrderStatus.Closed"/>.
             If <see cref="P:Newtonsoft.Json.JsonReader.CloseInput"/> is set to <c>true</c>, the underlying <see cref="T:System.IO.TextReader"/> is also closed.
             </summary>
         </member>
@@ -3893,21 +3893,21 @@
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task.</remarks>
         </member>
-        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValueAsync(System.Decimal,System.Threading.CancellationToken)">
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValueAsync(System.double,System.Threading.CancellationToken)">
             <summary>
-            Asynchronously writes a <see cref="T:System.Decimal"/> value.
+            Asynchronously writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
             execute synchronously, returning an already-completed task.</remarks>
         </member>
-        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValueAsync(System.Nullable{System.Decimal},System.Threading.CancellationToken)">
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValueAsync(System.Nullable{System.double},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value.
+            Asynchronously writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value to write.</param>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation.</returns>
             <remarks>Derived classes must override this method to get asynchronous behaviour. Otherwise it will
@@ -4416,11 +4416,11 @@
             </summary>
             <param name="value">The <see cref="T:System.SByte"/> value to write.</param>
         </member>
-        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValue(System.Decimal)">
+        <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValue(System.double)">
             <summary>
-            Writes a <see cref="T:System.Decimal"/> value.
+            Writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
         </member>
         <member name="M:Newtonsoft.Json.JsonTextWriter.WriteValue(System.DateTime)">
             <summary>
@@ -4636,7 +4636,7 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonValidatingReader.Close">
             <summary>
-            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.State.Closed"/>.
+            Changes the reader's state to <see cref="F:Newtonsoft.Json.JsonReader.OrderStatus.Closed"/>.
             If <see cref="P:Newtonsoft.Json.JsonReader.CloseInput"/> is set to <c>true</c>, the underlying <see cref="T:Newtonsoft.Json.JsonReader"/> is also closed.
             </summary>
         </member>
@@ -4656,9 +4656,9 @@
         </member>
         <member name="M:Newtonsoft.Json.JsonValidatingReader.ReadAsDecimal">
             <summary>
-            Reads the next JSON token from the underlying <see cref="T:Newtonsoft.Json.JsonReader"/> as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Reads the next JSON token from the underlying <see cref="T:Newtonsoft.Json.JsonReader"/> as a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
-            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.</returns>
+            <returns>A <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.</returns>
         </member>
         <member name="M:Newtonsoft.Json.JsonValidatingReader.ReadAsDouble">
             <summary>
@@ -5039,21 +5039,21 @@
             <remarks>The default behaviour is to execute synchronously, returning an already-completed task. Derived
             classes can override this behaviour for true asynchronicity.</remarks>
         </member>
-        <member name="M:Newtonsoft.Json.JsonWriter.WriteValueAsync(System.Decimal,System.Threading.CancellationToken)">
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValueAsync(System.double,System.Threading.CancellationToken)">
             <summary>
-            Asynchronously writes a <see cref="T:System.Decimal"/> value.
+            Asynchronously writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation.</returns>
             <remarks>The default behaviour is to execute synchronously, returning an already-completed task. Derived
             classes can override this behaviour for true asynchronicity.</remarks>
         </member>
-        <member name="M:Newtonsoft.Json.JsonWriter.WriteValueAsync(System.Nullable{System.Decimal},System.Threading.CancellationToken)">
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValueAsync(System.Nullable{System.double},System.Threading.CancellationToken)">
             <summary>
-            Asynchronously writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value.
+            Asynchronously writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value to write.</param>
             <param name="cancellationToken">The token to monitor for cancellation requests. The default value is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> that represents the asynchronous operation.</returns>
             <remarks>The default behaviour is to execute synchronously, returning an already-completed task. Derived
@@ -5625,11 +5625,11 @@
             </summary>
             <param name="value">The <see cref="T:System.SByte"/> value to write.</param>
         </member>
-        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Decimal)">
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.double)">
             <summary>
-            Writes a <see cref="T:System.Decimal"/> value.
+            Writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
         </member>
         <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.DateTime)">
             <summary>
@@ -5727,11 +5727,11 @@
             </summary>
             <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.SByte"/> value to write.</param>
         </member>
-        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.Decimal})">
+        <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.double})">
             <summary>
-            Writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value.
+            Writes a <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> value to write.</param>
         </member>
         <member name="M:Newtonsoft.Json.JsonWriter.WriteValue(System.Nullable{System.DateTime})">
             <summary>
@@ -7463,9 +7463,9 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.Decimal}">
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Nullable{System.double}">
             <summary>
-            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/>.
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/>.
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
@@ -7582,9 +7582,9 @@
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.Decimal">
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Explicit(Newtonsoft.Json.Linq.JToken)~System.double">
             <summary>
-            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.Decimal"/>.
+            Performs an explicit conversion from <see cref="T:Newtonsoft.Json.Linq.JToken"/> to <see cref="T:System.double"/>.
             </summary>
             <param name="value">The value.</param>
             <returns>The result of the conversion.</returns>
@@ -7750,9 +7750,9 @@
             <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
             <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.Decimal})~Newtonsoft.Json.Linq.JToken">
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Nullable{System.double})~Newtonsoft.Json.Linq.JToken">
             <summary>
-            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> of <see cref="T:System.Decimal"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            Performs an implicit conversion from <see cref="T:System.Nullable`1"/> of <see cref="T:System.double"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
             </summary>
             <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
             <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
@@ -7813,9 +7813,9 @@
             <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
             <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.Decimal)~Newtonsoft.Json.Linq.JToken">
+        <member name="M:Newtonsoft.Json.Linq.JToken.op_Implicit(System.double)~Newtonsoft.Json.Linq.JToken">
             <summary>
-            Performs an implicit conversion from <see cref="T:System.Decimal"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
+            Performs an implicit conversion from <see cref="T:System.double"/> to <see cref="T:Newtonsoft.Json.Linq.JToken"/>.
             </summary>
             <param name="value">The value to create a <see cref="T:Newtonsoft.Json.Linq.JValue"/> from.</param>
             <returns>The <see cref="T:Newtonsoft.Json.Linq.JValue"/> initialized with the specified value.</returns>
@@ -8505,11 +8505,11 @@
             </summary>
             <param name="value">The <see cref="T:System.SByte"/> value to write.</param>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.Decimal)">
+        <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.double)">
             <summary>
-            Writes a <see cref="T:System.Decimal"/> value.
+            Writes a <see cref="T:System.double"/> value.
             </summary>
-            <param name="value">The <see cref="T:System.Decimal"/> value to write.</param>
+            <param name="value">The <see cref="T:System.double"/> value to write.</param>
         </member>
         <member name="M:Newtonsoft.Json.Linq.JTokenWriter.WriteValue(System.DateTime)">
             <summary>
@@ -8573,7 +8573,7 @@
             </summary>
             <param name="value">The value.</param>
         </member>
-        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.Decimal)">
+        <member name="M:Newtonsoft.Json.Linq.JValue.#ctor(System.double)">
             <summary>
             Initializes a new instance of the <see cref="T:Newtonsoft.Json.Linq.JValue"/> class with the given value.
             </summary>
@@ -9094,7 +9094,7 @@
             </note>
             </summary>
         </member>
-        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Id">
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.CategoryID">
             <summary>
             Gets or sets the id.
             </summary>

@@ -12,22 +12,21 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CTKM
+    public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CTKM()
+        public Employee()
         {
-            this.Chi_tiết_đơn_hàng = new HashSet<Chi_tiết_đơn_hàng>();
-            this.Sản_phẩm = new HashSet<Sản_phẩm>();
+            this.Orders = new HashSet<Order>();
         }
     
-        public string ID_CTKM { get; set; }
-        public string Quy_cách { get; set; }
-        public Nullable<int> Thời_lượng { get; set; }
+        public int EmployeeID { get; set; }
+        public string EmployeePassword { get; set; }
+        public string EmployeeFullName { get; set; }
+        public int BirthYear { get; set; }
+        public int PositionID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chi_tiết_đơn_hàng> Chi_tiết_đơn_hàng { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sản_phẩm> Sản_phẩm { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -1,25 +1,18 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
 using WebApplication1.Models.ThongKe;
-=======
-﻿using anhemtoicodeweb.Models;
-using anhemtoicodeweb.Models.ThongKe;
->>>>>>> main
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 
-<<<<<<< HEAD
 namespace WebApplication1.Controllers
-=======
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
+
 {
     public class ProfileController : Controller
     {
-        private readonly Model1 database = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
         public ActionResult Index()
         {
             int _userId = (int?)Session["UserId"] ?? -1;
@@ -27,14 +20,14 @@ namespace anhemtoicodeweb.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-            var _user = database.Customers.Find(_userId);
+            var _user = db.Customers.Find(_userId);
             return View(_user);
         }
 
         public PartialViewResult Products()
         {
             var products = new List<Product>();
-            return PartialView(database.Products.ToList());
+            return PartialView(db.Products.ToList());
         }
 
         public ActionResult EditProfile()
@@ -44,7 +37,7 @@ namespace anhemtoicodeweb.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
-            var user = database.Customers.Find(id);
+            var user = db.Customers.Find(id);
             return View(user);
         }
 
@@ -54,18 +47,18 @@ namespace anhemtoicodeweb.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (customer.PasswordCus != customer.ConfirmPasswordCus)
+                if (customer.CusPassword != customer.ConfirmPasswordCus)
                 {
                     TempData["Error"] = "Mật khẩu nhập lại không trùng";
                     return View();
                 }
 
-                if (customer.PasswordCus == "" || customer.PasswordCus == null)
+                if (customer.CusPassword == "" || customer.CusPassword == null)
                 {
-                    customer.PasswordCus = PrevPassword;
+                    customer.CusPassword = PrevPassword;
                 }
-                database.Entry(customer).State = EntityState.Modified;
-                database.SaveChanges();
+                db.Entry(customer).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return RedirectToAction("Index");
@@ -73,9 +66,9 @@ namespace anhemtoicodeweb.Controllers
 
         public ActionResult ThongKe(int? month, int? year, bool? iframe)
         {
-            var s = ThongKeNgay.UseDB(database);
-            var ss = ThongKeThang.UseDB(database, month, year);
-            var sss = ThongKeNam.UseDB(database, year);
+            var s = ThongKeNgay.UseDB(db);
+            var ss = ThongKeThang.UseDB(db, month, year);
+            var sss = ThongKeNam.UseDB(db, year);
 
             if (iframe.HasValue)
             {

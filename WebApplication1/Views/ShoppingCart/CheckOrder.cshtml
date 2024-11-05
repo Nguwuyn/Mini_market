@@ -1,4 +1,4 @@
-﻿@model anhemtoicodeweb.Models.OrderPro
+﻿@model WebApplication1.Models.Order
 
 @{
     ViewBag.Title = "ShowCart";
@@ -7,16 +7,16 @@
     string TotalDiscount = "";
     string TotalTax = "";
 
-    decimal totalDiscount = 0;
-    decimal totalTax = 0;
-    decimal firstTotal = 0;
-    decimal total = 0;
+    double totalDiscount = 0;
+    double totalTax = 0;
+    double firstTotal = 0;
+    double total = 0;
     if (Model != null && Model.OrderDetails.Count() > 0)
     {
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.OrderDetails)
         {
-            var prodTotal = (item.Quantity * item.Product.Price);
+            var prodTotal = (item.StockQuantity * item.Product.Price);
             firstTotal += prodTotal;
             totalDiscount += prodTotal * item.Product.Discount;
             totalTax += prodTotal * item.Product.Tax;
@@ -55,7 +55,7 @@
             width: 15%;
         }
 
-        .quantity-input {
+        .StockQuantity-input {
             width: 85%;
             border-radius: 6px;
             border: #5b5b5b solid 1px;
@@ -108,20 +108,20 @@
     </style>
 }
 
-<h2 style="margin-bottom: 24px">Đơn hàng số @Model.ID | @Model.State</h2>
+<h2 style="margin-bottom: 24px">Đơn hàng số @Model.CategoryID | @Model.OrderStatus</h2>
 @if (Session["IsAdmin"] is true)
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.ID })">Cập nhật đơn hàng</a>
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.ID })">Xóa đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.CategoryID })">Cập nhật đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.CategoryID })">Xóa đơn hàng</a>
 }
 
-@if (Model.State.Contains("ủy"))
+@if (Model.OrderStatus.Contains("ủy"))
 {
-    <a style=" background-color: #5c5c5c; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;">@Model.State</a>
+    <a style=" background-color: #5c5c5c; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;">@Model.OrderStatus</a>
 }
 else
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.ID })">Hủy đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.CategoryID })">Hủy đơn hàng</a>
 }
 
 @if (Model != null && Model.OrderDetails.Count() > 0)
@@ -132,7 +132,7 @@ else
             <div class="product-box">
                 <a href="/ShoppingCart/RemoveCart/@item.Product.ProductID" class="no-select close">+</a>
                 <div class="position-relative product-image">
-                    <img src="@Url.Content(item.Product.ImagePro)" />
+                    <img src="@Url.Content(item.Product.ProductImg)" />
                 </div>
                 <div class="product-content">
                     <div class="main-content">
@@ -146,14 +146,14 @@ else
                             <div class="product-price">@(String.Format("{0:#,#.##}", item.Product.Price ))đ</div>
                         }
                         <a href="@Url.Action("Details", "Products", new { id = item.Product.ProductID })" style="text-decoration: none">
-                            <div class="product-name">@item.Product.NamePro</div>
+                            <div class="product-name">@item.Product.ProductName</div>
                         </a>
                     </div>
                     @using (Html.BeginForm("UpdateCartQuantity", "ShoppingCart"))
                     {
                         <div style="padding-bottom: 5px">Số lượng</div>
                         <input type="hidden" value="@item.Product.ProductID" name="idPro" />
-                        <input readonly class="quantity-input" type="number" min="0" max="@item.Product.InvQuantity" value="@item.Quantity" name="cartQuantity" />
+                        <input readonly class="StockQuantity-input" type="number" min="0" max="@item.Product.StockQuantity" value="@item.StockQuantity" name="cartQuantity" />
                     }
                 </div>
             </div>

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
-=======
-﻿using anhemtoicodeweb.Models;
->>>>>>> main
 using System;
 using System.Data;
 using System.Data.Entity;
@@ -10,16 +7,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
-
-<<<<<<< HEAD
 namespace WebApplication1.Controllers
-=======
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
+
 {
     public class ProductsController : Controller
     {
-        private readonly Model1 db = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
 
         public PartialViewResult PartialProduct(Product product)
         {
@@ -46,7 +39,7 @@ namespace anhemtoicodeweb.Controllers
             }
             ViewBag.MaxPage = maxPage;
             ViewBag.CurrentPage = page;
-            return View("UserIndex", db.Products.OrderBy(x => x.NamePro).Skip((page - 1) * 15).Take(15).ToList());
+            return View("UserIndex", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
         }
 
         public ActionResult Details(int? id)
@@ -70,7 +63,7 @@ namespace anhemtoicodeweb.Controllers
             {
                 return RedirectToAction("Index");
             }
-            ViewBag.IDCate = new SelectList(db.Categories, "IDCate", "NameCate");
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View(new Product());
         }
 
@@ -86,23 +79,20 @@ namespace anhemtoicodeweb.Controllers
                 return RedirectToAction("Index");
             }
 
-            if (product.ImagePro == null)
+            if (product.ProductImg == null)
             {
-                product.ImagePro = "~/Image/Product/CuonTuiRac.jpg";
+                product.ProductImg = "~/Image/Product/CuonTuiRac.jpg";
             }
 
-            if (product.InvQuantity == 0)
+            if (product.StockQuantity == 0)
             {
-                product.InvQuantity = 1000;
+                product.StockQuantity = 1000;
             }
 
             if (product.UploadImage != null)
             {
-                product.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Image/Product/"), product.ImagePro.Split('/').Last()));
+                product.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Image/Product/"), product.ProductImg.Split('/').Last()));
             }
-
-            product.FinalPrice = product.Price + (product.Price * product.Tax) - (product.Price * product.Discount);
-
             if (ModelState.IsValid)
             {
                 db.Products.Add(product);
@@ -110,7 +100,7 @@ namespace anhemtoicodeweb.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IDCate = new SelectList(db.Categories, "IDCate", "NameCate", product.IDCate);
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(product);
         }
 
@@ -131,7 +121,7 @@ namespace anhemtoicodeweb.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IDCate = new SelectList(db.Categories, "IDCate", "NameCate", product.IDCate);
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(product);
         }
 
@@ -149,24 +139,22 @@ namespace anhemtoicodeweb.Controllers
 
             if (product.UploadImage != null)
             {
-                product.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Image/Product/"), product.ImagePro.Split('/').Last()));
+                product.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Image/Product/"), product.ProductImg.Split('/').Last()));
             }
 
-            if (product.OldImagePro != null && product.ImagePro != product.OldImagePro)
+            if (product.OldProductImg != null && product.ProductImg != product.OldProductImg)
             {
-                var oldfile = Path.Combine(Server.MapPath("~/Image/Product/"), product.OldImagePro.Split('/').Last());
-                var file = Path.Combine(Server.MapPath("~/Image/Product/"), product.ImagePro.Split('/').Last());
+                var oldfile = Path.Combine(Server.MapPath("~/Image/Product/"), product.OldProductImg.Split('/').Last());
+                var file = Path.Combine(Server.MapPath("~/Image/Product/"), product.ProductImg.Split('/').Last());
                 System.IO.File.Move(oldfile, file);
             }
-
-            product.FinalPrice = product.Price + (product.Price * product.Tax) - (product.Price * product.Discount);
             if (ModelState.IsValid)
             {
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Details", new { id = product.ProductID });
             }
-            ViewBag.IDCate = new SelectList(db.Categories, "IDCate", "NameCate", product.IDCate);
+            ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName", product.CategoryID);
             return View(db.Products.Where(p => p.ProductID == product.ProductID).FirstOrDefault());
         }
 

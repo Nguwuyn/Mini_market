@@ -14,16 +14,13 @@
 <table id="cusTable" class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NameCus)
+            @Html.DisplayNameFor(model => model.FullName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PhoneCus)
+            @Html.DisplayNameFor(model => model.CusPhone)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.EmailCus)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AddressName)
+            @Html.DisplayNameFor(model => model.CusAddress)
         </th>
         <th>Action</th>
         <th></th>
@@ -31,22 +28,19 @@
 
     @foreach (var item in Model)
     {
-        <tr class="clickable" onclick="window.location.href='/Customers/Details/@item.IDCus'">
+        <tr class="clickable" onclick="window.location.href='/Customers/Details/@item.CustomerID'">
             <td>
-                @Html.DisplayFor(modelItem => item.NameCus)
+                @Html.DisplayFor(modelItem => item.FullName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PhoneCus)
+                @Html.DisplayFor(modelItem => item.CusPhone)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EmailCus)
+                @Html.DisplayFor(modelItem => item.CusAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AddressName)
-            </td>
-            <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.IDCus }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.IDCus })
+                @Html.ActionLink("Sửa", "Edit", new { id = item.CustomerID }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.CustomerID })
 
             </td>
             <td></td>

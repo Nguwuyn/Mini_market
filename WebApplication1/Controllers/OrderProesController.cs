@@ -6,122 +6,116 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-<<<<<<< HEAD
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
-=======
-using anhemtoicodeweb.Models;
-
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
 {
-    public class OrderProesController : Controller
+    public class OrderesController : Controller
     {
-        private Model1 db = new Model1();
+        private DAPMEntities db = new DAPMEntities();
 
-        // GET: OrderProes
+        // GET: Orderes
         public ActionResult Index()
         {
-            var orderProes = db.OrderProes.Include(o => o.Customer);
-            return View(orderProes.ToList());
+            var Orderes = db.Orders.Include(o => o.Customer);
+            return View(Orderes.ToList());
         }
 
-        // GET: OrderProes/Details/5
+        // GET: Orderes/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderPro orderPro = db.OrderProes.Find(id);
-            if (orderPro == null)
+            Order Order = db.Orders.Find(id);
+            if (Order == null)
             {
                 return HttpNotFound();
             }
-            return View(orderPro);
+            return View(Order);
         }
 
-        // GET: OrderProes/Create
+        // GET: Orderes/Create
         public ActionResult Create()
         {
-            ViewBag.IDCus = new SelectList(db.Customers, "IDCus", "NameCus");
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FullName");
             return View();
         }
 
-        // POST: OrderProes/Create
+        // POST: Orderes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,DateOrder,IDCus,PhoneNumber,AddressDelivery,TotalAmount,TotalMoney,TotalTax,TotalDiscount,State")] OrderPro orderPro)
+        public ActionResult Create([Bind(Include = "ID,OrderDate,CustomerID,RecipientPhone,RecipientAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
         {
             if (ModelState.IsValid)
             {
-                db.OrderProes.Add(orderPro);
+                db.Orders.Add(Order);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IDCus = new SelectList(db.Customers, "IDCus", "NameCus", orderPro.IDCus);
-            return View(orderPro);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FullName", Order.CustomerID);
+            return View(Order);
         }
 
-        // GET: OrderProes/Edit/5
+        // GET: Orderes/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderPro orderPro = db.OrderProes.Find(id);
-            if (orderPro == null)
+            Order Order = db.Orders.Find(id);
+            if (Order == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.IDCus = new SelectList(db.Customers, "IDCus", "NameCus", orderPro.IDCus);
-            return View(orderPro);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FullName", Order.CustomerID);
+            return View(Order);
         }
 
-        // POST: OrderProes/Edit/5
+        // POST: Orderes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,DateOrder,IDCus,PhoneNumber,AddressDelivery,TotalAmount,TotalMoney,TotalTax,TotalDiscount,State")] OrderPro orderPro)
+        public ActionResult Edit([Bind(Include = "ID,OrderDate,CustomerID,RecipientPhone,RecipientAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(orderPro).State = EntityState.Modified;
+                db.Entry(Order).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IDCus = new SelectList(db.Customers, "IDCus", "NameCus", orderPro.IDCus);
-            return View(orderPro);
+            ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FullName", Order.CustomerID);
+            return View(Order);
         }
 
-        // GET: OrderProes/Delete/5
+        // GET: Orderes/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OrderPro orderPro = db.OrderProes.Find(id);
-            if (orderPro == null)
+            Order Order = db.Orders.Find(id);
+            if (Order == null)
             {
                 return HttpNotFound();
             }
-            return View(orderPro);
+            return View(Order);
         }
 
-        // POST: OrderProes/Delete/5
+        // POST: Orderes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            OrderPro orderPro = db.OrderProes.Find(id);
-            db.OrderProes.Remove(orderPro);
+            Order Order = db.Orders.Find(id);
+            db.Orders.Remove(Order);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

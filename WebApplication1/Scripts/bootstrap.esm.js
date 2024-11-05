@@ -3489,7 +3489,7 @@ class Tooltip extends BaseComponent {
         fn: data => {
           // Pre-set Popper's placement attribute in order to read the arrow sizes properly.
           // Otherwise, Popper mixes up the width and height dimensions since the initial arrow style is for top placement
-          this._getTipElement().setAttribute('data-popper-placement', data.state.placement);
+          this._getTipElement().setAttribute('data-popper-placement', data.OrderStatus.placement);
         }
       }]
     };
@@ -3875,7 +3875,7 @@ class ScrollSpy extends BaseComponent {
 
   // The logic of selection
   _observerCallback(entries) {
-    const targetElement = entry => this._targetLinks.get(`#${entry.target.id}`);
+    const targetElement = entry => this._targetLinks.get(`#${entry.target.CategoryID}`);
     const activate = entry => {
       this._previousScrollData.visibleEntryTop = entry.target.offsetTop;
       this._process(targetElement(entry));
@@ -4178,8 +4178,8 @@ class Tab extends BaseComponent {
       return;
     }
     this._setAttributeIfNotExists(target, 'role', 'tabpanel');
-    if (child.id) {
-      this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.id}`);
+    if (child.CategoryID) {
+      this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.CategoryID}`);
     }
   }
   _toggleDropDown(element, open) {

@@ -1,17 +1,17 @@
-﻿@model anhemtoicodeweb.Models.Cart
+﻿@model WebApplication1.Models.Cart
 
 @{
     ViewBag.Title = "ShowCart";
     string placeholder_addr = (TempData["Address"] != null && (string)TempData["Address"] != "") ? (string)TempData["Address"] : "Nhập địa chỉ giao hàng";
-    string placeholder_phone = (TempData["PhoneNumber"] != null && (string)TempData["PhoneNumber"] != "") ? (string)TempData["PhoneNumber"] : "Nhập số điện thoại liên hệ";
+    string placeholder_phone = (TempData["RecipientPhone"] != null && (string)TempData["RecipientPhone"] != "") ? (string)TempData["RecipientPhone"] : "Nhập số điện thoại liên hệ";
     string FirstTotal = "";
     string TotalMoney = "";
     string TotalDiscount = "";
     string TotalTax = "";
 
-    decimal totalDiscount = 0;
-    decimal totalTax = 0;
-    decimal total = 0;
+    double totalDiscount = 0;
+    double totalTax = 0;
+    double total = 0;
     if (Model != null && Model.Items.Count() > 0)
     {
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
@@ -55,7 +55,7 @@
             width: 15%;
         }
 
-        .quantity-input {
+        .StockQuantity-input {
             width: 85%;
             border-radius: 6px;
             border: #5b5b5b solid 1px;
@@ -118,7 +118,7 @@
             <div class="product-box">
                 <a href="/ShoppingCart/RemoveCart/@item._product.ProductID" class="no-select close">+</a>
                 <div class="position-relative product-image">
-                    <img src="@Url.Content(item._product.ImagePro)" />
+                    <img src="@Url.Content(item._product.ProductImg)" />
                 </div>
                 <div class="product-content">
                     <div class="main-content">
@@ -132,14 +132,14 @@
                             <div class="product-price">@(String.Format("{0:#,#.##}", item._product.Price ))đ</div>
                         }
                         <a href="@Url.Action("Details", "Products", new { id = item._product.ProductID })" style="text-decoration: none">
-                            <div class="product-name">@item._product.NamePro</div>
+                            <div class="product-name">@item._product.ProductName</div>
                         </a>
                     </div>
                     @using (Html.BeginForm("UpdateCartQuantity", "ShoppingCart"))
                     {
                         <div style="padding-bottom: 5px">Số lượng</div>
                         <input type="hidden" value="@item._product.ProductID" name="idPro" />
-                        <input class="quantity-input" type="number" min="0" max="@item._product.InvQuantity" value="@item._quantity" name="cartQuantity" />
+                        <input class="StockQuantity-input" type="number" min="0" max="@item._product.StockQuantity" value="@item._quantity" name="cartQuantity" />
                         <input style="background-color: transparent; border: none" type="submit" value="✓" />
                     }
                 </div>
@@ -169,8 +169,8 @@
             using (Html.BeginForm("Checkout", "ShoppingCart", FormMethod.Post, new { style = "display: flex; gap: 10px;" }))
             {
                 <input type="hidden" value="@Session["UserId"]" name="CodeCustomer" />
-                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="AddressDelivery" placeholder="@placeholder_addr" title="@placeholder_addr" />
-                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="PhoneNumber" placeholder="@placeholder_phone" title="@placeholder_phone" />
+                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="RecipientAddress" placeholder="@placeholder_addr" title="@placeholder_addr" />
+                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="RecipientPhone" placeholder="@placeholder_phone" title="@placeholder_phone" />
                 <input class="btn btn-success" type="submit" value="Đi đến thanh toán" />
             }
         }

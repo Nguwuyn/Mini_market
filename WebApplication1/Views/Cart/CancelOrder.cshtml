@@ -1,4 +1,4 @@
-﻿@model WebApplication1.Models.OrderPro
+﻿@model WebApplication1.Models.Order
 
 
 @{
@@ -8,20 +8,19 @@
     string TotalDiscount = "";
     string TotalTax = "";
 
-    decimal totalDiscount = 0;
-    decimal totalTax = 0;
-    decimal firstTotal = 0;
-    decimal total = 0;
+    double totalDiscount = 0;
+    double totalTax = 0;
+    double firstTotal = 0;
+    double total = 0;
     if (Model != null && Model.OrderDetails.Count() > 0)
     {
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.OrderDetails)
         {
-            var prodTotal = (item.Quantity * item.Product.Price);
+            int prodTotal = (item.ProductQuantity * item.Product.Price);
             firstTotal += prodTotal;
-            totalDiscount += prodTotal * item.Product.Discount;
-            totalTax += prodTotal * item.Product.Tax;
-            total += prodTotal - (prodTotal * item.Product.Discount) + (prodTotal * item.Product.Tax);
+            totalTax += (int)(prodTotal* item.Product.Tax);
+            total += prodTotal + prodTotal * item.Product.Tax;//Thêm discount cho các promotion
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", firstTotal);
         TotalMoney = String.Format(": {0:#,#.##}đ", total);
@@ -56,7 +55,7 @@
             width: 15%;
         }
 
-        .quantity-input {
+        .StockQuantity-input {
             width: 85%;
             border-radius: 6px;
             border: #5b5b5b solid 1px;
@@ -118,28 +117,19 @@
             <div class="product-box">
                 <a href="/ShoppingCart/RemoveCart/@item.Product.ProductID" class="no-select close">+</a>
                 <div class="position-relative product-image">
-                    <img src="@Url.Content(item.Product.ImagePro)" />
+                    <img src="@Url.Content(item.Product.ProductImg)" />
                 </div>
                 <div class="product-content">
                     <div class="main-content">
-                        @if (item.Product.Discount > 0)
-                        {
-                            <div class="product-price" style="font-size: 12px;color: red;text-decoration: line-through;line-height: unset;">@(String.Format("{0:#,#.##}", item.Product.Price))đ</div>
-                            <div class="product-price">@(String.Format("{0:#,#.##}", item.Product.Price - (item.Product.Price * item.Product.Discount) ))đ</div>
-                        }
-                        else
-                        {
-                            <div class="product-price">@(String.Format("{0:#,#.##}", item.Product.Price ))đ</div>
-                        }
                         <a href="@Url.Action("Details", "Products", new { id = item.Product.ProductID })" style="text-decoration: none">
-                            <div class="product-name">@item.Product.NamePro</div>
+                            <div class="product-name">@item.Product.ProductName</div>
                         </a>
                     </div>
                     @using (Html.BeginForm("UpdateCartQuantity", "ShoppingCart"))
                     {
                         <div style="padding-bottom: 5px">Số lượng</div>
                         <input type="hidden" value="@item.Product.ProductID" name="idPro" />
-                        <input readonly class="quantity-input" type="number" min="0" max="@item.Product.InvQuantity" value="@item.Quantity" name="cartQuantity" />
+                        <input readonly class="StockQuantity-input" type="number" min="0" max="@item.Product.StockQuantity" value="@item.ProductQuantity" name="cartQuantity" />
                     }
                 </div>
             </div>

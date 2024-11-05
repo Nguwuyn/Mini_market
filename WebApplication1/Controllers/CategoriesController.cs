@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 ﻿using WebApplication1.Models;
-=======
-﻿using anhemtoicodeweb.Models;
->>>>>>> main
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,15 +8,12 @@ using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
-<<<<<<< HEAD
+
 namespace WebApplication1.Controllers
-=======
-namespace anhemtoicodeweb.Controllers
->>>>>>> main
 {
     public class CategoriesController : Controller
     {
-        private readonly Model1 db = new Model1();
+        private readonly DAPMEntities db = new DAPMEntities();
 
         public ActionResult Index()
         {
@@ -29,7 +23,7 @@ namespace anhemtoicodeweb.Controllers
                 return PartialView(category.ToList());
             }
 
-            return RedirectToAction("Details", new { id = db.Categories.Where(e => e.Id == 1) });
+            return RedirectToAction("Details", new { id = db.Categories.Where(e => e.CategoryID == 1) });
         }
 
         public ActionResult Details(string id, int page = 1)
@@ -70,7 +64,7 @@ namespace anhemtoicodeweb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IDCate,Id,NameCate")] Category category)
+        public ActionResult Create([Bind(Include = "CategoryID,Id,CategoryName")] Category category)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -108,7 +102,7 @@ namespace anhemtoicodeweb.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IDCate,Id,NameCate")] Category category)
+        public ActionResult Edit([Bind(Include = "CategoryID,Id,CategoryName")] Category category)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {

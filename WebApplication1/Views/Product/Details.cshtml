@@ -56,9 +56,9 @@
     >
     <a href="/Products">Danh sách sản phầm</a>
     >
-    <a href="/Categories/Details/@Model.Category.IDCate">@Model.Category.NameCate</a>
+    <a href="/Categories/Details/@Model.Category.CategoryID">@Model.Category.CategoryName</a>
     >
-    <a href="@Request.Path"><b>@Model.NamePro</b></a>
+    <a href="@Request.Path"><b>@Model.ProductName</b></a>
 </div>
 
 
@@ -66,40 +66,27 @@
     <div class="product-container">
         <div class="image">
             <div style="position: relative; border-radius:20px; overflow: hidden;">
-                @if (Model.InvQuantity == 0)
+                @if (Model.StockQuantity == 0)
                 {
                     <div class="no-select out-of-stock-overlay">Hết hàng</div>
                 }
-                <img src="@Url.Content(Model.ImagePro)" style="width: 100%" alt="Product image" />
+                <img src="@Url.Content(Model.ProductImg)" style="width: 100%" alt="Product image" />
                 @*<img src="~/Image/Product/BanChaiTre.png" alt="Product image" />*@
             </div>
         </div>
         <div class="text">
             <div>
-                <h2> @Html.DisplayFor(model => model.NamePro) </h2>
+                <h2> @Html.DisplayFor(model => model.ProductName) </h2>
             </div>
-            @if (Model.DecriptionPro != null && Model.DecriptionPro != "None")
+            @if (Model.ProductDescription != null && Model.ProductDescription != "None")
             {
                 <div>
-                    <l>@Html.DisplayFor(model => model.DecriptionPro) </l>
+                    <l>@Html.DisplayFor(model => model.ProductDescription) </l>
                 </div>
             }
-            <div>
-                @if (Model.Discount > 0)
-                {
-                    <b style="color: red; text-decoration-line: line-through; font-size: 18px">@(String.Format("{0:#,#.##}", Model.Price))đ </b>
-                    <b style="color: red; font-size: 18px">-@String.Format("{0:P2}", Model.Discount)</b>
-                    <br />
-                    <b style="color: #4E6C50">@(String.Format("{0:#,#.##}", Model.Price - (Model.Price * Model.Discount) ))đ</b>
-                }
-                else
-                {
-                    <b style="color: #4E6C50">@(String.Format("{0:#,#.##}", Model.Price))đ </b>
-                }
-            </div>
             <div class="button-container">
                 <div class="d-flex gap-4" style="padding-left:30px;padding-top:10px">
-                    @if (Model.InvQuantity == 0)
+                    @if (Model.StockQuantity == 0)
                     {
                         <a class="no-select AddToCart out-of-stock">Thêm vào giỏ hàng</a>
                     }
@@ -127,7 +114,7 @@
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div style="min-height: 140px" class="d-flex">
                             <div class="card-body card-extra p-3">
-                                @Model.DecriptionPro
+                                @Model.ProductDescription
                             </div>
                         </div>
                     </div>

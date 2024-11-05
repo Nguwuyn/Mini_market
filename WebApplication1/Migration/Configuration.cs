@@ -7,24 +7,24 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication1.Models.Model1>
+    internal sealed class DBConfiguration : DbMigrationsConfiguration<WebApplication1.Models.DAPMEntities>
     {
-        public Configuration()
+        public DBConfiguration()
         {
             AutomaticMigrationsEnabled = true;
             ContextKey = "WebApplication1.Models.Model1";
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(WebApplication1.Models.Model1 context)
+        protected override void Seed(WebApplication1.Models.DAPMEntities context)
         {
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
-            context.OrderProes.ForEach(p =>
+            context.Orders.ForEach(p =>
             {
-                p.State = "Đang giao hàng";
+                p.OrderStatus = "Đang giao hàng";
             });
         }
     }

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 ﻿@model WebApplication1.Models.Customer
 =======
-﻿@model anhemtoicodeweb.Models.Customer
+﻿@model WebApplication1.Models.Customer
 >>>>>>> main
 
 @{
-    var listID = Model.OrderProes.ToList().Select(x => x.ID);
+    var listID = Model.Orderes.ToList().Select(x => x.CategoryID);
     ViewBag.Title = "Profile";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -116,15 +116,15 @@
     <script type="text/javascript" src="@Url.Content("~/Scripts/Slick/slick.min.js")" defer></script>
     <script>
         $(document).ready(function () {
-            @foreach (var d in Model.OrderProes)
+            @foreach (var d in Model.Orderes)
             {
-                @:$('#product-slider@(d.ID) .slide-container').slick({
+                @:$('#product-slider@(d.CategoryID) .slide-container').slick({
                     @:lazyLoad: 'ondemand',
                     @:slidesToShow: 5,
                     @:draggable: false,
                     @:infinite: false,
-                    @:prevArrow: "#product-slider@(d.ID) .slick-prev-prod",
-                    @:nextArrow: "#product-slider@(d.ID) .slick-next-prod",
+                    @:prevArrow: "#product-slider@(d.CategoryID) .slick-prev-prod",
+                    @:nextArrow: "#product-slider@(d.CategoryID) .slick-next-prod",
                 @:});
             }
         });
@@ -215,14 +215,14 @@
 <div class="profile-info">
     <p>Tên người dùng: <b>@Model.NameCus</b></p>
     <p>Email: <b>@Model.EmailCus</b></p>
-    <p>Số điện thoại: <b>@Model.PhoneCus</b></p>
-    <p>Địa chỉ hiện tại: <b>@Model.AddressName</b></p>
+    <p>Số điện thoại: <b>@Model.CusPhone</b></p>
+    <p>Địa chỉ hiện tại: <b>@Model.CusAddress</b></p>
     <div class="dropdown">
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#orderCollapse" aria-expanded="false" aria-controls="orderCollapse" class="no-select dropbtn">Tổng số đơn hàng: @Model.OrderProes.Count</button>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#orderCollapse" aria-expanded="false" aria-controls="orderCollapse" class="no-select dropbtn">Tổng số đơn hàng: @Model.Orderes.Count</button>
         <div style="border-radius: 7px;" class="dropdown-content">
-            @foreach (var order in Model.OrderProes)
+            @foreach (var order in Model.Orderes)
             {
-                <a href="@Url.Action("CheckOrder", "ShoppingCart", new { @id = order.ID })">Đơn hàng số @order.ID</a>
+                <a href="@Url.Action("CheckOrder", "ShoppingCart", new { @id = order.CategoryID })">Đơn hàng số @order.CategoryID</a>
             }
         </div>
     </div>
@@ -232,11 +232,11 @@
 <hr />
 <div class="collapse" id="orderCollapse">
     <input type="text" id="searchOrders" class="searchBar" placeholder="Tìm kiếm đơn hàng..." onkeyup="searchOrders()" />
-    @foreach (var order in Model.OrderProes)
+    @foreach (var order in Model.Orderes)
     {
         <div>
-            <a class="orderID" href="@Url.Action("CheckOrder", "ShoppingCart", new { @id = order.ID })">Đơn hàng số @order.ID | @order.State</a>
-            <div class="position-relative" id="product-slider@(order.ID)">
+            <a class="orderID" href="@Url.Action("CheckOrder", "ShoppingCart", new { @id = order.CategoryID })">Đơn hàng số @order.CategoryID | @order.OrderStatus</a>
+            <div class="position-relative" id="product-slider@(order.CategoryID)">
                 <button class="slick-prev-prod slick-arrow"><</button>
                 <button class="slick-next-prod slick-arrow">></button>
                 <div class="slide-container">

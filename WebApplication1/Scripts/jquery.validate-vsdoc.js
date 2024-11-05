@@ -608,7 +608,7 @@ $.extend($.validator, {
 						return false;
 					}
 				} catch(e) {
-					this.settings.debug && window.console && console.log("exception occured when checking element " + element.id
+					this.settings.debug && window.console && console.log("exception occured when checking element " + element.CategoryID
 						 + ", check the '" + rule.method + "' method", e);
 					throw e;
 				}
@@ -759,7 +759,7 @@ $.extend($.validator, {
 		},
 		
 		idOrName: function(element) {
-			return this.groups[element.name] || (this.checkable(element) ? element.name : element.id || element.name);
+			return this.groups[element.name] || (this.checkable(element) ? element.name : element.CategoryID || element.name);
 		},
 
 		checkable: function( element ) {

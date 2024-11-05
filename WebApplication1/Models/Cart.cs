@@ -6,7 +6,7 @@ namespace WebApplication1.Models
     public class CartItem
     {
         public int _quantity { get; set; }
-        public Sản_phẩm _product { get; set; }
+        public Product _product { get; set; }
     }
 
     public class Cart
@@ -17,23 +17,23 @@ namespace WebApplication1.Models
             get { return items; }
         }
 
-        public bool AddProductCart(Sản_phẩm product, int quantity = 1)
+        public bool AddProductCart(Product product, int StockQuantity = 1)
         {
-            var item = Items.FirstOrDefault(s => s._product.ID_sản_phẩm == product.ID_sản_phẩm);
+            var item = Items.FirstOrDefault(s => s._product.ProductID == product.ProductID);
             if (item == null)
             {
                 items.Add(new CartItem
                 {
-                    _quantity = quantity,
+                    _quantity = StockQuantity,
                     _product = product
                 });
                 return true;
             }
 
-            var tempQ = quantity + item._quantity;
-            if (tempQ > product.số_lượng_tồn)
+            var tempQ = StockQuantity + item._quantity;
+            if (tempQ > product.StockQuantity)
             {
-                item._quantity = (int)product.số_lượng_tồn;
+                item._quantity = (int)product.StockQuantity;
                 return false;
             }
             item._quantity = tempQ;
@@ -45,15 +45,15 @@ namespace WebApplication1.Models
             return items.Sum(s => s._quantity);
         }
 
-        public decimal TotalMoney()
+        public double TotalMoney()
         {
-            var total = items.Sum(s => s._quantity * s._product.Giá_tiền);
-            return (decimal)total;
+            var total = items.Sum(s => s._quantity * s._product.Price);
+            return (double)total;
         }
 
         public void UpdateQuantity(int id, int new_quantity)
         {
-            var item = Items.FirstOrDefault(s => s._product.ID_sản_phẩm == id);
+            var item = Items.FirstOrDefault(s => s._product.ProductID == id);
             if (item != null)
                 if (new_quantity == 0)
                 {
@@ -65,7 +65,7 @@ namespace WebApplication1.Models
 
         public void RemoveCartItem(int id)
         {
-            items.RemoveAll(s => s._product.ID_sản_phẩm == id);
+            items.RemoveAll(s => s._product.ProductID == id);
         }
 
         public void ClearCart()

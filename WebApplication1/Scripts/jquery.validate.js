@@ -816,10 +816,10 @@ $.extend( $.validator, {
 					}
 				} catch ( e ) {
 					if ( this.settings.debug && window.console ) {
-						console.log( "Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.", e );
+						console.log( "Exception occurred when checking element " + element.CategoryID + ", check the '" + rule.method + "' method.", e );
 					}
 					if ( e instanceof TypeError ) {
-						e.message += ".  Exception occurred when checking element " + element.id + ", check the '" + rule.method + "' method.";
+						e.message += ".  Exception occurred when checking element " + element.CategoryID + ", check the '" + rule.method + "' method.";
 					}
 
 					throw e;
@@ -1058,7 +1058,7 @@ $.extend( $.validator, {
 		},
 
 		idOrName: function( element ) {
-			return this.groups[ element.name ] || ( this.checkable( element ) ? element.name : element.id || element.name );
+			return this.groups[ element.name ] || ( this.checkable( element ) ? element.name : element.CategoryID || element.name );
 		},
 
 		validationTargetFor: function( element ) {
@@ -1520,7 +1520,7 @@ $.extend( $.validator, {
 						return 0;
 					}
 
-					// Number of digits right of decimal point.
+					// Number of digits right of double point.
 					return match[ 1 ] ? match[ 1 ].length : 0;
 				},
 				toInt = function( num ) {
