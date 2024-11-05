@@ -108,7 +108,7 @@ window.Modernizr = (function( window, document, undefined ) {
           // This also allows the method to scale for unspecified uses
           while ( nodes-- ) {
               node = document.createElement('div');
-              node.CategoryID = testnames ? testnames[nodes] : mod + (nodes + 1);
+              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
               div.appendChild(node);
           }
       }
@@ -119,7 +119,7 @@ window.Modernizr = (function( window, document, undefined ) {
       // msdn.microsoft.com/en-us/library/ms533897%28VS.85%29.aspx
       // Documents served as xml will throw if using &shy; so use xml friendly encoded version. See issue #277
       style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
-      div.CategoryID = mod;
+      div.id = mod;
       // IE6 will false positive on some tests due to the style element inside the test div somehow interfering offsetHeight, so insert it into body or fakebody.
       // Opera will act all quirky when injecting elements in documentElement when page is served as xml, needs fakebody too. #270
       (body ? div : fakeBody).innerHTML += style;

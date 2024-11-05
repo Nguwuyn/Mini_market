@@ -108,11 +108,11 @@
     </style>
 }
 
-<h2 style="margin-bottom: 24px">Đơn hàng số @Model.CategoryID | @Model.OrderStatus</h2>
+<h2 style="margin-bottom: 24px">Đơn hàng số @Model.ID | @Model.OrderStatus</h2>
 @if (Session["IsAdmin"] is true)
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.CategoryID })">Cập nhật đơn hàng</a>
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.CategoryID })">Xóa đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.ID })">Cập nhật đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.ID })">Xóa đơn hàng</a>
 }
 
 @if (Model.OrderStatus.Contains("ủy"))
@@ -121,7 +121,7 @@
 }
 else
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.CategoryID })">Hủy đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.ID })">Hủy đơn hàng</a>
 }
 
 @if (Model != null && Model.OrderDetails.Count() > 0)

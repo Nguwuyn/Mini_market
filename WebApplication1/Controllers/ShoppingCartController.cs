@@ -28,7 +28,7 @@ namespace WebApplication1.Controllers
             {
                 Customer _cus = db.Customers.FirstOrDefault(x => x.CustomerID == _id);
                 TempData["Address"] = _cus.CusAddress;
-                TempData["RecipientPhone"] = _cus.RecipientPhone;
+                TempData["RecipientPhone"] = _cus.CusPhone;
             }
             return View(cart);
         }
@@ -124,12 +124,12 @@ namespace WebApplication1.Controllers
 
                 if (form["RecipientPhone"] == "")
                 {
-                    if (_user.RecipientPhone == null || _user.RecipientPhone == "")
+                    if (_user.CusPhone == null || _user.CusPhone == "")
                     {
                         TempData["Error"] = "Bạn cần phải nhập số điện thoại để liên hệ khi giao hàng";
                         return RedirectToAction("Index");
                     }
-                    form["RecipientPhone"] = _user.RecipientPhone;
+                    form["RecipientPhone"] = _user.CusPhone;
                 }
 
                 if (form["CodeCustomer"] == null)

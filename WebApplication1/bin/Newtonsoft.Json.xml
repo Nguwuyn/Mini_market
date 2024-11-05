@@ -1266,7 +1266,7 @@
             Instructs the <see cref="T:Newtonsoft.Json.JsonSerializer"/> how to serialize the object.
             </summary>
         </member>
-        <member name="P:Newtonsoft.Json.JsonContainerAttribute.CategoryID">
+        <member name="P:Newtonsoft.Json.JsonContainerAttribute.Id">
             <summary>
             Gets or sets the id.
             </summary>
@@ -9094,7 +9094,7 @@
             </note>
             </summary>
         </member>
-        <member name="P:Newtonsoft.Json.Schema.JsonSchema.CategoryID">
+        <member name="P:Newtonsoft.Json.Schema.JsonSchema.Id">
             <summary>
             Gets or sets the id.
             </summary>

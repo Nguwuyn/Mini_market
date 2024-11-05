@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿@model WebApplication1.Models.Customer
-=======
-﻿@model WebApplication1.Models.Customer
->>>>>>> main
 
 @{
     ViewBag.Title = "EditProfile";
@@ -68,7 +64,7 @@
 
     <div class="d-flex flex-row gap-3 my-3">
         <div class="label">Nhập lại mật khẩu: </div>
-        @Html.EditorFor(model => model.CusRePassword, new { htmlAttributes = new { @class = "input-edit", @Value = "", autocomplete = "off", @Type = "password" } })
+        @Html.EditorFor(model => model.ConfirmPasswordCus, new { htmlAttributes = new { @class = "input-edit", @Value = "", autocomplete = "off", @Type = "password" } })
     </div>
 
 </div>

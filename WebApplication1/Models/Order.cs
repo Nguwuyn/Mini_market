@@ -24,7 +24,7 @@ namespace WebApplication1.Models
         public int ProductQuantity { get; set; }
         public int TotalMoney { get; set; }
         public System.DateTime OrderDate { get; set; }
-        public int OrderStatus { get; set; }
+        public string OrderStatus { get; set; }
         public string RecipientFullName { get; set; }
         public string RecipientPhone { get; set; }
         public string RecipientAddress { get; set; }

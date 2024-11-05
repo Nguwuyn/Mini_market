@@ -3875,7 +3875,7 @@ class ScrollSpy extends BaseComponent {
 
   // The logic of selection
   _observerCallback(entries) {
-    const targetElement = entry => this._targetLinks.get(`#${entry.target.CategoryID}`);
+    const targetElement = entry => this._targetLinks.get(`#${entry.target.id}`);
     const activate = entry => {
       this._previousScrollData.visibleEntryTop = entry.target.offsetTop;
       this._process(targetElement(entry));
@@ -4178,8 +4178,8 @@ class Tab extends BaseComponent {
       return;
     }
     this._setAttributeIfNotExists(target, 'role', 'tabpanel');
-    if (child.CategoryID) {
-      this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.CategoryID}`);
+    if (child.id) {
+      this._setAttributeIfNotExists(target, 'aria-labelledby', `${child.id}`);
     }
   }
   _toggleDropDown(element, open) {

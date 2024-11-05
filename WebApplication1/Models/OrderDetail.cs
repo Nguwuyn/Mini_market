@@ -15,6 +15,8 @@ namespace WebApplication1.Models
     public partial class OrderDetail
     {
         public int ProductQuantity { get; set; }
+        public int ItemPrice { get; set; }
+        public int Discount { get; set; }
         public int TotalPrice { get; set; }
         public int OrderID { get; set; }
         public int ProductID { get; set; }

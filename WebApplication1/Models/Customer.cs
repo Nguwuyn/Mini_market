@@ -28,7 +28,7 @@ namespace WebApplication1.Models
         public string Username { get; set; }
         public string CusPassword { get; set; }
         [NotMapped]
-        public string ReCusPassword { get; set; }
+        public string ConfirmPasswordCus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }
