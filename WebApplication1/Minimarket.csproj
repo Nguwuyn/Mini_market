@@ -181,7 +181,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ThongKe.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,13 +299,6 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />
     <Content Include="bin\roslyn\csi.exe.config" />
@@ -329,7 +321,6 @@
     <Content Include="obj\Debug\Minimarket.csproj.Up2Date" />
     <Content Include="obj\Debug\WebApplication1.csproj.AssemblyReference.cache" />
     <Content Include="obj\Debug\_IsIncrementalBuild" />
-    <Content Include="obj\Release\Minimarket.csproj.AssemblyReference.cache" />
     <Content Include=".vs\Minimarket.csproj.dtbcache.json" />
     <Content Include=".vs\slnx.sqlite" />
     <Content Include=".vs\VSWorkspaceState.json" />
@@ -337,6 +328,13 @@
     <Content Include=".vs\WebApplication1\FileContentIndex\881bde90-cbfc-4fa8-abdb-937733b7a43f.vsidx" />
     <Content Include=".vs\WebApplication1\v17\.wsuo" />
     <Content Include=".vs\WebApplication1\v17\DocumentLayout.json" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\IndexScript.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />

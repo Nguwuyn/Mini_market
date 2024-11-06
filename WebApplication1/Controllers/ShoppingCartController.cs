@@ -28,7 +28,7 @@ namespace WebApplication1.Controllers
             {
                 Customer _cus = db.Customers.FirstOrDefault(x => x.CustomerID == _id);
                 TempData["Address"] = _cus.CusAddress;
-                TempData["RecipientPhone"] = _cus.CusPhone;
+                TempData["ReceiverPhoneNum"] = _cus.CusPhone;
             }
             return View(cart);
         }
@@ -112,24 +112,24 @@ namespace WebApplication1.Controllers
                     return RedirectToAction("Index");
                 }
 
-                if (form["RecipientAddress"] == "")
+                if (form["ReceiverAddress"] == "")
                 {
                     if (_user.CusAddress == null || _user.CusAddress == "")
                     {
                         TempData["Error"] = "Bạn cần phải nhập địa chỉ giao hàng";
                         return RedirectToAction("Index");
                     }
-                    form["RecipientAddress"] = _user.CusAddress;
+                    form["ReceiverAddress"] = _user.CusAddress;
                 }
 
-                if (form["RecipientPhone"] == "")
+                if (form["ReceiverPhoneNum"] == "")
                 {
                     if (_user.CusPhone == null || _user.CusPhone == "")
                     {
                         TempData["Error"] = "Bạn cần phải nhập số điện thoại để liên hệ khi giao hàng";
                         return RedirectToAction("Index");
                     }
-                    form["RecipientPhone"] = _user.CusPhone;
+                    form["ReceiverPhoneNum"] = _user.CusPhone;
                 }
 
                 if (form["CodeCustomer"] == null)
@@ -139,15 +139,15 @@ namespace WebApplication1.Controllers
 
                 if (_user.CusAddress == null)
                 {
-                    _user.CusAddress = form["RecipientAddress"];
+                    _user.CusAddress = form["ReceiverAddress"];
                     db.Entry<Customer>(_user).State = EntityState.Modified;
                 }
 
                 Order _order = new Order(); //Bang Hoa Don San pham
 
                 _order.OrderDate = DateTime.Now;
-                _order.RecipientAddress = form["RecipientAddress"];
-                _order.RecipientPhone = form["RecipientPhone"];
+                _order.ReceiverAddress = form["ReceiverAddress"];
+                _order.ReceiverPhoneNum = form["ReceiverPhoneNum"];
                 _order.CustomerID = int.Parse(form["CodeCustomer"]);
                 _order.OrderStatus = "Đang xử lý";
 
@@ -156,19 +156,19 @@ namespace WebApplication1.Controllers
 
                 foreach (var item in cart.Items)
                 {
-                    var prodTotal = (item._quantity * item._product.Price);
+                    var prodTotal = (item._quantity * item._product.ProductPrice);
                     var tax = (int)(prodTotal * item._product.Tax);
                     OrderDetail _order_detail = new OrderDetail
                     {
                         ProductID = item._product.ProductID,
                         OrderID = _order.OrderID,
-                        ProductQuantity = item._quantity,
-                        ItemPrice = item._product.Price,
-                        TotalPrice = prodTotal + tax,
+                        StockQuantity = item._quantity,
+                        ItemPrice = item._product.ProductPrice,
+                        Total = prodTotal + tax,
                     };
 
                     totalQuantity += item._quantity;
-                    totalPrice += _order_detail.TotalPrice;
+                    totalPrice += _order_detail.Total;
                     db.OrderDetails.Add(_order_detail);
 
                     var _prod = db.Products.Find(item._product.ProductID);
@@ -177,7 +177,7 @@ namespace WebApplication1.Controllers
                 }
 
                 _order.TotalMoney = totalPrice;
-                _order.ProductQuantity = totalQuantity;
+                _order.OrderQuantity = totalQuantity;
 
                 db.Orders.Add(_order);
                 db.SaveChanges();
@@ -205,7 +205,7 @@ namespace WebApplication1.Controllers
                 int _userId = (int)Session["UserId"];
                 var _user = db.Customers.FirstOrDefault(x => x.CustomerID == _userId);
                 FormCollection form = new FormCollection();
-                form["RecipientAddress"] = _user.CusAddress;
+                form["ReceiverAddress"] = _user.CusAddress;
                 form["CodeCustomer"] = _user.CustomerID.ToString();
                 return RedirectToAction("CheckOut", "ShoppingCart", form);
             }
@@ -263,7 +263,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditOrder([Bind(Include = "OrderID,ProductQuantity,TotalMoney,OrderDate,OrderStatus,RecipientFullName,RecipientPhone,RecipientAddress,CustomerID,EmployeeID,CouponID,FinalTotal")] Order Order)
+        public ActionResult EditOrder([Bind(Include = "OrderID,StockQuantity,TotalMoney,OrderDate,OrderStatus,ReceiverFullName,ReceiverPhoneNum,ReceiverAddress,CustomerID,EmployeeID,CouponID,FinalTotal")] Order Order)
         {
             if (ModelState.IsValid)
             {

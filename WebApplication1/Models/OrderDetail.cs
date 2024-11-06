@@ -14,13 +14,13 @@ namespace WebApplication1.Models
     
     public partial class OrderDetail
     {
-        public int ProductQuantity { get; set; }
+        public int StockQuantity { get; set; }
         public int ItemPrice { get; set; }
         public int Discount { get; set; }
-        public int TotalPrice { get; set; }
+        public int Total { get; set; }
         public int OrderID { get; set; }
         public int ProductID { get; set; }
-        public int CampaignID { get; set; }
+        public Nullable<int> PromotionID { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

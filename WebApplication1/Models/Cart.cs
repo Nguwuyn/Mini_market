@@ -47,7 +47,7 @@ namespace WebApplication1.Models
 
         public double TotalMoney()
         {
-            var total = items.Sum(s => s._quantity * s._product.Price);
+            var total = items.Sum(s => s._quantity * s._product.ProductPrice);
             return (double)total;
         }
 

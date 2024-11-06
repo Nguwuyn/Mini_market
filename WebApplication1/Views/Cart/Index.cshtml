@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "ShowCart";
     string placeholder_addr = (TempData["Address"] != null && (string)TempData["Address"] != "") ? (string)TempData["Address"] : "Nhập địa chỉ giao hàng";
-    string placeholder_phone = (TempData["RecipientPhone"] != null && (string)TempData["RecipientPhone"] != "") ? (string)TempData["RecipientPhone"] : "Nhập số điện thoại liên hệ";
+    string placeholder_phone = (TempData["ReceiverPhoneNum"] != null && (string)TempData["ReceiverPhoneNum"] != "") ? (string)TempData["ReceiverPhoneNum"] : "Nhập số điện thoại liên hệ";
     string FirstTotal = "";
     string TotalMoney = "";
     string TotalDiscount = "";
@@ -17,7 +17,7 @@
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.Items)
         {
-            var prodTotal = (item._quantity * item._product.Price);
+            var prodTotal = (item._quantity * item._product.ProductPrice);
             totalTax += prodTotal * item._product.Tax;
             total += prodTotal + (prodTotal * item._product.Tax);//Thêm discount cho promotion
         }
@@ -159,8 +159,8 @@
             using (Html.BeginForm("Checkout", "ShoppingCart", FormMethod.Post, new { style = "display: flex; gap: 10px;" }))
             {
                 <input type="hidden" value="@Session["UserId"]" name="CodeCustomer" />
-                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="RecipientAddress" placeholder="@placeholder_addr" title="@placeholder_addr" />
-                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="RecipientPhone" placeholder="@placeholder_phone" title="@placeholder_phone" />
+                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="ReceiverAddress" placeholder="@placeholder_addr" title="@placeholder_addr" />
+                <input style="text-indent: 5px; border-radius: 6px; border: black 1px solid" type="text" name="ReceiverPhoneNum" placeholder="@placeholder_phone" title="@placeholder_phone" />
                 <input class="btn btn-success" type="submit" value="Đi đến thanh toán" />
             }
         }

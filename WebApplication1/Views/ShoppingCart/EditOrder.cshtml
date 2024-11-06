@@ -15,10 +15,7 @@
     <h4>Order</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.CategoryID)
     @Html.HiddenFor(model => model.CustomerID)
-    @Html.HiddenFor(model => model.TotalTax)
-    @Html.HiddenFor(model => model.TotalDiscount)
 
     <div class="form-group">
         @Html.LabelFor(model => model.OrderDate, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -29,18 +26,18 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.RecipientPhone, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ReceiverPhoneNum, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.RecipientPhone, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.RecipientPhone, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.ReceiverPhoneNum, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ReceiverPhoneNum, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.RecipientAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.ReceiverAddress, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.RecipientAddress, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.RecipientAddress, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.ReceiverAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ReceiverAddress, "", new { @class = "text-danger" })
         </div>
     </div>
 

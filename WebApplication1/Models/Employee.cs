@@ -21,10 +21,10 @@ namespace WebApplication1.Models
         }
     
         public int EmployeeID { get; set; }
-        public string EmployeePassword { get; set; }
+        public string EmployeePassWord { get; set; }
         public string EmployeeFullName { get; set; }
-        public int BirthYear { get; set; }
-        public int PositionID { get; set; }
+        public Nullable<int> BirthYear { get; set; }
+        public Nullable<int> Position { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

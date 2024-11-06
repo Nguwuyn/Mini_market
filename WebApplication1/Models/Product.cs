@@ -24,19 +24,19 @@ namespace WebApplication1.Models
         }
     
         public int ProductID { get; set; }
-        public string ProductName { get; set; } 
-        public string ProductDescription { get; set; }
-        public int Price { get; set; }
+        public string ProductName { get; set; }
+        public int ProductPrice { get; set; }
         public int StockQuantity { get; set; }
-        public double Tax { get; set; }
-        public string Manufacturer { get; set; }
-        public int CategoryID { get; set; }
-        public string ProductImg {  get; set; }
+        public float Tax { get; set; }
+        public string Brand { get; set; }
+        public string ProductImg { get; set; }
         [NotMapped]
         public string OldProductImg { get; set; }
 
         [NotMapped]
         public HttpPostedFileBase UploadImage { get; set; }
+        public int CategoryID { get; set; }
+    
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

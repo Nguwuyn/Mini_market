@@ -5,38 +5,31 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DAPMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="CampaignProductDetails">
-          <Key>
-            <PropertyRef Name="CampaignID" />
-            <PropertyRef Name="ProductID" />
-          </Key>
-          <Property Name="CampaignID" Type="int" Nullable="false" />
-          <Property Name="ProductID" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="Categories">
           <Key>
             <PropertyRef Name="CategoryID" />
           </Key>
           <Property Name="CategoryID" Type="int" Nullable="false" />
-          <Property Name="CategoryName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="CategoryIllust" Type="varchar(max)" />
         </EntityType>
-        <EntityType Name="Coupon">
+        <EntityType Name="Coupons">
           <Key>
             <PropertyRef Name="CouponID" />
           </Key>
           <Property Name="CouponID" Type="int" Nullable="false" />
-          <Property Name="CouponDescription" Type="varchar" MaxLength="255" Nullable="false" />
-          <Property Name="DiscountAmount" Type="int" Nullable="false" />
+          <Property Name="CouponDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="CouponDiscount" Type="int" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
             <PropertyRef Name="CustomerID" />
           </Key>
           <Property Name="CustomerID" Type="int" Nullable="false" />
-          <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CusAddress" Type="varchar" MaxLength="200" Nullable="false" />
-          <Property Name="RecipientPhone" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Username" Type="nvarchar" MaxLength="15" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CusAddress" Type="nvarchar" MaxLength="200" />
+          <Property Name="CusPhone" Type="char" MaxLength="10" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="15" />
           <Property Name="CusPassword" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Employees">
@@ -44,98 +37,74 @@
             <PropertyRef Name="EmployeeID" />
           </Key>
           <Property Name="EmployeeID" Type="int" Nullable="false" />
-          <Property Name="EmployeePassword" Type="nvarchar" MaxLength="6" />
-          <Property Name="EmployeeFullName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="BirthYear" Type="int" Nullable="false" />
-          <Property Name="PositionID" Type="int" Nullable="false" />
+          <Property Name="EmployeePassWord" Type="varchar" MaxLength="10" />
+          <Property Name="EmployeeFullName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthYear" Type="int" />
+          <Property Name="Position" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="OrderDetails">
           <Key>
-            <PropertyRef Name="ProductQuantity" />
-            <PropertyRef Name="TotalPrice" />
+            <PropertyRef Name="StockQuantity" />
+            <PropertyRef Name="ItemPrice" />
+            <PropertyRef Name="Discount" />
             <PropertyRef Name="OrderID" />
             <PropertyRef Name="ProductID" />
-            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="ProductQuantity" Type="int" Nullable="false" />
-          <Property Name="TotalPrice" Type="int" Nullable="false" />
+          <Property Name="StockQuantity" Type="int" Nullable="false" />
+          <Property Name="ItemPrice" Type="int" Nullable="false" />
+          <Property Name="Discount" Type="int" Nullable="false" />
+          <Property Name="Total" Type="money" />
           <Property Name="OrderID" Type="int" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
-          <Property Name="CampaignID" Type="int" Nullable="false" />
+          <Property Name="PromotionID" Type="int" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="OrderID" />
           </Key>
           <Property Name="OrderID" Type="int" Nullable="false" />
-          <Property Name="ProductQuantity" Type="int" Nullable="false" />
+          <Property Name="OrderQuantity" Type="int" Nullable="false" />
           <Property Name="TotalMoney" Type="int" Nullable="false" />
-          <Property Name="OrderDate" Type="date" Nullable="false" />
-          <Property Name="OrderStatus" Type="int" Nullable="false" />
-          <Property Name="RecipientFullName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="RecipientPhone" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="RecipientAddress" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="OrderDate" Type="date" />
+          <Property Name="OrderStatus" Type="char" MaxLength="2" />
+          <Property Name="ReceiverName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverPhoneNum" Type="char" MaxLength="10" />
+          <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="200" />
           <Property Name="CustomerID" Type="int" Nullable="false" />
           <Property Name="EmployeeID" Type="int" Nullable="false" />
-          <Property Name="CouponID" Type="int" Nullable="false" />
+          <Property Name="CouponID" Type="int" />
         </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="ProductID" />
           </Key>
           <Property Name="ProductID" Type="int" Nullable="false" />
-          <Property Name="Price" Type="int" Nullable="false" />
-          <Property Name="StockQuantity" Type="int" Nullable="false" />
-          <Property Name="Tax" Type="float" Nullable="false" />
-          <Property Name="Manufacturer" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductPrice" Type="money" />
+          <Property Name="StockQuantity" Type="int" />
+          <Property Name="Tax" Type="float" />
+          <Property Name="Brand" Type="nvarchar" MaxLength="15" />
+          <Property Name="ProductImg" Type="varchar(max)" />
           <Property Name="CategoryID" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Promotion">
+        <EntityType Name="PromotionDetails">
           <Key>
-            <PropertyRef Name="CampaignID" />
+            <PropertyRef Name="PromotionID" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="CampaignID" Type="int" Nullable="false" />
-          <Property Name="Specification" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="PromotionID" Type="int" Nullable="false" />
+          <Property Name="ProductID" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__CampaignP__Campa__4CA06362">
-          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
-          <End Role="CampaignProductDetails" Type="Self.CampaignProductDetails" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Promotion">
-              <PropertyRef Name="CampaignID" />
-            </Principal>
-            <Dependent Role="CampaignProductDetails">
-              <PropertyRef Name="CampaignID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__CampaignP__Produ__4D94879B">
-          <End Role="Products" Type="Self.Products" Multiplicity="1" />
-          <End Role="CampaignProductDetails" Type="Self.CampaignProductDetails" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Products">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="CampaignProductDetails">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__OrderDeta__Campa__49C3F6B7">
-          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
-          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Promotion">
-              <PropertyRef Name="CampaignID" />
-            </Principal>
-            <Dependent Role="OrderDetails">
-              <PropertyRef Name="CampaignID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
+        <EntityType Name="Promotions">
+          <Key>
+            <PropertyRef Name="PromotionID" />
+          </Key>
+          <Property Name="PromotionID" Type="int" Nullable="false" />
+          <Property Name="Specification" Type="char" MaxLength="10" />
+          <Property Name="Duration" Type="int" />
+        </EntityType>
         <Association Name="FK__OrderDeta__Order__47DBAE45">
           <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
           <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
@@ -160,11 +129,23 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__OrderDeta__Promo__49C3F6B7">
+          <End Role="Promotions" Type="Self.Promotions" Multiplicity="0..1" />
+          <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Promotions">
+              <PropertyRef Name="PromotionID" />
+            </Principal>
+            <Dependent Role="OrderDetails">
+              <PropertyRef Name="PromotionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Orders__CouponID__45F365D3">
-          <End Role="Coupon" Type="Self.Coupon" Multiplicity="1" />
+          <End Role="Coupons" Type="Self.Coupons" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Coupon">
+            <Principal Role="Coupons">
               <PropertyRef Name="CouponID" />
             </Principal>
             <Dependent Role="Orders">
@@ -208,36 +189,50 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Promotion__Produ__4D94879B">
+          <End Role="Products" Type="Self.Products" Multiplicity="1" />
+          <End Role="PromotionDetails" Type="Self.PromotionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="PromotionDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Promotion__Promo__4CA06362">
+          <End Role="Promotions" Type="Self.Promotions" Multiplicity="1" />
+          <End Role="PromotionDetails" Type="Self.PromotionDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Promotions">
+              <PropertyRef Name="PromotionID" />
+            </Principal>
+            <Dependent Role="PromotionDetails">
+              <PropertyRef Name="PromotionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="DAPMModelStoreContainer">
-          <EntitySet Name="CampaignProductDetails" EntityType="Self.CampaignProductDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Coupon" EntityType="Self.Coupon" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Coupons" EntityType="Self.Coupons" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Promotion" EntityType="Self.Promotion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PromotionDetails" EntityType="Self.PromotionDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Promotions" EntityType="Self.Promotions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [OrderDetails].[ProductQuantity] AS [ProductQuantity], 
-    [OrderDetails].[TotalPrice] AS [TotalPrice], 
+    [OrderDetails].[StockQuantity] AS [StockQuantity], 
+    [OrderDetails].[ItemPrice] AS [ItemPrice], 
+    [OrderDetails].[Discount] AS [Discount], 
+    [OrderDetails].[Total] AS [Total], 
     [OrderDetails].[OrderID] AS [OrderID], 
     [OrderDetails].[ProductID] AS [ProductID], 
-    [OrderDetails].[CampaignID] AS [CampaignID]
+    [OrderDetails].[PromotionID] AS [PromotionID]
     FROM [dbo].[OrderDetails] AS [OrderDetails]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__CampaignP__Campa__4CA06362" Association="Self.FK__CampaignP__Campa__4CA06362">
-            <End Role="Promotion" EntitySet="Promotion" />
-            <End Role="CampaignProductDetails" EntitySet="CampaignProductDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK__CampaignP__Produ__4D94879B" Association="Self.FK__CampaignP__Produ__4D94879B">
-            <End Role="Products" EntitySet="Products" />
-            <End Role="CampaignProductDetails" EntitySet="CampaignProductDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__Campa__49C3F6B7" Association="Self.FK__OrderDeta__Campa__49C3F6B7">
-            <End Role="Promotion" EntitySet="Promotion" />
-            <End Role="OrderDetails" EntitySet="OrderDetails" />
-          </AssociationSet>
           <AssociationSet Name="FK__OrderDeta__Order__47DBAE45" Association="Self.FK__OrderDeta__Order__47DBAE45">
             <End Role="Orders" EntitySet="Orders" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
@@ -246,8 +241,12 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
+          <AssociationSet Name="FK__OrderDeta__Promo__49C3F6B7" Association="Self.FK__OrderDeta__Promo__49C3F6B7">
+            <End Role="Promotions" EntitySet="Promotions" />
+            <End Role="OrderDetails" EntitySet="OrderDetails" />
+          </AssociationSet>
           <AssociationSet Name="FK__Orders__CouponID__45F365D3" Association="Self.FK__Orders__CouponID__45F365D3">
-            <End Role="Coupon" EntitySet="Coupon" />
+            <End Role="Coupons" EntitySet="Coupons" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
           <AssociationSet Name="FK__Orders__Customer__440B1D61" Association="Self.FK__Orders__Customer__440B1D61">
@@ -262,6 +261,14 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
+          <AssociationSet Name="FK__Promotion__Produ__4D94879B" Association="Self.FK__Promotion__Produ__4D94879B">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PromotionDetails" EntitySet="PromotionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promotion__Promo__4CA06362" Association="Self.FK__Promotion__Promo__4CA06362">
+            <End Role="Promotions" EntitySet="Promotions" />
+            <End Role="PromotionDetails" EntitySet="PromotionDetails" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -273,7 +280,8 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <PropertyRef Name="CategoryID" />
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
-          <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CategoryName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryIllust" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__412EB0B6" FromRole="Categories" ToRole="Products" />
         </EntityType>
         <EntityType Name="Coupon">
@@ -281,19 +289,19 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <PropertyRef Name="CouponID" />
           </Key>
           <Property Name="CouponID" Type="Int32" Nullable="false" />
-          <Property Name="CouponDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DiscountAmount" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Coupon" ToRole="Orders" />
+          <Property Name="CouponDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CouponDiscount" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Coupons" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustomerID" />
           </Key>
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
-          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="CusAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="RecipientPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CusAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CusPhone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="CusPassword" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Customer__440B1D61" FromRole="Customers" ToRole="Orders" />
         </EntityType>
@@ -302,10 +310,10 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <PropertyRef Name="EmployeeID" />
           </Key>
           <Property Name="EmployeeID" Type="Int32" Nullable="false" />
-          <Property Name="EmployeePassword" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
-          <Property Name="EmployeeFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="BirthYear" Type="Int32" Nullable="false" />
-          <Property Name="PositionID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeePassWord" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthYear" Type="Int32" />
+          <Property Name="Position" Type="Int32" />
           <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__Employee__44FF419A" FromRole="Employees" ToRole="Orders" />
         </EntityType>
         <EntityType Name="Order">
@@ -313,17 +321,17 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <PropertyRef Name="OrderID" />
           </Key>
           <Property Name="OrderID" Type="Int32" Nullable="false" />
-          <Property Name="ProductQuantity" Type="Int32" Nullable="false" />
+          <Property Name="OrderQuantity" Type="Int32" Nullable="false" />
           <Property Name="TotalMoney" Type="Int32" Nullable="false" />
-          <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="OrderStatus" Type="Int32" Nullable="false" />
-          <Property Name="RecipientFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="RecipientPhone" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="RecipientAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Precision="0" />
+          <Property Name="OrderStatus" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ReceiverName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverPhoneNum" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ReceiverAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="CustomerID" Type="Int32" Nullable="false" />
           <Property Name="EmployeeID" Type="Int32" Nullable="false" />
-          <Property Name="CouponID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Coupon" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Orders" ToRole="Coupon" />
+          <Property Name="CouponID" Type="Int32" />
+          <NavigationProperty Name="Coupon" Relationship="Self.FK__Orders__CouponID__45F365D3" FromRole="Orders" ToRole="Coupons" />
           <NavigationProperty Name="Customer" Relationship="Self.FK__Orders__Customer__440B1D61" FromRole="Orders" ToRole="Customers" />
           <NavigationProperty Name="Employee" Relationship="Self.FK__Orders__Employee__44FF419A" FromRole="Orders" ToRole="Employees" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__47DBAE45" FromRole="Orders" ToRole="OrderDetails" />
@@ -333,41 +341,45 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <PropertyRef Name="ProductID" />
           </Key>
           <Property Name="ProductID" Type="Int32" Nullable="false" />
-          <Property Name="Price" Type="Int32" Nullable="false" />
-          <Property Name="StockQuantity" Type="Int32" Nullable="false" />
-          <Property Name="Tax" Type="Double" Nullable="false" />
-          <Property Name="Manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="StockQuantity" Type="Int32" />
+          <Property Name="Tax" Type="Double" />
+          <Property Name="Brand" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="ProductImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__412EB0B6" FromRole="Products" ToRole="Categories" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__48CFD27E" FromRole="Products" ToRole="OrderDetails" />
-          <NavigationProperty Name="Promotions" Relationship="Self.CampaignProductDetails" FromRole="Products" ToRole="Promotion" />
+          <NavigationProperty Name="Promotions" Relationship="Self.PromotionDetails" FromRole="Products" ToRole="Promotions" />
         </EntityType>
         <EntityType Name="Promotion">
           <Key>
-            <PropertyRef Name="CampaignID" />
+            <PropertyRef Name="PromotionID" />
           </Key>
-          <Property Name="CampaignID" Type="Int32" Nullable="false" />
-          <Property Name="Specification" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Duration" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Campa__49C3F6B7" FromRole="Promotion" ToRole="OrderDetails" />
-          <NavigationProperty Name="Products" Relationship="Self.CampaignProductDetails" FromRole="Promotion" ToRole="Products" />
+          <Property Name="PromotionID" Type="Int32" Nullable="false" />
+          <Property Name="Specification" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Duration" Type="Int32" />
+          <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Promo__49C3F6B7" FromRole="Promotions" ToRole="OrderDetails" />
+          <NavigationProperty Name="Products" Relationship="Self.PromotionDetails" FromRole="Promotions" ToRole="Products" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
-            <PropertyRef Name="ProductQuantity" />
-            <PropertyRef Name="TotalPrice" />
+            <PropertyRef Name="StockQuantity" />
+            <PropertyRef Name="ItemPrice" />
+            <PropertyRef Name="Discount" />
             <PropertyRef Name="OrderID" />
             <PropertyRef Name="ProductID" />
-            <PropertyRef Name="CampaignID" />
           </Key>
-          <Property Name="ProductQuantity" Type="Int32" Nullable="false" />
-          <Property Name="TotalPrice" Type="Int32" Nullable="false" />
+          <Property Name="StockQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ItemPrice" Type="Int32" Nullable="false" />
+          <Property Name="Discount" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="OrderID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
-          <Property Name="CampaignID" Type="Int32" Nullable="false" />
+          <Property Name="PromotionID" Type="Int32" />
           <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__47DBAE45" FromRole="OrderDetails" ToRole="Orders" />
           <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__48CFD27E" FromRole="OrderDetails" ToRole="Products" />
-          <NavigationProperty Name="Promotion" Relationship="Self.FK__OrderDeta__Campa__49C3F6B7" FromRole="OrderDetails" ToRole="Promotion" />
+          <NavigationProperty Name="Promotion" Relationship="Self.FK__OrderDeta__Promo__49C3F6B7" FromRole="OrderDetails" ToRole="Promotions" />
         </EntityType>
         <Association Name="FK__Products__Catego__412EB0B6">
           <End Role="Categories" Type="Self.Category" Multiplicity="1" />
@@ -382,10 +394,10 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__Orders__CouponID__45F365D3">
-          <End Role="Coupon" Type="Self.Coupon" Multiplicity="1" />
+          <End Role="Coupons" Type="Self.Coupon" Multiplicity="0..1" />
           <End Role="Orders" Type="Self.Order" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Coupon">
+            <Principal Role="Coupons">
               <PropertyRef Name="CouponID" />
             </Principal>
             <Dependent Role="Orders">
@@ -441,21 +453,21 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__OrderDeta__Campa__49C3F6B7">
-          <End Role="Promotion" Type="Self.Promotion" Multiplicity="1" />
+        <Association Name="FK__OrderDeta__Promo__49C3F6B7">
+          <End Role="Promotions" Type="Self.Promotion" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Promotion">
-              <PropertyRef Name="CampaignID" />
+            <Principal Role="Promotions">
+              <PropertyRef Name="PromotionID" />
             </Principal>
             <Dependent Role="OrderDetails">
-              <PropertyRef Name="CampaignID" />
+              <PropertyRef Name="PromotionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="CampaignProductDetails">
-          <End Role="Promotion" Type="Self.Promotion" Multiplicity="*" />
+        <Association Name="PromotionDetails">
           <End Role="Products" Type="Self.Product" Multiplicity="*" />
+          <End Role="Promotions" Type="Self.Promotion" Multiplicity="*" />
         </Association>
         <EntityContainer Name="DAPMEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
@@ -471,7 +483,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
           <AssociationSet Name="FK__Orders__CouponID__45F365D3" Association="Self.FK__Orders__CouponID__45F365D3">
-            <End Role="Coupon" EntitySet="Coupons" />
+            <End Role="Coupons" EntitySet="Coupons" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
           <AssociationSet Name="FK__Orders__Customer__440B1D61" Association="Self.FK__Orders__Customer__440B1D61">
@@ -490,13 +502,13 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="FK__OrderDeta__Campa__49C3F6B7" Association="Self.FK__OrderDeta__Campa__49C3F6B7">
-            <End Role="Promotion" EntitySet="Promotions" />
+          <AssociationSet Name="FK__OrderDeta__Promo__49C3F6B7" Association="Self.FK__OrderDeta__Promo__49C3F6B7">
+            <End Role="Promotions" EntitySet="Promotions" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
-          <AssociationSet Name="CampaignProductDetails" Association="Self.CampaignProductDetails">
-            <End Role="Promotion" EntitySet="Promotions" />
+          <AssociationSet Name="PromotionDetails" Association="Self.PromotionDetails">
             <End Role="Products" EntitySet="Products" />
+            <End Role="Promotions" EntitySet="Promotions" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -510,15 +522,16 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
               <MappingFragment StoreEntitySet="Categories">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryIllust" ColumnName="CategoryIllust" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Coupons">
             <EntityTypeMapping TypeName="DAPMModel.Coupon">
-              <MappingFragment StoreEntitySet="Coupon">
+              <MappingFragment StoreEntitySet="Coupons">
                 <ScalarProperty Name="CouponID" ColumnName="CouponID" />
                 <ScalarProperty Name="CouponDescription" ColumnName="CouponDescription" />
-                <ScalarProperty Name="DiscountAmount" ColumnName="DiscountAmount" />
+                <ScalarProperty Name="CouponDiscount" ColumnName="CouponDiscount" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -528,8 +541,8 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="FullName" ColumnName="FullName" />
                 <ScalarProperty Name="CusAddress" ColumnName="CusAddress" />
-                <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="CusPhone" ColumnName="CusPhone" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="CusPassword" ColumnName="CusPassword" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -538,10 +551,10 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <EntityTypeMapping TypeName="DAPMModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
-                <ScalarProperty Name="EmployeePassword" ColumnName="EmployeePassword" />
+                <ScalarProperty Name="EmployeePassWord" ColumnName="EmployeePassWord" />
                 <ScalarProperty Name="EmployeeFullName" ColumnName="EmployeeFullName" />
                 <ScalarProperty Name="BirthYear" ColumnName="BirthYear" />
-                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -549,13 +562,13 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <EntityTypeMapping TypeName="DAPMModel.Order">
               <MappingFragment StoreEntitySet="Orders">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
+                <ScalarProperty Name="OrderQuantity" ColumnName="OrderQuantity" />
                 <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
-                <ScalarProperty Name="RecipientFullName" ColumnName="RecipientFullName" />
-                <ScalarProperty Name="RecipientPhone" ColumnName="RecipientPhone" />
-                <ScalarProperty Name="RecipientAddress" ColumnName="RecipientAddress" />
+                <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+                <ScalarProperty Name="ReceiverPhoneNum" ColumnName="ReceiverPhoneNum" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="CouponID" ColumnName="CouponID" />
@@ -566,18 +579,20 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <EntityTypeMapping TypeName="DAPMModel.Product">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
                 <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
                 <ScalarProperty Name="Tax" ColumnName="Tax" />
-                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ProductImg" ColumnName="ProductImg" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Promotions">
             <EntityTypeMapping TypeName="DAPMModel.Promotion">
-              <MappingFragment StoreEntitySet="Promotion">
-                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+              <MappingFragment StoreEntitySet="Promotions">
+                <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
                 <ScalarProperty Name="Specification" ColumnName="Specification" />
                 <ScalarProperty Name="Duration" ColumnName="Duration" />
               </MappingFragment>
@@ -586,20 +601,22 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <EntitySetMapping Name="OrderDetails">
             <EntityTypeMapping TypeName="DAPMModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetails">
-                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
-                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+                <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
+                <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="CampaignProductDetails" TypeName="DAPMModel.CampaignProductDetails" StoreEntitySet="CampaignProductDetails">
-            <EndProperty Name="Promotion">
-              <ScalarProperty Name="CampaignID" ColumnName="CampaignID" />
-            </EndProperty>
+          <AssociationSetMapping Name="PromotionDetails" TypeName="DAPMModel.PromotionDetails" StoreEntitySet="PromotionDetails">
             <EndProperty Name="Products">
               <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+            </EndProperty>
+            <EndProperty Name="Promotions">
+              <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>

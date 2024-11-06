@@ -21,16 +21,16 @@ namespace WebApplication1.Models
         }
     
         public int OrderID { get; set; }
-        public int ProductQuantity { get; set; }
+        public int OrderQuantity { get; set; }
         public int TotalMoney { get; set; }
         public System.DateTime OrderDate { get; set; }
         public string OrderStatus { get; set; }
-        public string RecipientFullName { get; set; }
-        public string RecipientPhone { get; set; }
-        public string RecipientAddress { get; set; }
+        public string ReceiverName { get; set; }
+        public string ReceiverPhoneNum { get; set; }
+        public string ReceiverAddress { get; set; }
         public int CustomerID { get; set; }
         public int EmployeeID { get; set; }
-        public int CouponID { get; set; }
+        public Nullable<int> CouponID { get; set; }
     
         public virtual Coupon Coupon { get; set; }
         public virtual Customer Customer { get; set; }

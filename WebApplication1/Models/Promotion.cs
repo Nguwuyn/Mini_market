@@ -21,9 +21,9 @@ namespace WebApplication1.Models
             this.Products = new HashSet<Product>();
         }
     
-        public int CampaignID { get; set; }
+        public int PromotionID { get; set; }
         public string Specification { get; set; }
-        public int Duration { get; set; }
+        public Nullable<int> Duration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

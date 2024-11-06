@@ -22,7 +22,7 @@ namespace WebApplication1.Models
     
         public int CouponID { get; set; }
         public string CouponDescription { get; set; }
-        public int DiscountAmount { get; set; }
+        public Nullable<int> CouponDiscount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

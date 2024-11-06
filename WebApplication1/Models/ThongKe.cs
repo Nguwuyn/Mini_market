@@ -60,7 +60,7 @@ namespace WebApplication1.Models.ThongKe
         {
             var self = new ThongKeNgay();
 
-            db.Orders.Where(x => x.OrderDate.Day == DateTime.Now.Day).ForEach(item =>
+            db.Orders.Where(x => x.OrderDate.Date == DateTime.Now.Date).ForEach(item =>
             {
                 self.TongDoanhThu += item.TotalMoney;
                 self.TongKhacHang += 1;
@@ -68,12 +68,12 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.TotalPrice;
+                        self.ChiTietSanPham.TongThu += x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.ProductQuantity;
-                                sp.TongThu += x.TotalPrice;
+                                sp.TongSo += x.StockQuantity;
+                                sp.TongThu += x.Total;
                                 return true;
                             }, false);
                         if (!isSet)
@@ -82,7 +82,7 @@ namespace WebApplication1.Models.ThongKe
                                 sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
+                                        new ChiTiet((int)x.ProductID, x.StockQuantity, x.Total, sp.ProductName));
                                 });
                         }
                     });
@@ -133,12 +133,12 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.TotalPrice;
+                        self.ChiTietSanPham.TongThu += x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.ProductQuantity;
-                                sp.TongThu += x.TotalPrice;
+                                sp.TongSo += x.StockQuantity;
+                                sp.TongThu += x.Total;
                                 return true;
                             }, false);
                         if (!isSet)
@@ -147,7 +147,7 @@ namespace WebApplication1.Models.ThongKe
                                 sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
+                                        new ChiTiet((int)x.ProductID, x.StockQuantity, x.Total, sp.ProductName));
                                 });
                         }
                     });
@@ -192,12 +192,12 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.TotalPrice;
+                        self.ChiTietSanPham.TongThu += x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
-                                sp.TongSo += x.ProductQuantity;
-                                sp.TongThu += x.TotalPrice;
+                                sp.TongSo += x.StockQuantity;
+                                sp.TongThu += x.Total;
                                 return true;
                             }, false);
                         if (!isSet)
@@ -206,7 +206,7 @@ namespace WebApplication1.Models.ThongKe
                                 sp => sp.ProductID == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                                 {
                                     self.ChiTietSanPham.ChiTiet.Add(
-                                        new ChiTiet((int)x.ProductID, x.ProductQuantity, x.TotalPrice, sp.ProductName));
+                                        new ChiTiet((int)x.ProductID, x.StockQuantity, x.Total, sp.ProductName));
                                 });
                         }
                     });

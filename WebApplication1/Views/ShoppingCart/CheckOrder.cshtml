@@ -16,11 +16,10 @@
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.OrderDetails)
         {
-            var prodTotal = (item.StockQuantity * item.Product.Price);
+            var prodTotal = (item.StockQuantity * item.Product.ProductPrice);
             firstTotal += prodTotal;
-            totalDiscount += prodTotal * item.Product.Discount;
             totalTax += prodTotal * item.Product.Tax;
-            total += prodTotal - (prodTotal * item.Product.Discount) + (prodTotal * item.Product.Tax);
+            total += prodTotal + (prodTotal * item.Product.Tax);
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", firstTotal);
         TotalMoney = String.Format(": {0:#,#.##}đ", total);
@@ -108,11 +107,11 @@
     </style>
 }
 
-<h2 style="margin-bottom: 24px">Đơn hàng số @Model.ID | @Model.OrderStatus</h2>
+<h2 style="margin-bottom: 24px">Đơn hàng số @Model.OrderID | @Model.OrderStatus</h2>
 @if (Session["IsAdmin"] is true)
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.ID })">Cập nhật đơn hàng</a>
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.ID })">Xóa đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("EditOrder", new { id = Model.OrderID })">Cập nhật đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("DeleteOrder", new { id = Model.OrderID })">Xóa đơn hàng</a>
 }
 
 @if (Model.OrderStatus.Contains("ủy"))
@@ -121,7 +120,7 @@
 }
 else
 {
-    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.ID })">Hủy đơn hàng</a>
+    <a style=" background-color: #4E6C50; color: white; font-size: 16px; border: none; padding: 10px; padding-bottom: 10px; border-radius: 7px; max-height: 41px;" href="@Url.Action("CancelOrder", new { id = Model.OrderID })">Hủy đơn hàng</a>
 }
 
 @if (Model != null && Model.OrderDetails.Count() > 0)
@@ -136,15 +135,6 @@ else
                 </div>
                 <div class="product-content">
                     <div class="main-content">
-                        @if (item.Product.Discount > 0)
-                        {
-                            <div class="product-price" style="font-size: 12px;color: red;text-decoration: line-through;line-height: unset;">@(String.Format("{0:#,#.##}", item.Product.Price))đ</div>
-                            <div class="product-price">@(String.Format("{0:#,#.##}", item.Product.Price - (item.Product.Price * item.Product.Discount) ))đ</div>
-                        }
-                        else
-                        {
-                            <div class="product-price">@(String.Format("{0:#,#.##}", item.Product.Price ))đ</div>
-                        }
                         <a href="@Url.Action("Details", "Products", new { id = item.Product.ProductID })" style="text-decoration: none">
                             <div class="product-name">@item.Product.ProductName</div>
                         </a>

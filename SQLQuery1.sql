@@ -1,93 +1,101 @@
-﻿use DAPM
-CREATE TABLE Customer
+﻿CREATE DATABASE DAPM
+CREATE TABLE Customers
 (
-  CustomerID char(8),
-  Name nvarchar(50),
-  Địa_chỉ nvarchar(200),
-  Số_điện_thoại char(10),
+  CustomerID int,
+  FullName nvarchar(50),
+  CusAddress nvarchar(200),
+  CusPhone char(10),
+  UserName nvarchar(15),
+  CusPassword nvarchar(10),
   PRIMARY KEY (CustomerID)
 );
 
-CREATE TABLE Nhân_viên
+CREATE TABLE Employees
 (
-  ID_nhân_viên char(3),
-  Họ_tên_nhân_viên nvarchar(50),
-  Năm_sinh INT,
-  ID_chức_vụ INT,
-  PRIMARY KEY (ID_nhân_viên)
+  EmployeeID INT,
+  EmployeePassWord varchar(10),
+  EmployeeFullName nvarchar(50),
+  BirthYear INT,
+  Position INT,
+  PRIMARY KEY (EmployeeID)
 );
 
-CREATE TABLE CTKM
+CREATE TABLE Promotions
 (
-  ID_CTKM char(10),
-  Quy_cách char(4),
-  Thời_lượng INT,
-  PRIMARY KEY (ID_CTKM)
+  PromotionID INT,
+  Specification char(10),
+  Duration INT,
+  PRIMARY KEY (PromotionID)
 );
 
-CREATE TABLE Mã_giảm_giá
+CREATE TABLE Coupons
 (
-  ID_mã_giảm_giá char(10),
-  Nội_dung nvarchar(100),
-  Số_tiền_giảm float,
-  PRIMARY KEY (ID_mã_giảm_giá)
+  CouponID INT,
+  CouponDescription nvarchar(100),
+  CouponDiscount int,
+  PRIMARY KEY (CouponID)
 );
 
-CREATE TABLE Danh_mục
+CREATE TABLE Categories
 (
-  ID_danh_mục INT,
-  Tên_danh_mục nvarchar(10) not null,
-  PRIMARY KEY (ID_danh_mục)
+  CategoryID INT,
+  CategoryName nvarchar(10) not null,
+  CategoryIllust varchar(max),
+  PRIMARY KEY (CategoryID)
 );
 
-CREATE TABLE Product
+CREATE TABLE Products
 (
-  ProductID INT ,
-  Price money,
-  StockQuantity INT ,
-  Thuế float,
-  Hãng nvarchar(15),
-  ID_danh_mục INT NOT NULL,
+  ProductID INT,
+  ProductName nvarchar(50) not null,
+  ProductPrice money,
+  StockQuantity INT,
+  Tax float,
+  Brand nvarchar(15),
+  ProductImg varchar(max),
+  CategoryID INT NOT NULL,
   PRIMARY KEY (ProductID),
-  FOREIGN KEY (ID_danh_mục) REFERENCES Danh_mục(ID_danh_mục)
+  FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
 );
 
-CREATE TABLE Đơn_mua_hàng
+CREATE TABLE Orders
 (
-  ID_đơn_hàng INT NOT NULL,
-  Số_lượng_Product INT NOT NULL,
-  Tổng_thành_tiền INT NOT NULL,
-  Ngày_lập_đơn date,
-  Trạng_thái_đơn_hàng char(2),
-  Họ_tên_người_nhận nvarchar(50),
-  SĐT_người_nhận char(10),
-  Địa_chỉ_người_nhận nvarchar(200),
-  CustomerID char(8) NOT NULL,
-  ID_nhân_viên char(3) NOT NULL,
-  ID_mã_giảm_giá char(10),
-  PRIMARY KEY (ID_đơn_hàng),
-  FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
-  FOREIGN KEY (ID_nhân_viên) REFERENCES Nhân_viên(ID_nhân_viên),
-  FOREIGN KEY (ID_mã_giảm_giá) REFERENCES Mã_giảm_giá(ID_mã_giảm_giá)
+  OrderID INT NOT NULL,
+  OrderQuantity INT NOT NULL,
+  TotalMoney INT NOT NULL,
+  OrderDate date,
+  OrderStatus char(2),
+  ReceiverName nvarchar(50),
+  ReceiverPhoneNum char(10),
+  ReceiverAddress nvarchar(200),
+  CustomerID INT NOT NULL,
+  EmployeeID INT NOT NULL,
+  CouponID INT,
+  PRIMARY KEY (OrderID),
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+  FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+  FOREIGN KEY (CouponID) REFERENCES Coupons(CouponID)
 );
 
-CREATE TABLE Chi_tiết_đơn_hàng
+CREATE TABLE OrderDetails
 (
-  Số_lượng INT NOT NULL,
-  Thành_tiền money,
-  ID_đơn_hàng INT NOT NULL,
+  StockQuantity INT NOT NULL,
+  ItemPrice int NOT NULL,
+  Discount int NOT NULL,
+  Total money,
+  OrderID INT NOT NULL,
   ProductID INT NOT NULL,
-  ID_CTKM char(10),
-  FOREIGN KEY (ID_đơn_hàng) REFERENCES Đơn_mua_hàng(ID_đơn_hàng),
-  FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
-  FOREIGN KEY (ID_CTKM) REFERENCES CTKM(ID_CTKM)
+  PromotionID INT,
+  FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+  FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+  FOREIGN KEY (PromotionID) REFERENCES Promotions(PromotionID)
 );
 
-CREATE TABLE Chi_tiết_CTKM
+CREATE TABLE PromotionDetails
 (
-  ID_CTKM char(10),
+  PromotionID INT,
   ProductID INT NOT NULL,
-  PRIMARY KEY (ID_CTKM, ProductID),
-  FOREIGN KEY (ID_CTKM) REFERENCES CTKM(ID_CTKM),
-  FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+  PRIMARY KEY (PromotionID, ProductID),
+  FOREIGN KEY (PromotionID) REFERENCES Promotions(PromotionID),
+  FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );

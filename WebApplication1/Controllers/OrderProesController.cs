@@ -48,7 +48,7 @@ namespace WebApplication1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,OrderDate,CustomerID,RecipientPhone,RecipientAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
+        public ActionResult Create([Bind(Include = "ID,OrderDate,CustomerID,ReceiverPhoneNum,ReceiverAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace WebApplication1.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,OrderDate,CustomerID,RecipientPhone,RecipientAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
+        public ActionResult Edit([Bind(Include = "ID,OrderDate,CustomerID,ReceiverPhoneNum,ReceiverAddress,TotalMoney,TotalMoney,TotalTax,TotalDiscount,State")] Order Order)
         {
             if (ModelState.IsValid)
             {
