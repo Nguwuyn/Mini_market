@@ -11,8 +11,7 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,10 +24,8 @@ namespace WebApplication1.Models
         public string FullName { get; set; }
         public string CusAddress { get; set; }
         public string CusPhone { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
         public string CusPassword { get; set; }
-        [NotMapped]
-        public string ConfirmPasswordCus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

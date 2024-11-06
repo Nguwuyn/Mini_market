@@ -46,13 +46,13 @@
 warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="OrderDetails">
           <Key>
-            <PropertyRef Name="StockQuantity" />
+            <PropertyRef Name="ProductQuantity" />
             <PropertyRef Name="ItemPrice" />
             <PropertyRef Name="Discount" />
             <PropertyRef Name="OrderID" />
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="StockQuantity" Type="int" Nullable="false" />
+          <Property Name="ProductQuantity" Type="int" Nullable="false" />
           <Property Name="ItemPrice" Type="int" Nullable="false" />
           <Property Name="Discount" Type="int" Nullable="false" />
           <Property Name="Total" Type="money" />
@@ -96,6 +96,8 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           </Key>
           <Property Name="PromotionID" Type="int" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="DateStart" Type="date" />
+          <Property Name="DateEnd" Type="date" />
         </EntityType>
         <EntityType Name="Promotions">
           <Key>
@@ -224,7 +226,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <EntitySet Name="Promotions" EntityType="Self.Promotions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [OrderDetails].[StockQuantity] AS [StockQuantity], 
+    [OrderDetails].[ProductQuantity] AS [ProductQuantity], 
     [OrderDetails].[ItemPrice] AS [ItemPrice], 
     [OrderDetails].[Discount] AS [Discount], 
     [OrderDetails].[Total] AS [Total], 
@@ -350,7 +352,19 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Category" Relationship="Self.FK__Products__Catego__412EB0B6" FromRole="Products" ToRole="Categories" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__48CFD27E" FromRole="Products" ToRole="OrderDetails" />
-          <NavigationProperty Name="Promotions" Relationship="Self.PromotionDetails" FromRole="Products" ToRole="Promotions" />
+          <NavigationProperty Name="PromotionDetails" Relationship="Self.FK__Promotion__Produ__4D94879B" FromRole="Products" ToRole="PromotionDetails" />
+        </EntityType>
+        <EntityType Name="PromotionDetail">
+          <Key>
+            <PropertyRef Name="PromotionID" />
+            <PropertyRef Name="ProductID" />
+          </Key>
+          <Property Name="PromotionID" Type="Int32" Nullable="false" />
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="DateStart" Type="DateTime" Precision="0" />
+          <Property Name="DateEnd" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Product" Relationship="Self.FK__Promotion__Produ__4D94879B" FromRole="PromotionDetails" ToRole="Products" />
+          <NavigationProperty Name="Promotion" Relationship="Self.FK__Promotion__Promo__4CA06362" FromRole="PromotionDetails" ToRole="Promotions" />
         </EntityType>
         <EntityType Name="Promotion">
           <Key>
@@ -359,18 +373,18 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <Property Name="PromotionID" Type="Int32" Nullable="false" />
           <Property Name="Specification" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <Property Name="Duration" Type="Int32" />
+          <NavigationProperty Name="PromotionDetails" Relationship="Self.FK__Promotion__Promo__4CA06362" FromRole="Promotions" ToRole="PromotionDetails" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Promo__49C3F6B7" FromRole="Promotions" ToRole="OrderDetails" />
-          <NavigationProperty Name="Products" Relationship="Self.PromotionDetails" FromRole="Promotions" ToRole="Products" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
-            <PropertyRef Name="StockQuantity" />
+            <PropertyRef Name="ProductQuantity" />
             <PropertyRef Name="ItemPrice" />
             <PropertyRef Name="Discount" />
             <PropertyRef Name="OrderID" />
             <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="StockQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ProductQuantity" Type="Int32" Nullable="false" />
           <Property Name="ItemPrice" Type="Int32" Nullable="false" />
           <Property Name="Discount" Type="Int32" Nullable="false" />
           <Property Name="Total" Type="Decimal" Precision="19" Scale="4" />
@@ -453,6 +467,30 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Promotion__Produ__4D94879B">
+          <End Role="Products" Type="Self.Product" Multiplicity="1" />
+          <End Role="PromotionDetails" Type="Self.PromotionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="PromotionDetails">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Promotion__Promo__4CA06362">
+          <End Role="Promotions" Type="Self.Promotion" Multiplicity="1" />
+          <End Role="PromotionDetails" Type="Self.PromotionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Promotions">
+              <PropertyRef Name="PromotionID" />
+            </Principal>
+            <Dependent Role="PromotionDetails">
+              <PropertyRef Name="PromotionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__OrderDeta__Promo__49C3F6B7">
           <End Role="Promotions" Type="Self.Promotion" Multiplicity="0..1" />
           <End Role="OrderDetails" Type="Self.OrderDetail" Multiplicity="*" />
@@ -465,10 +503,6 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="PromotionDetails">
-          <End Role="Products" Type="Self.Product" Multiplicity="*" />
-          <End Role="Promotions" Type="Self.Promotion" Multiplicity="*" />
-        </Association>
         <EntityContainer Name="DAPMEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Coupons" EntityType="Self.Coupon" />
@@ -476,6 +510,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="PromotionDetails" EntityType="Self.PromotionDetail" />
           <EntitySet Name="Promotions" EntityType="Self.Promotion" />
           <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
           <AssociationSet Name="FK__Products__Catego__412EB0B6" Association="Self.FK__Products__Catego__412EB0B6">
@@ -502,13 +537,17 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
             <End Role="Products" EntitySet="Products" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
           </AssociationSet>
+          <AssociationSet Name="FK__Promotion__Produ__4D94879B" Association="Self.FK__Promotion__Produ__4D94879B">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="PromotionDetails" EntitySet="PromotionDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Promotion__Promo__4CA06362" Association="Self.FK__Promotion__Promo__4CA06362">
+            <End Role="Promotions" EntitySet="Promotions" />
+            <End Role="PromotionDetails" EntitySet="PromotionDetails" />
+          </AssociationSet>
           <AssociationSet Name="FK__OrderDeta__Promo__49C3F6B7" Association="Self.FK__OrderDeta__Promo__49C3F6B7">
             <End Role="Promotions" EntitySet="Promotions" />
             <End Role="OrderDetails" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="PromotionDetails" Association="Self.PromotionDetails">
-            <End Role="Products" EntitySet="Products" />
-            <End Role="Promotions" EntitySet="Promotions" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -589,6 +628,16 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="PromotionDetails">
+            <EntityTypeMapping TypeName="DAPMModel.PromotionDetail">
+              <MappingFragment StoreEntitySet="PromotionDetails">
+                <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Promotions">
             <EntityTypeMapping TypeName="DAPMModel.Promotion">
               <MappingFragment StoreEntitySet="Promotions">
@@ -601,7 +650,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <EntitySetMapping Name="OrderDetails">
             <EntityTypeMapping TypeName="DAPMModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetails">
-                <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
                 <ScalarProperty Name="ItemPrice" ColumnName="ItemPrice" />
                 <ScalarProperty Name="Discount" ColumnName="Discount" />
                 <ScalarProperty Name="Total" ColumnName="Total" />
@@ -611,14 +660,6 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="PromotionDetails" TypeName="DAPMModel.PromotionDetails" StoreEntitySet="PromotionDetails">
-            <EndProperty Name="Products">
-              <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-            </EndProperty>
-            <EndProperty Name="Promotions">
-              <ScalarProperty Name="PromotionID" ColumnName="PromotionID" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -12,17 +12,13 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class OrderDetail
+    public partial class PromotionDetail
     {
-        public int ProductQuantity { get; set; }
-        public int ItemPrice { get; set; }
-        public int Discount { get; set; }
-        public Nullable<decimal> Total { get; set; }
-        public int OrderID { get; set; }
+        public int PromotionID { get; set; }
         public int ProductID { get; set; }
-        public Nullable<int> PromotionID { get; set; }
+        public Nullable<System.DateTime> DateStart { get; set; }
+        public Nullable<System.DateTime> DateEnd { get; set; }
     
-        public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
         public virtual Promotion Promotion { get; set; }
     }

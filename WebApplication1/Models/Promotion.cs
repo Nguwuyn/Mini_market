@@ -17,8 +17,8 @@ namespace WebApplication1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Promotion()
         {
+            this.PromotionDetails = new HashSet<PromotionDetail>();
             this.OrderDetails = new HashSet<OrderDetail>();
-            this.Products = new HashSet<Product>();
         }
     
         public int PromotionID { get; set; }
@@ -26,8 +26,8 @@ namespace WebApplication1.Models
         public Nullable<int> Duration { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<PromotionDetail> PromotionDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

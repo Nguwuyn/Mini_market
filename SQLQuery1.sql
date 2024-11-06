@@ -95,6 +95,8 @@ CREATE TABLE PromotionDetails
 (
   PromotionID INT,
   ProductID INT NOT NULL,
+  DateStart Date Not null,
+  DateEnd Date NOT NULL,
   PRIMARY KEY (PromotionID, ProductID),
   FOREIGN KEY (PromotionID) REFERENCES Promotions(PromotionID),
   FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
