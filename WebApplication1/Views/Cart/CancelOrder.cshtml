@@ -17,10 +17,10 @@
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.OrderDetails)
         {
-            int prodTotal = (item.StockQuantity * item.Product.ProductPrice);
-            firstTotal += prodTotal;
+            var prodTotal = (item.ProductQuantity * item.Product.ProductPrice);
+            firstTotal += (double)prodTotal;
             totalTax += (int)(prodTotal* item.Product.Tax);
-            total += prodTotal + prodTotal * item.Product.Tax;//Thêm discount cho các promotion
+            total += (double)(prodTotal + prodTotal * item.Product.Tax);//Thêm discount cho các promotion
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", firstTotal);
         TotalMoney = String.Format(": {0:#,#.##}đ", total);
@@ -55,7 +55,7 @@
             width: 15%;
         }
 
-        .StockQuantity-input {
+        .ProductQuantity-input {
             width: 85%;
             border-radius: 6px;
             border: #5b5b5b solid 1px;
@@ -129,7 +129,7 @@
                     {
                         <div style="padding-bottom: 5px">Số lượng</div>
                         <input type="hidden" value="@item.Product.ProductID" name="idPro" />
-                        <input readonly class="StockQuantity-input" type="number" min="0" max="@item.Product.StockQuantity" value="@item.StockQuantity" name="cartQuantity" />
+                        <input readonly class="ProductQuantity-input" type="number" min="0" max="@item.Product.StockQuantity" value="@item.ProductQuantity" name="cartQuantity" />
                     }
                 </div>
             </div>

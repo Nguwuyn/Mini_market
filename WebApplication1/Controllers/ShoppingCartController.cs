@@ -162,9 +162,9 @@ namespace WebApplication1.Controllers
                     {
                         ProductID = item._product.ProductID,
                         OrderID = _order.OrderID,
-                        StockQuantity = item._quantity,
-                        ItemPrice = item._product.ProductPrice,
-                        Total = prodTotal + tax,
+                        ProductQuantity = item._quantity,
+                        ItemPrice = (int)item._product.ProductPrice,
+                        Total = (int)(prodTotal + tax),
                     };
 
                     totalQuantity += item._quantity;
@@ -172,7 +172,7 @@ namespace WebApplication1.Controllers
                     db.OrderDetails.Add(_order_detail);
 
                     var _prod = db.Products.Find(item._product.ProductID);
-                    _prod.StockQuantity = Math.Max(_prod.StockQuantity - item._quantity, 0);
+                    _prod.StockQuantity = Math.Max((int)(_prod.StockQuantity - item._quantity), 0);
                     db.Entry(_prod).State = EntityState.Modified;
                 }
 

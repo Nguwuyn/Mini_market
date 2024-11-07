@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Index(Customer _user)
         {
-            var check = db.Customers.Where(s => s.Username == _user.Username && s.CusPassword == _user.CusPassword).FirstOrDefault();
+            var check = db.Customers.Where(s => s.UserName == _user.UserName && s.CusPassword == _user.CusPassword).FirstOrDefault();
             if (check == null)
             {
                 ViewBag.ErrorInfo = "Thông tin đăng nhập bị sai. Vui lòng kiểm tra";
@@ -34,7 +34,7 @@ namespace WebApplication1.Controllers
                 db.Configuration.ValidateOnSaveEnabled = false;
                 Session["UserId"] = check.CustomerID;
                 Session["FullName"] = check.FullName;
-                Session["IsAdmin"] = check.Username == "Admin";
+                Session["IsAdmin"] = check.UserName == "Admin";
                 return RedirectToAction("Index", "Home");
             }
         }
@@ -55,7 +55,7 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var check = db.Customers.Where(s => s.CustomerID == _user.CustomerID || s.Username == _user.Username).FirstOrDefault();
+                var check = db.Customers.Where(s => s.CustomerID == _user.CustomerID || s.UserName == _user.UserName).FirstOrDefault();
                 if (check == null)
                 {
                     db.Configuration.ValidateOnSaveEnabled = false;

@@ -23,7 +23,7 @@ namespace WebApplication1.Models
         public int OrderID { get; set; }
         public int OrderQuantity { get; set; }
         public int TotalMoney { get; set; }
-        public Nullable<System.DateTime> OrderDate { get; set; }
+        public System.DateTime OrderDate { get; set; }
         public string OrderStatus { get; set; }
         public string ReceiverName { get; set; }
         public string ReceiverPhoneNum { get; set; }

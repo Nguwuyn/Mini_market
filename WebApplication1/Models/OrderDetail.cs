@@ -17,7 +17,7 @@ namespace WebApplication1.Models
         public int ProductQuantity { get; set; }
         public int ItemPrice { get; set; }
         public int Discount { get; set; }
-        public Nullable<decimal> Total { get; set; }
+        public int Total { get; set; }
         public int OrderID { get; set; }
         public int ProductID { get; set; }
         public Nullable<int> PromotionID { get; set; }

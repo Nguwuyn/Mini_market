@@ -18,8 +18,8 @@
         foreach (var item in Model.Items)
         {
             var prodTotal = (item._quantity * item._product.ProductPrice);
-            totalTax += prodTotal * item._product.Tax;
-            total += prodTotal + (prodTotal * item._product.Tax);//Thêm discount cho promotion
+            totalTax += (double)(prodTotal * item._product.Tax);
+            total += (double)(prodTotal + (prodTotal * item._product.Tax));//Thêm discount cho promotion
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         TotalMoney = String.Format(": {0:#,#.##}đ", total);

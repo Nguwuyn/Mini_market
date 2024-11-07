@@ -11,7 +11,9 @@ namespace WebApplication1.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Web;
+
     public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,13 +25,18 @@ namespace WebApplication1.Models
     
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-        public Nullable<decimal> ProductPrice { get; set; }
+        public Nullable<int> ProductPrice { get; set; }
         public Nullable<int> StockQuantity { get; set; }
         public Nullable<double> Tax { get; set; }
         public string Brand { get; set; }
         public string ProductImg { get; set; }
         public int CategoryID { get; set; }
-    
+        [NotMapped]
+        public string OldProductImg { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase UploadImage { get; set; }
+
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

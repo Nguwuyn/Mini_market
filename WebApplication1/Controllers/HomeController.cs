@@ -1,5 +1,4 @@
-
-﻿using WebApplication1.Models;
+using WebApplication1.Models;
 using WebApplication1.Models.ThongKe;
 using System;
 using System.Collections.Generic;

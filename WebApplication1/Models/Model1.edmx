@@ -83,7 +83,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ProductPrice" Type="money" />
-          <Property Name="StockQuantity" Type="int" />
+          <Property Name="ProductQuantity" Type="int" />
           <Property Name="Tax" Type="float" />
           <Property Name="Brand" Type="nvarchar" MaxLength="15" />
           <Property Name="ProductImg" Type="varchar(max)" />
@@ -345,7 +345,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="StockQuantity" Type="Int32" />
+          <Property Name="ProductQuantity" Type="Int32" />
           <Property Name="Tax" Type="Double" />
           <Property Name="Brand" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="ProductImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -620,7 +620,7 @@ warning 6002: The table/view 'DAPM.dbo.OrderDetails' does not have a primary key
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
-                <ScalarProperty Name="StockQuantity" ColumnName="StockQuantity" />
+                <ScalarProperty Name="ProductQuantity" ColumnName="ProductQuantity" />
                 <ScalarProperty Name="Tax" ColumnName="Tax" />
                 <ScalarProperty Name="Brand" ColumnName="Brand" />
                 <ScalarProperty Name="ProductImg" ColumnName="ProductImg" />
