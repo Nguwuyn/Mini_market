@@ -10,7 +10,7 @@ namespace WebApplication1.Controllers
 {
     public class CustomersController : Controller
     {
-        private readonly DAPMEntities db = new DAPMEntities();
+        private readonly Model1 db = new Model1();
 
         public ActionResult Index()
         {

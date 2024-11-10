@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 {
     public class OrderesController : Controller
     {
-        private DAPMEntities db = new DAPMEntities();
+        private Model1 db = new Model1();
 
         // GET: Orderes
         public ActionResult Index()

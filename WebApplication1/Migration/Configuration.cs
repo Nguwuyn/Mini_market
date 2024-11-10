@@ -7,7 +7,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class DBConfiguration : DbMigrationsConfiguration<WebApplication1.Models.DAPMEntities>
+    internal sealed class DBConfiguration : DbMigrationsConfiguration<WebApplication1.Models.Model1>
     {
         public DBConfiguration()
         {
@@ -16,7 +16,7 @@
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(WebApplication1.Models.DAPMEntities context)
+        protected override void Seed(WebApplication1.Models.Model1 context)
         {
             //  This method will be called after migrating to the latest version.
 

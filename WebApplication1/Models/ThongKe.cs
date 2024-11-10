@@ -56,7 +56,7 @@ namespace WebApplication1.Models.ThongKe
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeNgay UseDB(DAPMEntities db)
+        public static ThongKeNgay UseDB(Model1 db)
         {
             var self = new ThongKeNgay();
 
@@ -68,7 +68,7 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += (int)x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
@@ -109,7 +109,7 @@ namespace WebApplication1.Models.ThongKe
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeThang UseDB(DAPMEntities db, int? monthGet = null, int? yearGet = null)
+        public static ThongKeThang UseDB(Model1 db, int? monthGet = null, int? yearGet = null)
         {
             var self = new ThongKeThang();
 
@@ -133,7 +133,7 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += (int)x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
@@ -174,7 +174,7 @@ namespace WebApplication1.Models.ThongKe
 
         public DanhSachChiTiet ChiTietSanPham { get; set; } = new DanhSachChiTiet();
 
-        public static ThongKeNam UseDB(DAPMEntities db, int? yearGet = null)
+        public static ThongKeNam UseDB(Model1 db, int? yearGet = null)
         {
             var self = new ThongKeNam();
 
@@ -192,7 +192,7 @@ namespace WebApplication1.Models.ThongKe
                     .ForEach(x =>
                     {
                         self.TongDatHang += 1;
-                        self.ChiTietSanPham.TongThu += x.Total;
+                        self.ChiTietSanPham.TongThu += (int)x.Total;
                         var isSet = self.ChiTietSanPham.ChiTiet.Where(
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {

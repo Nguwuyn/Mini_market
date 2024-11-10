@@ -12,7 +12,7 @@ namespace WebApplication1.Controllers
 {
     public class ProductsController : Controller
     {
-        private readonly DAPMEntities db = new DAPMEntities();
+        private readonly Model1 db = new Model1();
 
         public PartialViewResult PartialProduct(Product product)
         {

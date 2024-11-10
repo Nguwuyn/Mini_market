@@ -14,7 +14,7 @@ namespace WebApplication1.Controllers
     public class ShoppingCartController : Controller
     {
         // GET: ShoppingCart
-        private readonly DAPMEntities db = new DAPMEntities();
+        private readonly Model1 db = new Model1();
         public ActionResult Index()
         {
             if (Session["Cart"] == null)
@@ -168,7 +168,7 @@ namespace WebApplication1.Controllers
                     };
 
                     totalQuantity += item._quantity;
-                    totalPrice += _order_detail.Total;
+                    totalPrice += (int)_order_detail.Total;
                     db.OrderDetails.Add(_order_detail);
 
                     var _prod = db.Products.Find(item._product.ProductID);

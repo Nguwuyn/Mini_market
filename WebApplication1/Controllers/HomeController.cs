@@ -11,7 +11,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly DAPMEntities db = new DAPMEntities();
+        private readonly Model1 db = new Model1();
         public ActionResult Index()
         {
             IEnumerable<Product> productList = db.Products.OrderByDescending(x => x.ProductName).ToList();
