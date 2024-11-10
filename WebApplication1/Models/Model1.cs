@@ -68,8 +68,8 @@ namespace WebApplication1.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-                .Property(e => e.ProductPrice)
-                .HasPrecision(19, 4);
+                .Property(e => e.ProductPrice);
+                //.HasPrecision(19, 4);
 
             modelBuilder.Entity<Product>()
                 .Property(e => e.ProductImg)
@@ -96,8 +96,8 @@ namespace WebApplication1.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderDetail>()
-                .Property(e => e.Total)
-                .HasPrecision(19, 4);
+                .Property(e => e.Total);
+                //.HasPrecision(19, 4);
         }
     }
 }
