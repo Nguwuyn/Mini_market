@@ -252,6 +252,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\bhx.png" />
     <Content Include="obj\Debug\Minimarket.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Models.Model1.Context.cs.dll" />
     <Content Include="obj\Debug\TempPE\Models.Model1.cs.dll" />
@@ -371,7 +372,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Image\" />
     <Folder Include="Views\Promotion\" />
   </ItemGroup>
   <ItemGroup />
