@@ -66,7 +66,7 @@
             @* products *@
             <div class="w-auto d-flex flex-nowrap flex-row justify-content-between align-content-end">
                 <h2>Các sản phẩm bán chạy</h2>
-                <a href="@Url.Action("Index", "Products")">
+                <a href="@Url.Action("Index", "Product")">
                     Xem thêm →
                 </a>
             </div>
@@ -78,7 +78,7 @@
                             <div class="container-wrap product">
                                 @foreach (var product in Model.Item1.Take(10))
                                 {
-                                    Html.RenderPartial("../Products/PartialProduct", product, ViewData);
+                                    Html.RenderPartial("../Product/PartialProduct", product, ViewData);
                                 }
                             </div>
                         </div>*@
@@ -92,7 +92,7 @@
                             <div class="container-wrap product">
                                 @foreach (var product in Model.Item1.Skip(i).Take(2))
                                 {
-                                    Html.RenderPartial("../Products/PartialProduct", product, ViewData);
+                                    Html.RenderPartial("../Product/PartialProduct", product, ViewData);
                                 }
                             </div>
                         </div>

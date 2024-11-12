@@ -1,52 +1,55 @@
 
 ﻿using WebApplication1.Models;
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
 
-namespace WebApplication1.Controllers
 
+namespace WebApplication1.Controllers
 {
-    public class CustomersController : Controller
+    public class CategoryController : Controller
     {
         private readonly Model1 db = new Model1();
 
         public ActionResult Index()
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-
-            var customers = db.Customers.ToList();
+            var category = db.Categories.ToList();
             if (ControllerContext.IsChildAction)
             {
-                return PartialView(customers.ToList());
+                return PartialView(category.ToList());
             }
-            ViewBag.Layout = "~/Views/Shared/_Layout.cshtml";
-            return View(customers.ToList());
+
+            return RedirectToAction("Details", new { id = db.Categories.Where(e => e.CategoryID == 1) });
         }
 
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id, int page = 1)
         {
-            //if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            //{
-            //    return RedirectToAction("Index", "Home");
-            //}
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var customer = db.Customers.Where(x => x.CustomerID == id).FirstOrDefault();
-            if (customer == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+                return HttpNotFound();
             }
+            IEnumerable<Product> productList = category.Products.ToList();
 
-            return View(customer);
+            int maxPage = Math.Max(1, productList.Count() / 10);
+            if (page > maxPage)
+            {
+                page = maxPage;
+            }
+            ViewBag.MaxPage = maxPage;
+            ViewBag.CurrentPage = page;
+
+            var tuple = new Tuple<Category, IEnumerable<Product>>(category, productList.Skip((page - 1) * 10).Take(10));
+            return View(tuple);
         }
 
         public ActionResult Create()
@@ -61,7 +64,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CustomerID,FullName,CusPhone,EmailCus,CusAddress,CusPassword")] Customer customer)
+        public ActionResult Create([Bind(Include = "CategoryID,Id,CategoryName")] Category category)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -70,15 +73,15 @@ namespace WebApplication1.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Categories.Add(category);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(customer);
+            return View(category);
         }
 
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -89,18 +92,17 @@ namespace WebApplication1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(category);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FullName,CusPhone,EmailCus,CusAddress,CusPassword")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CategoryID,CategoryName")] Category category)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -109,14 +111,14 @@ namespace WebApplication1.Controllers
 
             if (ModelState.IsValid)
             {
-                db.Entry(customer).State = EntityState.Modified;
+                db.Entry(category).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(customer);
+            return View(category);
         }
 
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
@@ -127,25 +129,25 @@ namespace WebApplication1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Customer customer = db.Customers.Find(id);
-            if (customer == null)
+            Category category = db.Categories.Find(id);
+            if (category == null)
             {
                 return HttpNotFound();
             }
-            return View(customer);
+            return View(category);
         }
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
                 return RedirectToAction("Index", "Home");
             }
 
-            Customer customer = db.Customers.Find(id);
-            db.Customers.Remove(customer);
+            Category category = db.Categories.Find(id);
+            db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

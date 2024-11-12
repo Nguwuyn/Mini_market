@@ -10,18 +10,18 @@ using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    public class OrderesController : Controller
+    public class OrderController : Controller
     {
         private Model1 db = new Model1();
 
-        // GET: Orderes
+        // GET: Cart
         public ActionResult Index()
         {
-            var Orderes = db.Orders.Include(o => o.Customer);
-            return View(Orderes.ToList());
+            var Cart = db.Orders.Include(o => o.Customer);
+            return View(Cart.ToList());
         }
 
-        // GET: Orderes/Details/5
+        // GET: Cart/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,14 +36,14 @@ namespace WebApplication1.Controllers
             return View(Order);
         }
 
-        // GET: Orderes/Create
+        // GET: Cart/Create
         public ActionResult Create()
         {
             ViewBag.CustomerID = new SelectList(db.Customers, "CustomerID", "FullName");
             return View();
         }
 
-        // POST: Orderes/Create
+        // POST: Cart/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -61,7 +61,7 @@ namespace WebApplication1.Controllers
             return View(Order);
         }
 
-        // GET: Orderes/Edit/5
+        // GET: Cart/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,7 +77,7 @@ namespace WebApplication1.Controllers
             return View(Order);
         }
 
-        // POST: Orderes/Edit/5
+        // POST: Cart/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -94,7 +94,7 @@ namespace WebApplication1.Controllers
             return View(Order);
         }
 
-        // GET: Orderes/Delete/5
+        // GET: Cart/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +109,7 @@ namespace WebApplication1.Controllers
             return View(Order);
         }
 
-        // POST: Orderes/Delete/5
+        // POST: Cart/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -37,6 +37,8 @@ namespace WebApplication1.Models
 
         public int CategoryID { get; set; }
 
+        public string ProductDescription { get; set; }
+
         public virtual Category Category { get; set; }
 
         [NotMapped]

@@ -131,12 +131,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CategoriesController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\OrderProesController.cs" />
-    <Compile Include="Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\PromotionController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
@@ -325,13 +325,13 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Cart\CancelOrder.cshtml" />
-    <Content Include="Views\Cart\CheckOrder.cshtml" />
-    <Content Include="Views\Cart\CheckOutSuccess.cshtml" />
-    <Content Include="Views\Cart\DeleteOrder.cshtml" />
-    <Content Include="Views\Cart\EditOrder.cshtml" />
-    <Content Include="Views\Cart\EmptyCart.cshtml" />
-    <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Order\CancelOrder.cshtml" />
+    <Content Include="Views\Order\CheckOrder.cshtml" />
+    <Content Include="Views\Order\CheckOutSuccess.cshtml" />
+    <Content Include="Views\Order\DeleteCart.cshtml" />
+    <Content Include="Views\Order\EditCart.cshtml" />
+    <Content Include="Views\Order\EmptyCart.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />

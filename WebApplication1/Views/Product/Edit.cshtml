@@ -12,7 +12,7 @@
 }
 
 <h2>Chỉnh sửa sản phẩm</h2>
-<form action="/Products/Edit/@Model.ProductID" enctype="multipart/form-data" method="post" onsubmit="sanitizePrice(this)">
+<form action="/Product/Edit/@Model.ProductID" enctype="multipart/form-data" method="post" onsubmit="sanitizePrice(this)">
     @Html.AntiForgeryToken()
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -31,7 +31,7 @@
             <div></div>
             <div class="product-content">
                 <div class="main-content">
-                    <input class="product-price" name="Price" id="Price" type="text" value="@String.Format("{0:#,#.##}", Model.Price)đ" />
+                    <input class="product-price" name="Price" id="Price" type="text" value="@String.Format("{0:#,#.##}", Model.ProductPrice)đ" />
                     <textarea placeholder="Ghi tên sản phẩm ở đây" class="edit-product-name" id="ProductName" name="ProductName" rows="12" cols="50"></textarea>
                     <textarea placeholder="Ghi mô tả sản phẩm ở đây" class="edit-product-name" id="ProductDescription" name="ProductDescription" rows="12" cols="50"></textarea>
                 </div>

@@ -17,9 +17,9 @@
         //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.Items)
         {
-            var prodTotal = (item._quantity * item._product.Price);
-            totalTax += prodTotal * item._product.Tax;
-            total += prodTotal + (prodTotal * item._product.Tax); //Thêm discount cho phần khuyến mãi sau
+            var prodTotal = (item._quantity * item._product.ProductPrice);
+            totalTax += (double)(prodTotal * item._product.Tax);
+            total += (double)(prodTotal + (prodTotal * item._product.Tax)); //Thêm discount cho phần khuyến mãi sau
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         TotalMoney = String.Format(": {0:#,#.##}đ", total);

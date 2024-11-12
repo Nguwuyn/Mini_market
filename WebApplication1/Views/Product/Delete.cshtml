@@ -18,7 +18,7 @@
         </div>
         <div class="product-content">
             <div class="main-content">
-                <div class="product-price">@(String.Format("{0:#,#.##}", Model.Price))đ</div>
+                <div class="product-price">@(String.Format("{0:#,#.##}", Model.ProductPrice))đ</div>
                 <a href="@Url.Action("Details", "Products", new { id = Model.ProductID })" style="text-decoration: none">
                     <div class="product-name">@Model.ProductName</div>
                 </a>

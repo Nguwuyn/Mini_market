@@ -7,10 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using System.CodeDom;
 namespace WebApplication1.Controllers
 
 {
-    public class ProductsController : Controller
+    public class ProductController : Controller
     {
         private readonly Model1 db = new Model1();
 
@@ -31,6 +32,7 @@ namespace WebApplication1.Controllers
             {
                 return PartialView(db.Products.ToList());
             }
+                
             ViewBag.Layout = "~/Views/Shared/_Layout.cshtml";
             int maxPage = Math.Max(1, db.Products.Count() / 10);
             if (page > maxPage)
@@ -39,7 +41,7 @@ namespace WebApplication1.Controllers
             }
             ViewBag.MaxPage = maxPage;
             ViewBag.CurrentPage = page;
-            return View("UserIndex", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
+            return View("Index", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
         }
 
         public ActionResult Details(int? id)

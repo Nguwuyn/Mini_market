@@ -4,8 +4,8 @@
     @if (Session["IsAdmin"] is true)
     {
         <div class="admin-btn">
-            <a href="/Products/Delete/@Model.ProductID" class="no-select remove">&#x2715;</a>
-            <a href="/Products/Edit/@Model.ProductID" class="no-select remove">
+            <a href="/Product/Delete/@Model.ProductID" class="no-select remove">&#x2715;</a>
+            <a href="/Product/Edit/@Model.ProductID" class="no-select remove">
                 <img class="edit-btn" src="@Url.Content("~/Image/svg/pencil.svg")" />
             </a>
         </div>
@@ -19,7 +19,7 @@
     </div>
     <div class="product-content">
         <div class="d-flex gap-4">
-            <a class="no-select BuyNowBtn out-of-stock">Số lượng: @Model.StockQuantity</a>
+            <a class="no-select BuyNowBtn out-of-stock">Số lượng: @Model.ProductQuantity</a>
             <img src="~/Image/svg/heart.svg" alt="favorite" />
         </div>
     </div>
