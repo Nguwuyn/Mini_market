@@ -368,10 +368,14 @@
     <Content Include="Views\ShoppingCart\EditOrder.cshtml" />
     <Content Include="Views\ShoppingCart\EmptyCart.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\Promotion\Index.cshtml" />
+    <Content Include="Views\Promotion\Detail.cshtml" />
+    <Content Include="Views\Promotion\Create.cshtml" />
+    <Content Include="Views\Promotion\Edit.cshtml" />
+    <Content Include="Views\Promotion\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Promotion\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
