@@ -1,4 +1,5 @@
 ﻿CREATE DATABASE DAPM
+
 CREATE TABLE Customers
 (
   CustomerID int,
@@ -18,14 +19,6 @@ CREATE TABLE Employees
   BirthYear INT,
   Position INT,
   PRIMARY KEY (EmployeeID)
-);
-
-CREATE TABLE Promotions
-(
-  PromotionID INT,
-  Specification char(10),
-  Duration INT,
-  PRIMARY KEY (PromotionID)
 );
 
 CREATE TABLE Coupons
@@ -48,6 +41,7 @@ CREATE TABLE Products
 (
   ProductID INT,
   ProductName nvarchar(50) not null,
+  ProductDescription nvarchar(200),
   ProductPrice money,
   StockQuantity INT,
   Tax float,
@@ -56,6 +50,18 @@ CREATE TABLE Products
   CategoryID INT NOT NULL,
   PRIMARY KEY (ProductID),
   FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+);
+
+CREATE TABLE Promotions
+(
+  PromotionID INT,
+  Specification char(30),
+  ProductID INT NOT NULL,
+  DateStart Date Not null,
+  DateEnd Date NOT NULL,
+  PRIMARY KEY (PromotionID),
+  FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+  
 );
 
 CREATE TABLE Orders
@@ -89,15 +95,4 @@ CREATE TABLE OrderDetails
   FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
   FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
   FOREIGN KEY (PromotionID) REFERENCES Promotions(PromotionID)
-);
-
-CREATE TABLE PromotionDetails
-(
-  PromotionID INT,
-  ProductID INT NOT NULL,
-  DateStart Date Not null,
-  DateEnd Date NOT NULL,
-  PRIMARY KEY (PromotionID, ProductID),
-  FOREIGN KEY (PromotionID) REFERENCES Promotions(PromotionID),
-  FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
 );

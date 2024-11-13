@@ -24,7 +24,7 @@ namespace WebApplication1.Models
         public int Discount { get; set; }
 
         [Column(TypeName = "money")]
-        public int? Total { get; set; }
+        public int Total { get; set; }
 
         [Key]
         [Column(Order = 3)]

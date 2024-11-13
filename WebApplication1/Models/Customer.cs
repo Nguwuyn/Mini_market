@@ -31,6 +31,7 @@ namespace WebApplication1.Models
 
         [StringLength(10)]
         public string CusPassword { get; set; }
+
         [StringLength(10)]
         [NotMapped]
         public string ConfirmPasswordCus { get; set; }

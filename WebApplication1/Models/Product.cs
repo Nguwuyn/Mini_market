@@ -13,7 +13,7 @@ namespace WebApplication1.Models
         public Product()
         {
             OrderDetails = new HashSet<OrderDetail>();
-            PromotionDetails = new HashSet<PromotionDetail>();
+            Promotions = new HashSet<Promotion>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -23,23 +23,21 @@ namespace WebApplication1.Models
         [StringLength(50)]
         public string ProductName { get; set; }
 
+        [Required]
+        [StringLength(200)]
+        public string ProductDescription { get; set; }
+
         [Column(TypeName = "money")]
-        public int? ProductPrice { get; set; }
+        public int ProductPrice { get; set; }
 
-        public int? StockQuantity { get; set; }
+        public int StockQuantity { get; set; }
 
-        public double? Tax { get; set; }
+        public double Tax { get; set; }
 
         [StringLength(15)]
         public string Brand { get; set; }
 
         public string ProductImg { get; set; }
-
-        public int CategoryID { get; set; }
-
-        public string ProductDescription { get; set; }
-
-        public virtual Category Category { get; set; }
 
         [NotMapped]
         public string OldProductImg { get; set; }
@@ -47,10 +45,14 @@ namespace WebApplication1.Models
         [NotMapped]
         public HttpPostedFileBase UploadImage { get; set; }
 
+        public int CategoryID { get; set; }
+
+        public virtual Category Category { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PromotionDetail> PromotionDetails { get; set; }
+        public virtual ICollection<Promotion> Promotions { get; set; }
     }
 }

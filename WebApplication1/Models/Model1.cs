@@ -18,7 +18,6 @@ namespace WebApplication1.Models
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<PromotionDetail> PromotionDetails { get; set; }
         public virtual DbSet<Promotion> Promotions { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
@@ -69,7 +68,6 @@ namespace WebApplication1.Models
 
             modelBuilder.Entity<Product>()
                 .Property(e => e.ProductPrice);
-                //.HasPrecision(19, 4);
 
             modelBuilder.Entity<Product>()
                 .Property(e => e.ProductImg)
@@ -81,7 +79,7 @@ namespace WebApplication1.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-                .HasMany(e => e.PromotionDetails)
+                .HasMany(e => e.Promotions)
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
@@ -90,14 +88,8 @@ namespace WebApplication1.Models
                 .IsFixedLength()
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Promotion>()
-                .HasMany(e => e.PromotionDetails)
-                .WithRequired(e => e.Promotion)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<OrderDetail>()
                 .Property(e => e.Total);
-                //.HasPrecision(19, 4);
         }
     }
 }
