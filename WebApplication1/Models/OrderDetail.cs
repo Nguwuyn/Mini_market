@@ -11,7 +11,7 @@ namespace WebApplication1.Models
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int StockQuantity { get; set; }
+        public int ProductQuantity { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -24,7 +24,7 @@ namespace WebApplication1.Models
         public int Discount { get; set; }
 
         [Column(TypeName = "money")]
-        public decimal? Total { get; set; }
+        public decimal Total { get; set; }
 
         [Key]
         [Column(Order = 3)]

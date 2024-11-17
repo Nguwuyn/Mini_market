@@ -18,5 +18,6 @@ namespace WebApplication1.Models
         public int? CustomerID { get; set; }
 
         public virtual Customer Customer { get; set; }
+        
     }
 }

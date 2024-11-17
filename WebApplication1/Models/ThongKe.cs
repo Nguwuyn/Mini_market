@@ -10,7 +10,7 @@ namespace WebApplication1.Models.ThongKe
 {
     public class ChiTiet
     {
-        public ChiTiet(int idsp, int? tongSo, double? tongThu, string tenSP)
+        public ChiTiet(int idsp, int tongSo, decimal tongThu, string tenSP)
         {
             IDSP = idsp;
             TongSo = tongSo;
@@ -20,9 +20,9 @@ namespace WebApplication1.Models.ThongKe
 
         public int IDSP { get; set; }
         public string TenSP { get; set; }
-        public int? TongSo { get; set; }
+        public int TongSo { get; set; }
         public string DonViTinh { get; set; }
-        public double? TongThu { get; set; }
+        public decimal TongThu { get; set; }
     }
 
     public class DanhSachChiTiet
@@ -73,7 +73,7 @@ namespace WebApplication1.Models.ThongKe
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
                                 sp.TongSo += x.ProductQuantity;
-                                sp.TongThu += x.Total;
+                                sp.TongThu += (int)x.Total;
                                 return true;
                             }, false);
                         if (!isSet)
@@ -138,7 +138,7 @@ namespace WebApplication1.Models.ThongKe
                             sp => sp.IDSP == x.ProductID).FirstOrDefault().IfNotNull(sp =>
                             {
                                 sp.TongSo += x.ProductQuantity;
-                                sp.TongThu += x.Total;
+                                sp.TongThu += (int)x.Total;
                                 return true;
                             }, false);
                         if (!isSet)
