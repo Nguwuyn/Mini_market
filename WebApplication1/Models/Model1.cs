@@ -11,7 +11,7 @@ namespace WebApplication1.Models
             : base("name=Model1")
         {
         }
-
+        public virtual DbSet<AdminUser> AdminUser { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Coupon> Coupons { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }

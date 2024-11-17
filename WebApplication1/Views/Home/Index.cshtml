@@ -91,7 +91,7 @@
                             <div class="container-wrap product">
                                 @foreach (var product in Model.Item1.Skip(i).Take(2))
                                 {
-                                    Html.RenderPartial("../Product/PartialProduct", product, ViewData);
+                                    Html.RenderPartial("../Products/PartialProduct", product, ViewData);
                                 }
                             </div>
                         </div>
