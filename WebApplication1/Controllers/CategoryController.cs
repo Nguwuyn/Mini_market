@@ -23,7 +23,7 @@ namespace WebApplication1.Controllers
                 return PartialView(category.ToList());
             }
 
-            return RedirectToAction("Details", new { id = db.Categories.Where(e => e.CategoryID == 1) });
+            return RedirectToAction("Details", new { id = 1 });
         }
 
         public ActionResult Details(int id, int page = 1)
