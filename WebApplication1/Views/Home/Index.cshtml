@@ -51,7 +51,11 @@
             <div class="container-wrap category">
                 @foreach (var category in Model.Item2)
                 {
+<<<<<<< HEAD
                     <a class="category-box" href="@Url.Action("Details", "Category", new { id = category.CategoryID })">
+=======
+                    <a class="category-box" href="@Url.Action("Details", "Category")">
+>>>>>>> 48a9d1b8682b7ad992dc7f36baf15fa52ee0b6c6
                         @if (category.CategoryIllust != null)
                         {
                             <img src=@Url.Content(category.CategoryIllust) />
