@@ -1,5 +1,8 @@
 ﻿CREATE DATABASE DAPM
 
+drop database DAPM
+USE DAPM
+
 CREATE TABLE Customers
 (
   CustomerID int,
@@ -36,6 +39,15 @@ CREATE TABLE Categories
   CategoryIllust varchar(max),
   PRIMARY KEY (CategoryID)
 );
+
+Create table AdminUser
+(
+	ID int,
+	UserName nvarchar(15),
+	CustomerID int,
+	PRIMARY KEY (ID),
+	FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+)
 
 CREATE TABLE Products
 (

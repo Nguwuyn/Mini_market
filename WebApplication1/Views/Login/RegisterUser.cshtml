@@ -25,10 +25,9 @@
             }
         @Html.AntiForgeryToken()
     <div class="input-field">
-        <input class="input-box" type="text" placeholder="Username" name="FullName" id="FullName" required>
+        <input class="input-box" type="text" placeholder="User Name" name="UserName" id="UserName" required>
         <input class="input-box" type="password" placeholder="Password" name="CusPassword" id="CusPassword" required>
         <input class="input-box" type="password" placeholder="Re-enter password" name="ConfirmPasswordCus" id="ConfirmPasswordCus" required>
-        <input class="input-box" type="Email" placeholder="Email (Optional)" name="EmailCus" id="EmailCus">
     </div>
         <input class="login-btn" type="submit" value="Register">
         <a href="@Url.Action("Index", "Login")">&#8592 Back to Login</a>

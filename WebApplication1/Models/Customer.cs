@@ -11,6 +11,7 @@ namespace WebApplication1.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer()
         {
+            AdminUsers = new HashSet<AdminUser>();
             Orders = new HashSet<Order>();
         }
 

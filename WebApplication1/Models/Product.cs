@@ -28,7 +28,7 @@ namespace WebApplication1.Models
         public string ProductDescription { get; set; }
 
         [Column(TypeName = "money")]
-        public int ProductPrice { get; set; }
+        public decimal ProductPrice { get; set; }
 
         public int StockQuantity { get; set; }
 

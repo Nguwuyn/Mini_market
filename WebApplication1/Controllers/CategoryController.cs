@@ -26,17 +26,12 @@ namespace WebApplication1.Controllers
             return RedirectToAction("Details", new { id = db.Categories.Where(e => e.CategoryID == 1) });
         }
 
-        public ActionResult Details(string id, int page = 1)
+        public ActionResult Details(int id, int page = 1)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             Category category = db.Categories.Find(id);
             if (category == null)
             {
-                return HttpNotFound();
+                return RedirectToAction("Empty");
             }
             IEnumerable<Product> productList = category.Products.ToList();
 
@@ -64,7 +59,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoryID,Id,CategoryName")] Category category)
+        public ActionResult Create([Bind(Include = "CategoryID,CategoryName")] Category category)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {

@@ -12,6 +12,7 @@ namespace WebApplication1.Models
         {
         }
 
+        public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Coupon> Coupons { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -67,7 +68,8 @@ namespace WebApplication1.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-                .Property(e => e.ProductPrice);
+                .Property(e => e.ProductPrice)
+                .HasPrecision(19, 4);
 
             modelBuilder.Entity<Product>()
                 .Property(e => e.ProductImg)
@@ -89,7 +91,8 @@ namespace WebApplication1.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderDetail>()
-                .Property(e => e.Total);
+                .Property(e => e.Total)
+                .HasPrecision(19, 4);
         }
     }
 }

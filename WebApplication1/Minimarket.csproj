@@ -144,6 +144,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migration\Configuration.cs" />
+    <Compile Include="Models\AdminUser.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Coupon.cs" />
@@ -373,6 +374,7 @@
     <Content Include="Views\Promotion\Create.cshtml" />
     <Content Include="Views\Promotion\Edit.cshtml" />
     <Content Include="Views\Promotion\Delete.cshtml" />
+    <Content Include="Views\Category\Empty.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

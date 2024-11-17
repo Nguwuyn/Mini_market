@@ -100,7 +100,7 @@ namespace WebApplication1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CustomerID,FullName,CusPhone,EmailCus,CusAddress,CusPassword")] Customer customer)
+        public ActionResult Edit([Bind(Include = "CustomerID,FullName,CusPhone,CusAddress")] Customer customer)
         {
             if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
             {
