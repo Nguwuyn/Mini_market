@@ -51,7 +51,7 @@
             <div class="container-wrap category">
                 @foreach (var category in Model.Item2)
                 {
-                    <a class="category-box" href="@Url.Action("Index", "Category")">
+                    <a class="category-box" href="@Url.Action("Details", "Category")">
                         @if (category.CategoryIllust != null)
                         {
                             <img src=@Url.Content(category.CategoryIllust) />
