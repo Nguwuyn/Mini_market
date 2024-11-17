@@ -18,7 +18,7 @@ namespace WebApplication1.Models
         public int CategoryID { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         public string CategoryName { get; set; }
 
         public string CategoryIllust { get; set; }
