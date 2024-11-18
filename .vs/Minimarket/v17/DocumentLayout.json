@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\mini_market\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\mini_market\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -174,8 +174,7 @@
               "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T11:14:14.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T11:14:14.855Z"
             },
             {
               "$type": "Document",
@@ -233,7 +232,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_Layout.cshtml*",
               "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAAABAAAAAAAAAAAmwCIBAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAFcDAAAAAAAAAAAswHUDAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-17T17:24:54.258Z",
               "EditorCaption": ""
