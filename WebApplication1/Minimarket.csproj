@@ -252,7 +252,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\bapcaitrang.jpg" />
     <Content Include="Image\bhx.png" />
+    <Content Include="Image\bhx2.png" />
+    <Content Include="Image\bhx3.png" />
+    <Content Include="Image\dauanhk1l.png" />
+    <Content Include="Image\miphomai.jpg" />
+    <Content Include="Image\thitheoxay.jpg" />
+    <Content Include="Image\tuirac.jpg" />
+    <Content Include="Image\vnm.jpg" />
+    <Content Include="Image\vodkasoda.jpg" />
     <Content Include="obj\Debug\Minimarket.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\TempPE\Models.Model1.Context.cs.dll" />
     <Content Include="obj\Debug\TempPE\Models.Model1.cs.dll" />

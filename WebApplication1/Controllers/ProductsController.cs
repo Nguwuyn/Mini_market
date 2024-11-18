@@ -44,7 +44,7 @@ namespace WebApplication1.Controllers
             return View("Index", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
         }
 
-        public ActionResult Details(int? id)
+        public ActionResult Details(int? id, int? someOtherParameter)
         {
             if (id == null)
             {

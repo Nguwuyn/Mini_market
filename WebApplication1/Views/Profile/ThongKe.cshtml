@@ -1,4 +1,4 @@
-﻿@model Tuple<WebApplication1.Models.ThongKe.ThongKeNgay, WebApplication1.Models.ThongKe.ThongKeThang, WebApplication1.Models.ThongKe.ThongKeNam>
+﻿@model Tuple<WebApplication1.Models.ThongKe.ThongKeNgay, WebApplication1.Models.ThongKe.ThongKeThang>
 
 @{
     ViewBag.Title = "ThongKe";
@@ -231,7 +231,7 @@
             <div class="card-body card-extra">
                 Tổng doanh thu
                 <div class="big-text">
-                    @(Model.Item3.TongDoanhThu != 0 ? String.Format("{0:#,#.##}", Model.Item3.TongDoanhThu) : 0)đ
+                    @(Model.Item2.TongDoanhThu != 0 ? String.Format("{0:#,#.##}", Model.Item2.TongDoanhThu) : "0")đ
                 </div>
                 <div onclick="selfToggle('collapseDetailDT3')" class="small-text fw-normal user-select-none cursor-pointer">
                     Xem thêm &darr;
@@ -240,13 +240,13 @@
             <div class="card-body card-extra">
                 Tổng số lượng khách hàng
                 <div class="big-text">
-                    @Model.Item3.TongKhacHang
+                    @Model.Item2.TongKhacHang
                 </div>
             </div>
             <div class="card-body card-extra">
                 Tổng số đơn hàng xử lý
                 <div class="big-text">
-                    @Model.Item3.TongDatHang
+                    @Model.Item2.TongDatHang
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@
                 <div onclick="selfToggle('collapseDetailDT3_collapseSP')" class="card-body card-detail cursor-pointer">
                     <h3>Doanh thu theo sản phẩm</h3>
                     <div class="big-text">
-                        @(Model.Item3.ChiTietSanPham.TongThu != 0 ? String.Format("{0:#,#.##}", Model.Item3.ChiTietSanPham.TongThu) : 0)đ
+                        @(Model.Item2.ChiTietSanPham.TongThu != 0 ? String.Format("{0:#,#.##}", Model.Item2.ChiTietSanPham.TongThu) : "0")đ
                     </div>
                 </div>
                 <div id="collapseDetailDT3_collapseSP" class="collapse">
@@ -271,7 +271,7 @@
                                 Tổng thu
                             </th>
                         </tr>
-                        @foreach (var item in Model.Item3.ChiTietSanPham.ChiTiet)
+                        @foreach (var item in Model.Item2.ChiTietSanPham.ChiTiet)
                         {
                             <tr>
                                 <td>
@@ -281,7 +281,7 @@
                                     @item.TongSo
                                 </td>
                                 <td>
-                                    @(item.TongThu != 0 ? String.Format("{0:#,#.##}", item.TongThu) : 0)đ
+                                    @(item.TongThu != 0 ? String.Format("{0:#,#.##}", item.TongThu) : "0")đ
                                 </td>
                             </tr>
                         }
@@ -290,4 +290,6 @@
             </div>
         </div>
     </div>
+
 </div>
+        

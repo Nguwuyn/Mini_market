@@ -68,7 +68,6 @@ namespace WebApplication1.Controllers
         {
             var s = ThongKeNgay.UseDB(db);
             var ss = ThongKeThang.UseDB(db, month, year);
-            var sss = ThongKeNam.UseDB(db, year);
 
             if (iframe.HasValue)
             {
@@ -84,7 +83,7 @@ namespace WebApplication1.Controllers
                 ViewBag.Year = year.Value;
             }
 
-            return View(new Tuple<ThongKeNgay, ThongKeThang, ThongKeNam>(s, ss, sss));
+            return View(new Tuple<ThongKeNgay, ThongKeThang>(s, ss));
         }
     }
 }
