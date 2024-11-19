@@ -131,6 +131,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -466,6 +467,11 @@
     <Content Include="Views\Promotion\Delete.cshtml" />
     <Content Include="Views\Category\Empty.cshtml" />
     <Content Include="Views\Products\Empty.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
+    <Content Include="Views\AdminPanel\ProductsManagement.cshtml" />
+    <Content Include="Views\AdminPanel\BrandsManagement.cshtml" />
+    <Content Include="Views\AdminPanel\CustomersManagement.cshtml" />
+    <Content Include="Views\AdminPanel\OrdersManagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
