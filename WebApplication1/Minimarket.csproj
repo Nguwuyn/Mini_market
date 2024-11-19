@@ -472,9 +472,11 @@
     <Content Include="Views\AdminPanel\CategoryManagement.cshtml" />
     <Content Include="Views\AdminPanel\CustomersManagement.cshtml" />
     <Content Include="Views\AdminPanel\OrdersManagement.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -533,6 +535,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties content_4bootstrap-reboot_1css_1map__JsonSchema="" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

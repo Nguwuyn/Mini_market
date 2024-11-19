@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("Styles", false)
+    <style>
+        .error-info {
+            border-radius: 10px;
+            font-size: large;
+            text-align: center;
+            background: #ff000070;
+            border: #ff0000b5 2px solid;
+            width: max-content;
+            height: max-content;
+            line-height: normal;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body class="m-0">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-header">
+        <div class="container">
+            <a href="@Url.Action("Index", "Home")">
+                <div class="logo">
+                    <h2 style="font-family: Volkhov; color: #484848;font-size:52px;font-weight:400;line-height:100%">ANDEPTRAI STAFF</h2>
+                </div>
+            </a>
+            <form class="searchBox" method="get" action="@Url.Action("Search", "Home")">
+                <input type="text" class="searchBar" placeholder="Search..." name="query" />
+                <button type="submit" class="searchBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_2737)">
+                            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_2737">
+                                <rect width="24" height="24" fill="#EEF9AF" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </form>
+            <div class="d-flex flex-row gap-4">
+                <a href="@Url.Action("Index", "ShoppingCart")">
+                    <div class="box-link">
+                        <img src="~/img/svg/cart.svg" alt="cart list" />
+                    </div>
+                </a>
+                <div class="position-relative">
+                    @if (Session["UserID"] != null)
+                    {
+                        <a class="profile-link" href="@Url.Action("Index", "Profile")">
+                            <img src="@Url.Content("/img/profile.png")" alt="profile image" class="profile-img" />
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="profile-link" href="@Url.Action("Index", "Login")">
+                            <img src="@Url.Content("/img/profile.png")" alt="profile image" class="profile-img" />
+                        </a>
+                    }
+                    <div class="d-flex flex-column gap-2 p-2 profile-popup">
+                        @if (Session["UserID"] != null)
+                        {
+                            <div>Hello, <b>@Session["NameCus"]</b>!</div>
+                            <hr style="margin: 0.3em 0;" />
+                            <a href="@Url.Action("Index", "Profile")">Customer Information</a>
+                            <a href="@Url.Action("LogoutUser", "Login")">Log out</a>
+                        }
+                        else
+                        {
+                            <div>Hello, Anonymous user</div>
+                            <hr style="margin: 0.3em 0;" />
+                            <a href="@Url.Action("Index", "Login")">Log in</a>
+                            <a href="@Url.Action("RegisterUser", "Login")">Sign up</a>
+                        }
+                        <hr style="margin: 0.3em 0;" />
+                        <a href="@Url.Action("CheckOrder", "ShoppingCart")">Check order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-content container">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("JavaScript", required: false)
+</body>
+</html>

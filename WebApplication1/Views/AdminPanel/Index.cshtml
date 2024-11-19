@@ -68,20 +68,20 @@
     }
 </style>
 <h1 class="py-3">Admin Panel</h1>
-<h2>Managements</h2>
+<h2>Quản lý</h2>
 <div class="container" style="display: flex; padding-bottom: 10px; margin-right: 20px">
-    <a href="@Url.Action("ProductsManagement", "AdminPanel")" class="no-select edit">Products management</a>
-    <a href="@Url.Action("BrandsManagement", "AdminPanel")" class="no-select edit">Brands management</a>
-    <a href="@Url.Action("CustomersManagement", "AdminPanel")" class="no-select edit">Customers management</a>
-    <a href="@Url.Action("OrdersManagement", "AdminPanel")" class="no-select edit">Orders management</a>
+    <a href="@Url.Action("ProductsManagement", "AdminPanel")" class="no-select edit">Quản lý sản phẩm</a>
+    <a href="@Url.Action("CategoryManagement", "AdminPanel")" class="no-select edit">Danh mục</a>
+    <a href="@Url.Action("CustomersManagement", "AdminPanel")" class="no-select edit">Quản lý khách hàng</a>
+    <a href="@Url.Action("OrdersManagement", "AdminPanel")" class="no-select edit">Quản lý đơn hàng</a>
 </div>
 
-<h2>Statistics</h2>
+<h2>Thống kê</h2>
 <div class="card-deck mb-3 text-center">
     <!-- Total revenue card -->
     <div class="card mb-4 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Total revenue</h4>
+            <h4 class="my-0 font-weight-normal">Tổng doanh thu</h4>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">@ViewBag.totalSales <small class="text-muted">đ</small></h1>
@@ -90,7 +90,7 @@
     <!-- Total orders card -->
     <div class="card mb-4 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Total orders</h4>
+            <h4 class="my-0 font-weight-normal">Tổng đơn hàng</h4>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">@ViewBag.TotalOrders <small class="text-muted"></small></h1>
@@ -99,7 +99,7 @@
     <!-- Waiting for confirmation orders card -->
     <div class="card mb-4 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Waiting for confirmation</h4>
+            <h4 class="my-0 font-weight-normal">Chờ xác nhận</h4>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">@ViewBag.WaitingForConfirmationOrders <small class="text-muted"></small></h1>
@@ -108,7 +108,7 @@
     <!-- On delivery orders card -->
     <div class="card mb-4 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal">On delivery</h4>
+            <h4 class="my-0 font-weight-normal">Đang giao hàng</h4>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">@ViewBag.OnDeliveryOrders <small class="text-muted"></small></h1>
@@ -117,7 +117,7 @@
     <!-- Completed orders card -->
     <div class="card mb-4 shadow-sm">
         <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Completed</h4>
+            <h4 class="my-0 font-weight-normal">Đơn hàng đã hoàn thành</h4>
         </div>
         <div class="card-body">
             <h1 class="card-title pricing-card-title">@ViewBag.CompletedOrders <small class="text-muted"></small></h1>
