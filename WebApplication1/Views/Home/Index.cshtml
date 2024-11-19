@@ -201,38 +201,20 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <ul class="navbar-nav list-unstyled d-flex flex-row gap-3 gap-lg-5 justify-content-center flex-wrap align-items-center mb-0 fw-bold text-uppercase text-dark">
-                        <li class="nav-item active">
-                            <a href="@Url.Action("Index", "Home")" class="nav-link">Trang chủ</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle pe-3" role="button" id="pages" data-bs-toggle="dropdown" aria-expanded="false">Khác</a>
-                            <ul class="dropdown-menu border-0 p-3 rounded-0 shadow" aria-labelledby="pages">
-                                <li><a href="@Url.Action("Index", "Promotion")" class="dropdown-item">Khuyến mãi</a></li>
-                                <li><a href="@Url.Action("UserIndex", "Products")" class="dropdown-item">Shop </a></li>
-                                <li><a href="@Url.Action("Index", "ShoppingCart")" class="dropdown-item">Giỏ hàng </a></li>
-                                <li><a href="@Url.Action("Index", "Home")" class="dropdown-item">Liên hệ </a></li>
-                                <li><a href="@Url.Action("Index", "Profile")" class="dropdown-item">Tài khoản </a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-
                 <div class="col-sm-8 col-lg-2 d-flex gap-5 align-items-center justify-content-center justify-content-sm-end">
                     <ul class="d-flex justify-content-end list-unstyled m-0">
                         <li>
-                            <a href="#" class="p-2 mx-1">
+                            <a href="@Url.Action("Index", "Profile")" class="p-2 mx-1">
                                 <svg width="24" height="24"><use xlink:href="#user"></use></svg>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="p-2 mx-1">
+                            <a href="@Url.Action("Index", "Profile")" class="p-2 mx-1">
                                 <svg width="24" height="24"><use xlink:href="#wishlist"></use></svg>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                            <a href="@Url.Action("Index", "ShoppingCart")" class="p-2 mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
                                 <svg width="24" height="24"><use xlink:href="#shopping-bag"></use></svg>
                             </a>
                         </li>

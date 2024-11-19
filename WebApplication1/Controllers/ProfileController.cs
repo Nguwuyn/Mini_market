@@ -20,6 +20,10 @@ namespace WebApplication1.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+            if (Session["IsAdmin"] is true)
+            {
+                return RedirectToAction("ThongKe", "Profile");
+            }    
             var _user = db.Customers.Find(_userId);
             return View(_user);
         }
