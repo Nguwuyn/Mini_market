@@ -4,7 +4,7 @@
 }
 
 .admin-btn {
-    visibility: hidden;
+    visibility: visible;
     opacity: 0;
     position: absolute;
     transition: all 0.2s ease;

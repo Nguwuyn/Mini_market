@@ -250,6 +250,7 @@
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\Paginator.css" />
     <Content Include="Content\css\ProductDetails.css" />
+    <Content Include="Content\css\qr.css" />
     <Content Include="Content\css\vendor.css" />
     <Content Include="Content\Font\fontawesome-webfont.svg" />
     <Content Include="Content\Font\glyphicons-halflings-regular.svg" />
