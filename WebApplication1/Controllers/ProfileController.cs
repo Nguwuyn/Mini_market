@@ -22,7 +22,7 @@ namespace WebApplication1.Controllers
             }
             if (Session["IsAdmin"] is true)
             {
-                return RedirectToAction("ThongKe", "Profile");
+                return RedirectToAction("Index", "AdminPanel");
             }    
             var _user = db.Customers.Find(_userId);
             return View(_user);

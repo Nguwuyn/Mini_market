@@ -42,13 +42,7 @@
 
 <h4>Sửa bảng <b>sản phẩm</b></h4>
 
-
-@if (Session["IsAdmin"] is true)
-{
-    <p>
-        @Html.ActionLink("Tạo mới", "Create", "", new { @class = "btn btn-success" })
-    </p>
-}
+@Html.ActionLink("Tạo mới", "Create", "", new { @class = "btn btn-success" })
 <div style="overflow-x: auto">
     <table class="table" style="width: max-content;">
         <tr>

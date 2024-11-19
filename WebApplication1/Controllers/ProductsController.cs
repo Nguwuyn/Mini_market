@@ -59,10 +59,6 @@ namespace WebApplication1.Controllers
         // GET: Products/Create
         public ActionResult Create()
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index");
-            }
             ViewBag.CategoryID = new SelectList(db.Categories, "CategoryID", "CategoryName");
             return View(new Product());
         }
@@ -74,12 +70,7 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Product product)
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index");
-            }
-
-            if (product.ProductImg == null)
+           if (product.ProductImg == null)
             {
                 product.ProductImg = "~/Image/Product/CuonTuiRac.jpg";
             }
@@ -107,11 +98,6 @@ namespace WebApplication1.Controllers
         // GET: Products/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index");
-            }
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -132,12 +118,7 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Product product)
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index");
-            }
-
-            if (product.UploadImage != null)
+           if (product.UploadImage != null)
             {
                 product.UploadImage.SaveAs(Path.Combine(Server.MapPath("~/Image/Product/"), product.ProductImg.Split('/').Last()));
             }
@@ -161,11 +142,6 @@ namespace WebApplication1.Controllers
         // GET: Products/Delete/5
         public ActionResult Delete(int? id)
         {
-            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
-            {
-                return RedirectToAction("Index");
-            }
-
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

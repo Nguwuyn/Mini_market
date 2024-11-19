@@ -1,150 +1,112 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\",
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\hihi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\mini_market\\webapplication1\\views\\adminpanel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\adminpanel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\adminpanel\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\content\\bootstrap-reboot.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\bootstrap-reboot.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\adminpanel\\productsmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\adminpanel\\productsmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\content\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\bootstrap-reboot.css.map||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\hihi\\webapplication1\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\content\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\bootstrap-reboot.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\hihi\\webapplication1\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\controllers\\adminpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\adminpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\adminpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\adminpanel\\categorymanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\adminpanel\\categorymanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Profile\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\ThongKe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Profile\\ThongKe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.AdminUser.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\views\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layoutlogin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.Customers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\UserIndex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Products\\UserIndex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialProduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Products\\PartialProduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\adminpanel\\ordersmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\adminpanel\\ordersmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\adminpanel\\customersmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\adminpanel\\customersmanagement.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProfileController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Controllers\\ProfileController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\ThongKe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\ThongKe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ShoppingCartController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Controllers\\ShoppingCartController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Home\\Search.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\login\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\login\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\ProductDetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Home\\ProductDetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\products\\empty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\empty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Category\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\category\\empty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\category\\empty.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\EditProfile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Profile\\EditProfile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Controllers\\ProductsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Products\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Controllers\\LoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\views\\home\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Category\\Details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\Category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\AdminUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\AdminUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Promotion\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Promotion\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Promotion\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Views\\Promotion\\Detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\PromotionController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Controllers\\PromotionController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\Promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\Model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:WebApplication1\\Models\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Admin\\source\\repos\\hihi\\webapplication1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -154,7 +116,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -177,441 +139,337 @@
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\AdminPanel\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\AdminPanel\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\Index.cshtml",
-              "ViewState": "AgIAADQAAAAAAAAAAAAswEUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T16:11:10.436Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "bootstrap-reboot.min.css",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.min.css",
-              "RelativeDocumentMoniker": "WebApplication1\\Content\\bootstrap-reboot.min.css",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.min.css",
-              "RelativeToolTip": "WebApplication1\\Content\\bootstrap-reboot.min.css",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAQAAABVIAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T16:26:58.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "bootstrap-reboot.css.map",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.css.map",
-              "RelativeDocumentMoniker": "WebApplication1\\Content\\bootstrap-reboot.css.map",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.css.map",
-              "RelativeToolTip": "WebApplication1\\Content\\bootstrap-reboot.css.map",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACwqgAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-19T16:26:53.02Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "bootstrap-reboot.css",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.css",
-              "RelativeDocumentMoniker": "WebApplication1\\Content\\bootstrap-reboot.css",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Content\\bootstrap-reboot.css",
-              "RelativeToolTip": "WebApplication1\\Content\\bootstrap-reboot.css",
-              "ViewState": "AgIAALsBAAAAAAAAAAAAAMEBAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T16:26:50.48Z"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Properties\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Properties\\AssemblyInfo.cs",
-              "RelativeToolTip": "WebApplication1\\Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:26:45.053Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAAMkAAAAAAAAAAAAAAOkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T17:00:31.46Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_LayoutLogin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_LayoutLogin.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_LayoutLogin.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_LayoutLogin.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_LayoutLogin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "dbo.AdminUser.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.AdminUser.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.AdminUser.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-19T15:53:44.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\ProductsManagement.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\ProductsManagement.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\ProductsManagement.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\ProductsManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T16:13:00.143Z"
+              "WhenOpened": "2024-11-19T15:13:30.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T15:12:36.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAArwBMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:00:39.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T09:14:51.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T15:35:22.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "_LayoutAdmin.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_LayoutAdmin.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAASwCEAAAB/AAAAAAAAAA==",
+              "Title": "CategoryManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\CategoryManagement.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\CategoryManagement.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\CategoryManagement.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\CategoryManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T16:12:31.823Z"
+              "WhenOpened": "2024-11-19T15:14:02.389Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "AdminPanelController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\AdminPanelController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\AdminPanelController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AdminPanelController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\AdminPanelController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\AdminPanelController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\AdminPanelController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAArwBAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T16:11:01.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T11:55:33.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T12:01:29.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PartialOrdersProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T11:52:31.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Profile\\Index.cshtml",
-              "ViewState": "AgIAANUAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T17:33:37.598Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ThongKe.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\ThongKe.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\ThongKe.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\ThongKe.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Profile\\ThongKe.cshtml",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAmwCYBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T17:33:14.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PartialProduct.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialProduct.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\PartialProduct.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\PartialProduct.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Products\\PartialProduct.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T10:41:52.564Z"
+              "WhenOpened": "2024-11-19T15:09:23.6Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
+              "Title": "CustomersManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\CustomersManagement.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\CustomersManagement.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\CustomersManagement.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\CustomersManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T11:14:14.855Z"
+              "WhenOpened": "2024-11-19T15:14:19.49Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "OrdersManagement.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\OrdersManagement.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\AdminPanel\\OrdersManagement.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\AdminPanel\\OrdersManagement.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\AdminPanel\\OrdersManagement.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T15:14:34.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T11:28:27.826Z"
+              "WhenOpened": "2024-11-19T15:31:58.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "dbo.Customers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.Customers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/LAPTOP_6712H2GD/DAPM/True/SqlTable/dbo.Customers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-19T15:53:23.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAEwNgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T16:44:19.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T15:33:12.562Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ThongKe.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\ThongKe.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\ThongKe.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\ThongKe.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\ThongKe.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAwwKYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T11:22:10.764Z"
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T10:15:59.788Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "ShoppingCartController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ShoppingCartController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ShoppingCartController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ShoppingCartController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\ShoppingCartController.cs",
-              "ViewState": "AgIAABgBAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAMMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T06:36:04.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Search.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Search.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Search.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\Search.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Search.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T06:27:51.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ProductDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\ProductDetails.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\ProductDetails.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Home\\ProductDetails.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\ProductDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T06:27:49.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Category\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-19T06:27:30.163Z"
+              "WhenOpened": "2024-11-19T09:50:33.806Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "EditProfile.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\EditProfile.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\EditProfile.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Profile\\EditProfile.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Profile\\EditProfile.cshtml",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\ShoppingCart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\ShoppingCart\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T09:15:19.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Login\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Login\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Login\\ForgotPassword.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Login\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T06:33:35.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T16:53:31.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Empty.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\Empty.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Empty.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Products\\Empty.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Products\\Empty.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-19T10:05:52.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Empty.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Category\\Empty.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Empty.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Category\\Empty.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Category\\Empty.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T11:42:53.648Z"
+              "WhenOpened": "2024-11-19T10:04:49.156Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAABBwDwAAAAfAAAAAAAAAA==",
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Models\\Cart.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Cart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T11:47:55.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\Details.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Products\\Details.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Products\\Details.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T18:38:15.734Z"
+              "WhenOpened": "2024-11-19T09:20:58.751Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAArwE0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T17:32:26.647Z"
+              "Title": "ProductDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Home\\ProductDetails.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\ProductDetails.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Home\\ProductDetails.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\ProductDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T16:47:46.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T16:46:42.672Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Details.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Details.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Category\\Details.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Category\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-17T17:16:44.109Z"
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Web.config",
+              "RelativeDocumentMoniker": "WebApplication1\\Web.config",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\Web.config",
+              "RelativeToolTip": "WebApplication1\\Web.config",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-18T16:07:07.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Category.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\hihi\\WebApplication1\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "WebApplication1\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:43:27.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AdminUser.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\AdminUser.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\AdminUser.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\AdminUser.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\AdminUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T16:21:09.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Delete.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Delete.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Promotion\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T18:53:54.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Edit.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Edit.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Promotion\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T18:53:41.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Promotion\\Create.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T18:52:21.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Detail.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Views\\Promotion\\Detail.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Promotion\\Detail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-13T18:51:54.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "PromotionController.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\PromotionController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PromotionController.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\PromotionController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\PromotionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:47:51.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Promotion.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Promotion.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Promotion.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Promotion.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Promotion.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:41:43.088Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Model1.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Model1.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Model1.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Model1.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Model1.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAABBwAwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:40:34.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Models\\Product.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\Mini_market\\WebApplication1\\Models\\Product.cs",
-              "RelativeToolTip": "WebApplication1\\Models\\Product.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T18:40:25.805Z"
+              "WhenOpened": "2024-11-04T11:56:34.712Z"
             }
           ]
         }

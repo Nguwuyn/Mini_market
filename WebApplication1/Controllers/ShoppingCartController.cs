@@ -157,7 +157,7 @@ namespace WebApplication1.Controllers
                 foreach (var item in cart.Items)
                 {
                     var prodTotal = (item._quantity * item._product.ProductPrice);
-                    var tax = (int)(prodTotal * item._product.Tax);
+                    var tax = prodTotal * (decimal)item._product.Tax;
                     OrderDetail _order_detail = new OrderDetail
                     {
                         ProductID = item._product.ProductID,

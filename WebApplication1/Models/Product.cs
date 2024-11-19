@@ -32,7 +32,7 @@ namespace WebApplication1.Models
 
         public int StockQuantity { get; set; }
 
-        public decimal Tax { get; set; }
+        public double Tax { get; set; }
 
         [StringLength(15)]
         public string Brand { get; set; }
