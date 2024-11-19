@@ -32,8 +32,6 @@ namespace WebApplication1.Controllers
             {
                 return PartialView(db.Products.ToList());
             }
-                
-            ViewBag.Layout = "~/Views/Shared/_Layout.cshtml";
             int maxPage = Math.Max(1, db.Products.Count() / 10);
             if (page > maxPage)
             {
@@ -189,6 +187,25 @@ namespace WebApplication1.Controllers
             db.Products.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult UserIndex(int page = 1)
+        {
+            if(db.Products.Count() == 0)
+            {
+                return RedirectToAction("Empty");
+            }    
+            if (ControllerContext.IsChildAction)
+            {
+                return PartialView(db.Products.ToList());
+            }
+            int maxPage = Math.Max(1, db.Products.Count() / 10);
+            if (page > maxPage)
+            {
+                page = maxPage;
+            }
+            ViewBag.MaxPage = maxPage;
+            ViewBag.CurrentPage = page;
+            return View("Index", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
         }
 
         protected override void Dispose(bool disposing)

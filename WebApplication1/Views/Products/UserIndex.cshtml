@@ -15,17 +15,10 @@
     <link href="@Url.Content("~/Content/css/ForAdmin.css")" rel="stylesheet" type="text/css" />
 }
 
-@if (Session["IsAdmin"] is true)
-{
-    <p>
-        @Html.ActionLink("Tạo mới", "Create", "", new { @class = "btn btn-success" })
-    </p>
-}
-
 <div style="margin-bottom: 24px" class="list-href">
-    <a href="/">Trang chủ</a>
+    <a href="@Url.Action("Index", "Home")">Trang chủ</a>
     >
-    <a href="/Products"><b>Danh sách sản phẩm</b></a>
+    <b>Danh sách sản phẩm</b>
     >
     <a href="@Request.Path">Trang @CurrentPage</a>
 </div>
