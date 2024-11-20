@@ -39,7 +39,6 @@
 
 <form action="/Product/Create" enctype="multipart/form-data" method="post" onsubmit="sanitizePrice(this)">
     @Html.AntiForgeryToken()
-
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ProductID)
     <div class="container-wrap product">

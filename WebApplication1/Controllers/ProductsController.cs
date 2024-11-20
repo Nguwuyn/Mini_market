@@ -164,12 +164,8 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult UserIndex(int page = 1)
+        public ActionResult UserIndex(int? id, int page = 1)
         {
-            if(db.Products.Count() == 0)
-            {
-                return RedirectToAction("Empty");
-            }    
             if (ControllerContext.IsChildAction)
             {
                 return PartialView(db.Products.ToList());
