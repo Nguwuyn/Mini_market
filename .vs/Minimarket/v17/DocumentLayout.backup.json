@@ -38,15 +38,15 @@
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -80,7 +80,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Content\\style.css",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\style.css",
               "RelativeToolTip": "WebApplication1\\Content\\style.css",
-              "ViewState": "AgIAACkCAAAAAAAAAAAAwGECAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAF8CAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-21T14:38:25.284Z",
               "EditorCaption": ""
@@ -106,7 +106,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Content\\css\\main-style.css",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\css\\main-style.css",
               "RelativeToolTip": "WebApplication1\\Content\\css\\main-style.css",
-              "ViewState": "AgIAAK8BAAAAAAAAAAAAwFIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJgDAAAAAAAAAAAAwLcDAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-21T14:35:53.399Z",
               "EditorCaption": ""
@@ -119,7 +119,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAHgBAAAAAAAAAADwv3sBAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAMwAAAAAAAAAAADwv9oAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T13:43:32.059Z",
               "EditorCaption": ""

@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\new folder\\webapplication1\\content\\css\\main-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\css\\main-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\new folder\\webapplication1\\content\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\new folder\\webapplication1\\content\\css\\main-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\content\\css\\main-style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\admin\\source\\repos\\new folder\\webapplication1\\content\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -37,17 +37,8 @@
           "SelectedChildIndex": 12,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\style.css",
-              "RelativeDocumentMoniker": "WebApplication1\\Content\\style.css",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\style.css*",
-              "RelativeToolTip": "WebApplication1\\Content\\style.css*",
-              "ViewState": "AgIAAEICAAAAAAAAAAAQwJQCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-21T14:38:25.284Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -56,10 +47,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -87,6 +74,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\style.css",
+              "RelativeDocumentMoniker": "WebApplication1\\Content\\style.css",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\style.css",
+              "RelativeToolTip": "WebApplication1\\Content\\style.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAF8CAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-21T14:38:25.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "index.css",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\css\\index.css",
@@ -100,13 +100,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "main-style.css",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\css\\main-style.css",
               "RelativeDocumentMoniker": "WebApplication1\\Content\\css\\main-style.css",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Content\\css\\main-style.css",
               "RelativeToolTip": "WebApplication1\\Content\\css\\main-style.css",
-              "ViewState": "AgIAAK8BAAAAAAAAAAAAwFIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAJgDAAAAAAAAAAAAwLcDAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-11-21T14:35:53.399Z",
               "EditorCaption": ""
@@ -119,7 +119,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder\\WebApplication1\\Views\\Home\\Index.cshtml*",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml*",
-              "ViewState": "AgIAAOUAAAAAAAAAAADwvxYBAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAALQBAAAAAAAAAAAAAMYBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T13:43:32.059Z",
               "EditorCaption": ""

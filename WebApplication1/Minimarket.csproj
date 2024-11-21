@@ -271,6 +271,7 @@
     <Content Include="Content\images\category-thumb-6.jpg" />
     <Content Include="Content\images\category-thumb-7.jpg" />
     <Content Include="Content\images\category-thumb-8.jpg" />
+    <Content Include="Content\images\Chicken.png" />
     <Content Include="Content\images\img-app-store.png" />
     <Content Include="Content\images\img-google-play.png" />
     <Content Include="Content\images\img-login.jpg" />
@@ -324,8 +325,10 @@
     <Content Include="Content\images\reviewer-1.jpg" />
     <Content Include="Content\images\reviewer-2.jpg" />
     <Content Include="Content\images\reviewer-3.jpg" />
+    <Content Include="Content\images\salmon.png" />
     <Content Include="Content\images\sample-image-2.jpg" />
     <Content Include="Content\images\sample-image.jpg" />
+    <Content Include="Content\images\suplo.jpg" />
     <Content Include="Content\js\jquery-1.11.0.min.js" />
     <Content Include="Content\js\modernizr.js" />
     <Content Include="Content\js\plugins.js" />
