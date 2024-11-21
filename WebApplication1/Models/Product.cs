@@ -16,27 +16,26 @@ namespace WebApplication1.Models
             Promotions = new HashSet<Promotion>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [StringLength(100)]
         public string ProductName { get; set; }
 
-        [Required]
-        [StringLength(200)]
+        [StringLength(500)]
         public string ProductDescription { get; set; }
 
-        [Column(TypeName = "money")]
         public decimal ProductPrice { get; set; }
 
         public int StockQuantity { get; set; }
 
-        public double Tax { get; set; }
+        public decimal Tax { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(100)]
         public string Brand { get; set; }
 
+        [StringLength(255)]
         public string ProductImg { get; set; }
 
         [NotMapped]

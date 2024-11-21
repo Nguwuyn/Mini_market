@@ -23,16 +23,17 @@ namespace WebApplication1.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Discount { get; set; }
 
-        [Column(TypeName = "money")]
+        [Key]
+        [Column(Order = 3)]
         public decimal Total { get; set; }
 
         [Key]
-        [Column(Order = 3)]
+        [Column(Order = 4)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }
 
         [Key]
-        [Column(Order = 4)]
+        [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductID { get; set; }
 

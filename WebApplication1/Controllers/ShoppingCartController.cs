@@ -147,7 +147,7 @@ namespace WebApplication1.Controllers
 
                 _order.OrderDate = DateTime.Now;
                 _order.ReceiverAddress = form["ReceiverAddress"];
-                _order.ReceiverPhoneNum = form["ReceiverPhoneNum"];
+                _order.ReceiverPhoneNumber = form["ReceiverPhoneNum"];
                 _order.CustomerID = int.Parse(form["CodeCustomer"]);
                 _order.OrderStatus = "Đang xử lý";
 

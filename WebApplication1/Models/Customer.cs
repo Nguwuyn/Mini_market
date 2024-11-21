@@ -15,30 +15,36 @@ namespace WebApplication1.Models
             Orders = new HashSet<Order>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CustomerID { get; set; }
 
-        [StringLength(50)]
+        [Required]
+        [StringLength(100)]
         public string FullName { get; set; }
 
-        [StringLength(200)]
+        [Required]
+        [StringLength(255)]
         public string CusAddress { get; set; }
 
-        [StringLength(10)]
+        [Required]
+        [StringLength(15)]
         public string CusPhone { get; set; }
 
-        [StringLength(15)]
+        [Required]
+        [StringLength(50)]
         public string UserName { get; set; }
 
-        [StringLength(10)]
+        [Required]
+        [StringLength(255)]
         public string CusPassword { get; set; }
 
-        [StringLength(10)]
         [NotMapped]
         public string ConfirmPasswordCus { get; set; }
 
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AdminUser> AdminUsers { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<AdminUser> AdminUsers { get; set; }
     }
 }

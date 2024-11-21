@@ -177,7 +177,7 @@ namespace WebApplication1.Controllers
             }
             ViewBag.MaxPage = maxPage;
             ViewBag.CurrentPage = page;
-            return View("Index", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
+            return View("UserIndex", db.Products.OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
         }
 
         protected override void Dispose(bool disposing)

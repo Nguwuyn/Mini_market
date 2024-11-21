@@ -8,11 +8,10 @@ namespace WebApplication1.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model11")
         {
         }
 
-        public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Coupon> Coupons { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
@@ -20,46 +19,40 @@ namespace WebApplication1.Models
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Promotion> Promotions { get; set; }
+        public virtual DbSet<AdminUser> AdminUsers { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>()
-                .Property(e => e.CategoryIllust)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Category>()
                 .HasMany(e => e.Products)
                 .WithRequired(e => e.Category)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Coupon>()
+                .Property(e => e.CouponDiscount)
+                .HasPrecision(15, 2);
+
             modelBuilder.Entity<Customer>()
                 .Property(e => e.CusPhone)
-                .IsFixedLength()
                 .IsUnicode(false);
+
+            modelBuilder.Entity<Customer>()
+                .HasMany(e => e.AdminUsers)
+                .WithRequired(e => e.Customer)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Customer>()
                 .HasMany(e => e.Orders)
                 .WithRequired(e => e.Customer)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Employee>()
-                .Property(e => e.EmployeePassWord)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Employee>()
-                .HasMany(e => e.Orders)
-                .WithRequired(e => e.Employee)
-                .WillCascadeOnDelete(false);
+            modelBuilder.Entity<Order>()
+                .Property(e => e.TotalMoney)
+                .HasPrecision(15, 2);
 
             modelBuilder.Entity<Order>()
-                .Property(e => e.OrderStatus)
-                .IsFixedLength()
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Order>()
-                .Property(e => e.ReceiverPhoneNum)
-                .IsFixedLength()
+                .Property(e => e.ReceiverPhoneNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Order>()
@@ -69,11 +62,11 @@ namespace WebApplication1.Models
 
             modelBuilder.Entity<Product>()
                 .Property(e => e.ProductPrice)
-                .HasPrecision(19, 4);
+                .HasPrecision(15, 2);
 
             modelBuilder.Entity<Product>()
-                .Property(e => e.ProductImg)
-                .IsUnicode(false);
+                .Property(e => e.Tax)
+                .HasPrecision(5, 2);
 
             modelBuilder.Entity<Product>()
                 .HasMany(e => e.OrderDetails)
@@ -85,14 +78,13 @@ namespace WebApplication1.Models
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<Promotion>()
-                .Property(e => e.Specification)
-                .IsFixedLength()
+            modelBuilder.Entity<AdminUser>()
+                .Property(e => e.UserName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<OrderDetail>()
                 .Property(e => e.Total)
-                .HasPrecision(19, 4);
+                .HasPrecision(15, 2);
         }
     }
 }

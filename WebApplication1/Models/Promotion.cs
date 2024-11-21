@@ -14,19 +14,19 @@ namespace WebApplication1.Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PromotionID { get; set; }
 
-        [StringLength(30)]
+        [Required]
+        [StringLength(255)]
         public string Specification { get; set; }
 
         public int ProductID { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime DateStart { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime DateEnd { get; set; }
+        public DateTime EndDate { get; set; }
 
         public virtual Product Product { get; set; }
 

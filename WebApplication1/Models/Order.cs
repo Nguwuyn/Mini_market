@@ -14,31 +14,34 @@ namespace WebApplication1.Models
             OrderDetails = new HashSet<OrderDetail>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int OrderID { get; set; }
 
         public int OrderQuantity { get; set; }
 
-        public int TotalMoney { get; set; }
+        public decimal TotalMoney { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime OrderDate { get; set; }
 
-        [StringLength(2)]
+        [Required]
+        [StringLength(50)]
         public string OrderStatus { get; set; }
 
-        [StringLength(50)]
+        [Required]
+        [StringLength(100)]
         public string ReceiverName { get; set; }
 
-        [StringLength(10)]
-        public string ReceiverPhoneNum { get; set; }
+        [Required]
+        [StringLength(15)]
+        public string ReceiverPhoneNumber { get; set; }
 
-        [StringLength(200)]
+        [Required]
+        [StringLength(255)]
         public string ReceiverAddress { get; set; }
 
         public int CustomerID { get; set; }
 
-        public int EmployeeID { get; set; }
+        public int? EmployeeID { get; set; }
 
         public int? CouponID { get; set; }
 

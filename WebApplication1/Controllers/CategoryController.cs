@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
+using System.Web.UI;
 
 
 namespace WebApplication1.Controllers
@@ -17,6 +18,10 @@ namespace WebApplication1.Controllers
 
         public ActionResult Index()
         {
+            if (Session["IsAdmin"] == null || Session["IsAdmin"] is false)
+            {
+                return RedirectToAction("UserIndex", "Category");
+            }
             var category = db.Categories.ToList();
             if (ControllerContext.IsChildAction)
             {
@@ -145,6 +150,18 @@ namespace WebApplication1.Controllers
             db.Categories.Remove(category);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+        public ActionResult UserIndex(int page)
+        {
+            var Pro = db.Products.Include(o => o.Category);
+            int maxPage = Math.Max(1, Pro.Count() / 10);
+            if (page > maxPage)
+            {
+                page = maxPage;
+            }
+            ViewBag.MaxPage = maxPage;
+            ViewBag.CurrentPage = page;
+            return View("UserIndex");
         }
 
         protected override void Dispose(bool disposing)

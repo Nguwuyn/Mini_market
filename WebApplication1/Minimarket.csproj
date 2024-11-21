@@ -473,6 +473,7 @@
     <Content Include="Views\AdminPanel\CustomersManagement.cshtml" />
     <Content Include="Views\AdminPanel\OrdersManagement.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Category\UserIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

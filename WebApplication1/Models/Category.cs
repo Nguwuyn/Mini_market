@@ -14,13 +14,13 @@ namespace WebApplication1.Models
             Products = new HashSet<Product>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CategoryID { get; set; }
 
         [Required]
         [StringLength(100)]
         public string CategoryName { get; set; }
 
+        [StringLength(255)]
         public string CategoryIllust { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

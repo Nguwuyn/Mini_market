@@ -14,13 +14,13 @@ namespace WebApplication1.Models
             Orders = new HashSet<Order>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CouponID { get; set; }
 
-        [StringLength(100)]
+        [Required]
+        [StringLength(255)]
         public string CouponDescription { get; set; }
 
-        public int CouponDiscount { get; set; }
+        public decimal CouponDiscount { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

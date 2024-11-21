@@ -4,8 +4,8 @@
     @if (Session["IsAdmin"] is true)
     {
         <div class="admin-btn">
-            <a href="/Product/Delete/@Model.ProductID" class="no-select remove">&#x2715;</a>
-            <a href="/Product/Edit/@Model.ProductID" class="no-select remove">
+            <a href="/Products/Delete/@Model.ProductID" class="no-select remove">&#x2715;</a>
+            <a href="/Products/Edit/@Model.ProductID" class="no-select remove">
                 <img class="edit-btn" src="@Url.Content("~/Image/svg/pencil.svg")" />
             </a>
         </div>

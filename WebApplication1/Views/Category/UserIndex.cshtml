@@ -1,5 +1,4 @@
-﻿@model IEnumerable<WebApplication1.Models.Product>
-
+﻿@model Tuple<WebApplication1.Models.Category, IEnumerable<WebApplication1.Models.Product>>
 @{
     ViewBag.Title = "UserIndex";
     Layout = ViewBag.Layout;
@@ -18,7 +17,7 @@
 <div style="margin-bottom: 24px" class="list-href">
     <a href="@Url.Action("Index", "Home")">Trang chủ</a>
     >
-    <b>Danh sách sản phẩm</b>
+    <a>href="@Url.Action("UserIndex","Category")<b>Danh mục</b></a>
     >
     <a href="@Request.Path">Trang @CurrentPage</a>
 </div>
@@ -58,30 +57,25 @@
         div.style.top = e.pageY + "px";
     }
 </script>
+<div style="margin:auto"><b>@Model.Item1</b></div>
 <div style="overflow-x: auto">
     <table class="table" style="width: max-content;">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Category.CategoryName)
+                Tên sản phẩm
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductName)
+                Mô tả
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ProductDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductPrice)
+                Giá tiền
             </th>
             <th></th>
         </tr>
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.Item2)
         {
             <tr onmouseover="show(@item.ProductID)" onmouseout="hide(@item.ProductID)" onmousemove="move(@item.ProductID, event)">
-                <td>
-                    @Html.DisplayFor(modelItem => item.Category.CategoryName)
-                </td>
                 <td>
                     @Html.ActionLink(item.ProductName, "Details", new { id = item.ProductID })
                 </td>
@@ -95,10 +89,10 @@
                 </td>
             </tr>
         }
-        
+
     </table>
 </div>
-<div class="page-nav" style="align-items:center" >
+<div class="page-nav" style="align-items:center">
     <div class="grid-nav-page">
         @if (CurrentPage == MaxPage)
         {
@@ -126,3 +120,4 @@
         }
     </div>
 </div>
+

@@ -66,7 +66,7 @@ namespace WebApplication1.Models.ThongKe
 
             orders.ForEach(item =>
             {
-                self.TongDoanhThu += item.TotalMoney;
+                self.TongDoanhThu += (double)item.TotalMoney;
                 self.TongKhacHang += 1;
 
                 var orderDetails = db.OrderDetails.Where(x => x.OrderID == item.OrderID).ToList();
@@ -135,7 +135,7 @@ namespace WebApplication1.Models.ThongKe
 
             db.Orders.Where(x => x.OrderDate.Month == month && x.OrderDate.Year == year).ForEach(item =>
             {
-                self.TongDoanhThu += item.TotalMoney;
+                self.TongDoanhThu += (double)item.TotalMoney;
                 self.TongKhacHang += 1;
                 db.OrderDetails.Where(x => x.OrderID == item.OrderID)
                     .ForEach(x =>
