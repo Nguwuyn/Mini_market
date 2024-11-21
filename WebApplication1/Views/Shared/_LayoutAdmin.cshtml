@@ -52,20 +52,20 @@
             <div class="d-flex flex-row gap-4">
                 <a href="@Url.Action("Index", "ShoppingCart")">
                     <div class="box-link">
-                        <img src="~/img/svg/cart.svg" alt="cart list" />
+                        <img src="~/Content/images/cart.svg" alt="cart list" />
                     </div>
                 </a>
                 <div class="position-relative">
                     @if (Session["UserID"] != null)
                     {
                         <a class="profile-link" href="@Url.Action("Index", "Profile")">
-                            <img src="@Url.Content("/img/profile.png")" alt="profile image" class="profile-img" />
+                            <img src="~/Content/images/profile.png" alt="profile image" class="profile-img" />
                         </a>
                     }
                     else
                     {
                         <a class="profile-link" href="@Url.Action("Index", "Login")">
-                            <img src="@Url.Content("/img/profile.png")" alt="profile image" class="profile-img" />
+                            <img src="~/Content/images/profile.png" alt="profile image" class="profile-img" />
                         </a>
                     }
                     <div class="d-flex flex-column gap-2 p-2 profile-popup">

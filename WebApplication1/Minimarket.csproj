@@ -262,6 +262,7 @@
     <Content Include="Content\images\banner-ad-3.jpg" />
     <Content Include="Content\images\banner-newsletter.jpg" />
     <Content Include="Content\images\banner-onlineapp.png" />
+    <Content Include="Content\images\cart.svg" />
     <Content Include="Content\images\category-thumb-1.jpg" />
     <Content Include="Content\images\category-thumb-2.jpg" />
     <Content Include="Content\images\category-thumb-3.jpg" />
@@ -275,6 +276,7 @@
     <Content Include="Content\images\img-login.jpg" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\logo.svg" />
+    <Content Include="Content\images\person.svg" />
     <Content Include="Content\images\post-thumbnail-1.jpg" />
     <Content Include="Content\images\post-thumbnail-2.jpg" />
     <Content Include="Content\images\post-thumbnail-3.jpg" />
@@ -318,6 +320,7 @@
     <Content Include="Content\images\product-thumbnail-3.jpg" />
     <Content Include="Content\images\product-thumbnail-4.jpg" />
     <Content Include="Content\images\product-thumbnail-5.jpg" />
+    <Content Include="Content\images\profile.png" />
     <Content Include="Content\images\reviewer-1.jpg" />
     <Content Include="Content\images\reviewer-2.jpg" />
     <Content Include="Content\images\reviewer-3.jpg" />
