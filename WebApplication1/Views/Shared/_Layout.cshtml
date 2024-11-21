@@ -23,8 +23,8 @@
                 </select>
 
                 <!-- Tìm kiếm -->
-                <form id="search-form" class="flex-grow-1" action="index.html" method="post">
-                    <input type="text" class="form-control border-0 bg-transparent" placeholder="Tìm kiếm">
+                <form onsubmit="searchProduct()" id="search-form" class="flex-grow-1">
+                    <input id="searchbar" type="text" class="form-control border-0 bg-transparent" placeholder="Tìm kiếm">
                 </form>
 
                 <!-- Icon tìm kiếm -->
@@ -64,5 +64,12 @@
     @Scripts.Render("~/Scripts/_Layout.js")
     @RenderSection("JavaScript", false)
     @RenderBody()
+    <script>
+        function searchProduct() {
+            const value = document.getElementById("searchbar").value;
+            const link = "@Url.Action("UserIndex", "Products", new{ page = 1, searchValue = "_xXXx_"})";
+            window.location.href = link.replace("_xXXx_", value);
+        }
+    </script>
 </body>
 </html>

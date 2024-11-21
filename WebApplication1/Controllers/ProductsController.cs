@@ -26,12 +26,23 @@ namespace WebApplication1.Controllers
         }
 
         // GET: Products
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(int page = 1, String searchValue = "")
         {
             if (ControllerContext.IsChildAction)
             {
                 return PartialView(db.Products.ToList());
             }
+            if (searchValue != "")
+            {
+                if (page > Math.Max(1, db.Products.Count() / 10))
+                {
+                    page = Math.Max(1, db.Products.Count() / 10);
+                }
+                ViewBag.MaxPage = Math.Max(1, db.Products.Count(p => p.ProductName.ToUpper().Contains(searchValue.ToUpper())) / 10);
+                ViewBag.CurrentPage = page;
+                return View("Index", db.Products.Where(p => p.ProductName.ToUpper().Contains(searchValue.ToUpper())).OrderBy(x => x.ProductName).Skip((page - 1) * 15).Take(15).ToList());
+            }
+
             int maxPage = Math.Max(1, db.Products.Count() / 10);
             if (page > maxPage)
             {

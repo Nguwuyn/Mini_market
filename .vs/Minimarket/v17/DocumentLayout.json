@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Vinha\\source\\repos\\vc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\vc\\webapplication1\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\vc\\webapplication1\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\category\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\category\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\vc\\webapplication1\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|c:\\users\\vinha\\source\\repos\\vc\\webapplication1\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\category\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -155,20 +167,8 @@
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\productdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\products\\userindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\controllers\\adminpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,7 +186,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 17,
           "Children": [
             {
               "$type": "Bookmark",
@@ -218,32 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CheckOut.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T18:05:13.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\UserIndex.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\UserIndex.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\UserIndex.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Category\\UserIndex.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T17:38:29.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Index.cshtml",
@@ -255,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Detail.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Detail.cshtml",
@@ -267,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Delete.cshtml",
@@ -279,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CategoryController.cs",
@@ -291,19 +266,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProductsController.cs*",
-              "RelativeToolTip": "..\\..\\..\\..\\Admin\\source\\repos\\Mini_market\\WebApplication1\\Controllers\\ProductsController.cs*",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAD4AAAAYAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:23:43.122Z"
+              "WhenOpened": "2024-11-21T17:23:43.122Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\Details.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Details.cshtml",
@@ -311,11 +287,12 @@
               "RelativeToolTip": "WebApplication1\\Views\\Category\\Details.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T17:18:18.767Z"
+              "WhenOpened": "2024-11-21T17:18:18.767Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\Create.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Create.cshtml",
@@ -328,7 +305,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAAEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T16:47:28.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T16:49:07.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T16:48:01.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserIndex.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\UserIndex.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\UserIndex.cshtml",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\UserIndex.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Category\\UserIndex.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T17:38:29.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
+              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\ShoppingCart\\CheckOut.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T18:05:13.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "PromotionController.cs",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Controllers\\PromotionController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PromotionController.cs",
@@ -340,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Edit.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Edit.cshtml",
@@ -352,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Create.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Create.cshtml",
@@ -364,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ThongKe.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Profile\\ThongKe.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\ThongKe.cshtml",
@@ -376,7 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\Index.cshtml",
@@ -388,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "EditProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Profile\\EditProfile.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\EditProfile.cshtml",
@@ -400,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "PartialProduct.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\PartialProduct.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\PartialProduct.cshtml",
@@ -412,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\Index.cshtml",
@@ -424,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "EmptyCart.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\EmptyCart.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\EmptyCart.cshtml",
@@ -436,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Delete.cshtml",
@@ -448,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\Edit.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Edit.cshtml",
@@ -460,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Empty.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\Empty.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Empty.cshtml",
@@ -472,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "PartialOrdersProduct.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\PartialOrdersProduct.cshtml",
@@ -484,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "EditCart.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\EditCart.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\EditCart.cshtml",
@@ -496,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "DeleteCart.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\DeleteCart.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\DeleteCart.cshtml",
@@ -508,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "CheckOutSuccess.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\CheckOutSuccess.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\CheckOutSuccess.cshtml",
@@ -520,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "CheckOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\CheckOrder.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\CheckOrder.cshtml",
@@ -532,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "CancelOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Order\\CancelOrder.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Order\\CancelOrder.cshtml",
@@ -544,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Customer\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Customer\\Index.cshtml",
@@ -556,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Customer\\Edit.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Customer\\Edit.cshtml",
@@ -568,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Customer\\Details.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Customer\\Details.cshtml",
@@ -580,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Customer\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Customer\\Delete.cshtml",
@@ -592,7 +633,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Customer\\Create.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Customer\\Create.cshtml",
@@ -604,7 +645,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Index.cshtml",
@@ -616,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\Edit.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Edit.cshtml",
@@ -628,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\Delete.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Delete.cshtml",
@@ -640,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Category\\Create.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Category\\Create.cshtml",
@@ -652,19 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T16:47:28.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "ProductDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\ProductDetails.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\ProductDetails.cshtml",
@@ -676,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "Search.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Home\\Search.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Search.cshtml",
@@ -688,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\Index.cshtml",
@@ -697,18 +726,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T17:16:49.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "UserIndex.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Products\\UserIndex.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T16:49:07.276Z"
             },
             {
               "$type": "Document",
@@ -721,18 +738,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:48:16.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwDUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-21T16:48:01.596Z"
             },
             {
               "$type": "Document",
