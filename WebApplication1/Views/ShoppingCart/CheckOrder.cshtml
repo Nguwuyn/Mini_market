@@ -19,7 +19,7 @@
             var prodTotal = (item.ProductQuantity * item.Product.ProductPrice);
             firstTotal += (double)prodTotal;
             totalTax += (double)(prodTotal * item.Product.Tax);
-            total += (double)(prodTotal + (prodTotal * item.Product.Tax));
+            total += (double)(prodTotal + prodTotal * item.Product.Tax);
         }
         FirstTotal = String.Format(": {0:#,#.##}đ", firstTotal);
         TotalMoney = String.Format(": {0:#,#.##}đ", total);

@@ -53,7 +53,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult RegisterUser(Customer _user)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 var check = db.Customers.Where(s => s.CustomerID == _user.CustomerID || s.UserName == _user.UserName).FirstOrDefault();
                 if (check == null)

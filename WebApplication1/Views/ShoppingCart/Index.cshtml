@@ -9,23 +9,21 @@
     string TotalMoney = "";
     string TotalDiscount = "";
     string TotalTax = "";
-
     double totalDiscount = 0;
     double totalTax = 0;
     double total = 0;
     if (Model != null && Model.Items.Count() > 0)
     {
-        //TotalMoney = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
         foreach (var item in Model.Items)
         {
-            var prodTotal = (item._quantity * item._product.ProductPrice);
-            totalTax += (double)prodTotal * item._product.Tax;
-            total += (double)prodTotal + (double)prodTotal * item._product.Tax; //Thêm discount cho phần khuyến mãi sau
+            var prodTotal = (double)(item._quantity * item._product.ProductPrice); // Convert decimal to double
+            totalTax += prodTotal * (double)item._product.Tax; // Convert decimal to double
+            total += prodTotal + prodTotal * (double)item._product.Tax; // Convert decimal to double
         }
-        FirstTotal = String.Format(": {0:#,#.##}đ", Model.TotalMoney());
-        TotalMoney = String.Format(": {0:#,#.##}đ", total);
-        TotalDiscount = String.Format(": -{0:#,#.##}đ", totalDiscount);
-        TotalTax = String.Format(": +{0:#,#.##}đ", totalTax);
+        FirstTotal = String.Format(": {0:#,#.##}��", Model.TotalMoney());
+        TotalMoney = String.Format(": {0:#,#.##}��", total);
+        TotalDiscount = String.Format(": -{0:#,#.##}��", totalDiscount);
+        TotalTax = String.Format(": +{0:#,#.##}��", totalTax);
     }
 }
 
@@ -109,7 +107,7 @@
 }
 
 <h2>Giỏ hàng của bạn</h2>
-<a href="@Url.Action("Index", "Products")">&#8592 Tiếp tục mua hàng</a>
+<a href="@Url.Action("UserIndex", "Products")">&#8592 Tiếp tục mua hàng</a>
 @if (Model != null && Model.Items.Count() > 0)
 {
     <div class="container-wrap product" style="justify-content: flex-start; gap: 12px">

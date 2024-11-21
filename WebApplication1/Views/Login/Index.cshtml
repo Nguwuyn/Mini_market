@@ -6,17 +6,17 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 
-@section Styles {
+@section Styles 
+{
     <link href="@Url.Content("~/Content/css/Login.css")" rel="stylesheet" type="text/css" />
 }
-
 <form class="popup" method="post" action="@Url.Action("Index", "Login")">
     <div class="wrapper">
         <h1>Login</h1>
-        @if(ViewBag.ErrorInfo != null)
-            {
-                <div class="error-info">@ViewBag.ErrorInfo</div>
-            }
+        @if (ViewBag.ErrorInfo != null)
+        {
+            <div class="error-info">@ViewBag.ErrorInfo</div>
+        }
         @Html.AntiForgeryToken()
         <div class="input-field">
             <input class="input-box" type="text" placeholder="User Name" name="UserName" id="UserName" required>
