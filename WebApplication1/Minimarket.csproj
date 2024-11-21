@@ -481,6 +481,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\RegisterUser.cshtml" />
     <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
