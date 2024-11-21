@@ -583,3 +583,28 @@ a.btn-link.text-light:after {
 	}
 }
 /* ============ mobile view .end// ============ */
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Chia đều khoảng cách giữa các phần */
+}
+
+.form-select {
+    min-width: 120px; /* Đảm bảo dropdown không quá nhỏ */
+}
+
+#search-form input {
+    width: 100%; /* Tự động chiếm toàn bộ chiều rộng của ô tìm kiếm */
+}
+
+svg {
+    cursor: pointer;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
