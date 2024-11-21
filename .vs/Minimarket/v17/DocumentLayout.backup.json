@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Vinha\\source\\repos\\vc\\",
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\New folder (2)\\",
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{8DE05985-EC04-439F-929E-99E1645C9251}|WebApplication1\\Minimarket.csproj|C:\\Users\\Vinha\\source\\repos\\vc\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -190,7 +190,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -210,11 +210,15 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Bookmark",
@@ -222,13 +226,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Promotion\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\Views\\Promotion\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Promotion\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder (2)\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder (2)\\WebApplication1\\Views\\Home\\Index.cshtml*",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml*",
+              "ViewState": "AgIAAJkFAAAAAAAAAAAlwLEFAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-21T17:23:01.992Z"
             },
@@ -747,13 +751,14 @@
               "$type": "Document",
               "DocumentIndex": 44,
               "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\App_Start\\RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\New folder (2)\\WebApplication1\\App_Start\\RouteConfig.cs",
               "RelativeDocumentMoniker": "WebApplication1\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Users\\Vinha\\source\\repos\\vc\\WebApplication1\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\New folder (2)\\WebApplication1\\App_Start\\RouteConfig.cs",
               "RelativeToolTip": "WebApplication1\\App_Start\\RouteConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T11:56:34.712Z"
+              "WhenOpened": "2024-11-04T11:56:34.712Z",
+              "EditorCaption": ""
             }
           ]
         }
