@@ -1,7 +1,7 @@
 ﻿@model Tuple<WebApplication1.Models.Category, IEnumerable<WebApplication1.Models.Product>>
 @{
     ViewBag.Title = "UserIndex";
-    Layout = ViewBag.Layout;
+    Layout = "~/Views/Shared/_Layout.cshtml";
     int CurrentPage = (int)ViewBag.CurrentPage;
     int MaxPage = (int)ViewBag.MaxPage;
 }

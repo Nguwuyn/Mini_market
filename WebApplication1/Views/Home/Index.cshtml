@@ -1,4 +1,6 @@
-﻿
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,60 +164,6 @@
             </ul>
         </div>
     </div>
-    <header>
-        <div class="container-fluid">
-            <div class="row py-3 border-bottom align-items-center">
-                <!-- Logo -->
-                <div class="col-3 text-center text-sm-start">
-                    <a href="index.html">
-                        <img src="~/Content/images/logo.png" alt="logo" class="img-fluid">
-                    </a>
-                </div>
-
-                <!-- Danh mục và Tìm kiếm -->
-                <div class="col-6 d-flex align-items-center justify-content-center gap-3">
-                    <!-- Danh mục -->
-                    <select class="form-select border-0 bg-transparent w-25" aria-label="Choose an option">
-                        <option value="0">Danh mục</option>
-                        <option value="1">THỊT, CÁ, TRỨNG, HẢI SẢN</option>
-                        <option value="3">RAU CỦ</option>
-                        <option value="4">DẦU ĂN, GIA VỊ</option>
-                        <option value="5">MÌ, MIẾN, CHÁO, PHỞ</option>
-                        <option value="6">BIA, NƯỚC GIẢI KHÁT</option>
-                        <option value="7">SỮA CÁC LOẠI</option>
-                        <option value="8">ĐỒ DÙNG GIA ĐÌNH</option>
-                    </select>
-
-                    <!-- Tìm kiếm -->
-                    <form id="search-form" class="flex-grow-1" action="index.html" method="post">
-                        <input type="text" class="form-control border-0 bg-transparent" placeholder="Tìm kiếm">
-                    </form>
-
-                    <!-- Icon tìm kiếm -->
-                    <button class="btn bg-transparent border-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21.71 20.29L18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a1 1 0 0 0 1.42 0a1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 7-7a7 7 0 0 1-7 7Z" />
-                        </svg>
-                    </button>
-                </div>
-
-                <!-- Icons -->
-                <div class="col-3 d-flex justify-content-end gap-3">
-                    <a href="@Url.Action("Index", "Profile")" class="p-2">
-                        <svg width="24" height="24"><use xlink:href="#user"></use></svg>
-                    </a>
-                    <a href="@Url.Action("Index", "Profile")" class="p-2">
-                        <svg width="24" height="24"><use xlink:href="#wishlist"></use></svg>
-                    </a>
-                    <a href="@Url.Action("Index", "ShoppingCart")" class="p-2">
-                        <svg width="24" height="24"><use xlink:href="#shopping-bag"></use></svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
     <section style="background-image: url('~/Content/images/banner-1.jpg');background-repeat: no-repeat;background-size: cover;">
         <div class="container-lg text-center text-lg-start">
             <div class="row">

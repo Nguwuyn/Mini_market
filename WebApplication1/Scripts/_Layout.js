@@ -25,7 +25,3 @@ function postAddCart(id) {
         return console.log("ok!")
     })
 }
-
-markNav();
-Bs5Utils.defaults.toasts.position = 'bottom-right';
-window.bs5Utils = new Bs5Utils();

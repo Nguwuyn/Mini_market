@@ -151,17 +151,25 @@ namespace WebApplication1.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult UserIndex(int page)
+        public ActionResult UserIndex(int id, int page)
         {
-            var Pro = db.Products.Include(o => o.Category);
-            int maxPage = Math.Max(1, Pro.Count() / 10);
+            Category category = db.Categories.Find(id);
+            if (category == null)
+            {
+                return RedirectToAction("Empty");
+            }
+            IEnumerable<Product> productList = category.Products.ToList();
+
+            int maxPage = Math.Max(1, productList.Count() / 10);
             if (page > maxPage)
             {
                 page = maxPage;
             }
             ViewBag.MaxPage = maxPage;
             ViewBag.CurrentPage = page;
-            return View("UserIndex");
+
+            var tuple = new Tuple<Category, IEnumerable<Product>>(category, productList.Skip((page - 1) * 10).Take(10));
+            return View(tuple);
         }
 
         protected override void Dispose(bool disposing)

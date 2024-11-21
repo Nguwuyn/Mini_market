@@ -1,6 +1,7 @@
 ﻿@model WebApplication1.Models.Cart
 
 @{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
     ViewBag.Title = "ShowCart";
     string placeholder_addr = (TempData["Address"] != null && (string)TempData["Address"] != "") ? (string)TempData["Address"] : "Nhập địa chỉ giao hàng";
     string placeholder_phone = (TempData["ReceiverPhoneNum"] != null && (string)TempData["ReceiverPhoneNum"] != "") ? (string)TempData["ReceiverPhoneNum"] : "Nhập số điện thoại liên hệ";
