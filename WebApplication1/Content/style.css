@@ -646,8 +646,10 @@ h2 {
 
 /* SVG icon */
 svg {
-    fill: #ffffff; /* Màu biểu tượng SVG */
-    margin-bottom: 10px;
+    display: inline-block;
+    visibility: visible;
+    width: 24px;
+    height: 24px;
 }
 
 .card h5 {
@@ -657,5 +659,13 @@ svg {
 .card-text {
     font-size: 0.9rem;
     color: #f8f9fa;
+}
+
+
+svg {
+    display: inline-block;
+    visibility: visible;
+    width: 24px;
+    height: 24px;
 }
 

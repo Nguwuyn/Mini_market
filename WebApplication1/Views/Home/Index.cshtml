@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!DOCTYPE html>
@@ -164,7 +164,7 @@
             </ul>
         </div>
     </div>
-    <section style="background-image: url('~/Content/images/banner-1.jpg');background-repeat: no-repeat;background-size: cover;">
+    <section style="background-image: url('@Url.Content("~/Content/images/banner-1.jpg")'); background-repeat: no-repeat; background-size: cover;">
         <div class="container-lg text-center text-lg-start">
             <div class="row">
                 <div class="col-lg-6 pt-5 mt-5">
@@ -182,45 +182,47 @@
                 </div>
             </div>
         </div>
+    </section>
 
 
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-5">
-            <div class="col">
-                <div class="card border-0 bg-primary rounded-3 text-light p-4">
-                    <div class="text-center">
-                        <svg width="60" height="60"><use xlink:href="#fresh"></use></svg>
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="text-light">An tâm tuyệt đối!</h5>
-                        <p class="card-text">Đổi trả nhanh chóng, chỉ trong 15 phút.</p>
-                    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 mt-5">
+        <div class="col">
+            <div class="card border-0 bg-primary rounded-3 text-light p-4">
+                <div class="text-center">
+                    <svg width="60" height="60"><use xlink:href="#fresh"></use></svg>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card border-0 bg-secondary rounded-3 text-light p-4">
-                    <div class="text-center">
-                        <svg width="60" height="60"><use xlink:href="#organic"></use></svg>
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="text-light">100% Nguyên liệu tươi</h5>
-                        <p class="card-text">Cam kết độ tươi sống của các sản phẩm rau và thịt.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card border-0 bg-danger rounded-3 text-light p-4">
-                    <div class="text-center">
-                        <svg width="60" height="60"><use xlink:href="#delivery"></use></svg>
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="text-light">Miễn phí giao hàng</h5>
-                        <p class="card-text">Giao hàng miễn phí cho đơn hàng từ 100.000đ trở lên.</p>
-                    </div>
+                <div class="card-body text-center">
+                    <h5 class="text-light">An tâm tuyệt đối!</h5>
+                    <p class="card-text">Đổi trả nhanh chóng, chỉ trong 15 phút.</p>
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card border-0 bg-secondary rounded-3 text-light p-4">
+                <div class="text-center">
+                    <svg width="60" height="60"><use xlink:href="#organic"></use></svg>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="text-light">100% Nguyên liệu tươi</h5>
+                    <p class="card-text">Cam kết độ tươi sống của các sản phẩm rau và thịt.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-0 bg-danger rounded-3 text-light p-4">
+                <div class="text-center">
+                    <svg width="60" height="60"><use xlink:href="#delivery"></use></svg>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="text-light">Miễn phí giao hàng</h5>
+                    <p class="card-text">Giao hàng miễn phí cho đơn hàng từ 100.000đ trở lên.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </section>
+
 
     <section class="py-5 overflow-hidden">
         <div class="container-lg">
@@ -693,17 +695,20 @@
 
                     <div class="banner-blocks">
 
-                        <div class="banner-ad d-flex align-items-center large bg-info block-1" style="background: url('Content/images/banner-ad-1.jpg') no-repeat; background-size: cover;">
+                        <div class="banner-ad d-flex align-items-center large bg-info block-1"
+                             style="background: url('@Url.Content("~/Content/images/banner-ad-1.jpg?v=@DateTime.Now.Ticks")') no-repeat; background-size: cover;">
                             <div class="banner-content p-5">
                                 <div class="content-wrapper text-light">
                                     <h3 class="banner-title text-light">Đang GIẢM GIÁ</h3>
-                                    <p>Khuyễn mãi lên đến 30%</p>
+                                    <p>Khuyến mãi lên đến 30%</p>
                                     <a href="#" class="btn-link text-white">Mua ngay</a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="banner-ad bg-success-subtle block-2" style="background: url('Content/images/banner-ad-2.jpg') no-repeat; background-size: cover">
+
+                        <div class="banner-ad bg-success-subtle block-2"
+                             style="background: url('@Url.Content("~/Content/images/banner-ad-2.jpg?v=@DateTime.Now.Ticks")') no-repeat; background-size: cover;">
                             <div class="banner-content align-items-center p-5">
                                 <div class="content-wrapper text-light">
                                     <h3 class="banner-title text-light">Mua nhiều giảm nhiều</h3>
@@ -713,7 +718,8 @@
                             </div>
                         </div>
 
-                        <div class="banner-ad bg-danger block-3" style="background: url('Content/images/banner-ad-3.jpg') no-repeat; background-size: cover">
+                        <div class="banner-ad bg-danger block-3"
+                             style="background: url('@Url.Content("~/Content/images/banner-ad-3.jpg?v=@DateTime.Now.Ticks")') no-repeat; background-size: cover;">
                             <div class="banner-content align-items-center p-5">
                                 <div class="content-wrapper text-light">
                                     <h3 class="banner-title text-light">SALE MẠNH CUỐI NGÀY</h3>
@@ -722,6 +728,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
                     <!-- / Banner Blocks -->
@@ -1066,8 +1073,8 @@
 
     <section>
         <div class="container-lg">
-
-            <div class="bg-secondary text-light py-5 my-5" style="background: url('Content/images/banner-newsletter.jpg') no-repeat; background-size: cover;">
+            <div class="bg-secondary text-light py-5 my-5"
+                 style="background: url('@Url.Content("~/Content/images/hinh-anh-20-11.jpeg?v=@DateTime.Now.Ticks")') no-repeat; background-size: cover;">
                 <div class="container">
                     <div class="row justify-content-xxl-center">
                         <div class="col-md-10 p-6">
@@ -1076,18 +1083,12 @@
                             </div>
                             <p>GIẢM ĐẾN 50% TRI ÂN THẦY CÔ</p>
                         </div>
-                        <div class="col-md-10 p-6">
-
-
-                        </div>
-
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
+
 
     <section id="popular-products" class="products-carousel">
         <div class="container-lg overflow-hidden py-5">
