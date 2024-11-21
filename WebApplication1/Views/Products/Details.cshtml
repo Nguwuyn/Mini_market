@@ -54,7 +54,7 @@
 <div style="margin-bottom: 24px" class="list-href">
     <a href="/">Trang chủ</a>
     >
-    <a href="/Products">Danh sách sản phầm</a>
+    <a href="/Products/UserIndex">Danh sách sản phầm</a>
     >
     <a href="/Categories/Details/@Model.Category.CategoryID">@Model.Category.CategoryName</a>
     >
@@ -70,7 +70,7 @@
                 {
                     <div class="no-select out-of-stock-overlay">Hết hàng</div>
                 }
-                <img src="@Url.Content(Model.ProductImg)" style="width: 100%" alt="Product image" />
+                <img src="~/Image/tuirac.jpg" style="width: 100%" alt="Product image" />
             </div>
         </div>
         <div class="text">
@@ -92,6 +92,8 @@
                     else
                     {
                         <a onclick="postAddCart(@Model.ProductID)" class="no-select AddToCart">Thêm vào giỏ hàng</a>
+                        <a href="/ShoppingCart" class="no-select AddToCart">Đi đến thanh toán</a>
+
                     }
                 </div>
                 @if (Session["IsAdmin"] is true)

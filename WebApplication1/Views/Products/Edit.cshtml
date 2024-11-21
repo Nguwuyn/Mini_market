@@ -91,12 +91,13 @@
                     $(previewImg).attr('src', e.target.result);
                 }
                 reader.readAsDataURL(UploadImage.files[0]);
-                document.getElementById("ProductImg").value = `~/Image/Product/${UploadImage.files[0].name}`;
+                document.getElementById("ProductImg").value = `~/Image/${UploadImage.files[0].name}`;
 
                 try {
                     document.getElementById("OldProductImg").remove();
                 } catch { }
             }
         }
+
     </script>
 }
