@@ -248,6 +248,7 @@
     <Content Include="Content\css\ForAdmin.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\Login.css" />
+    <Content Include="Content\css\main-style.css" />
     <Content Include="Content\css\normalize.css" />
     <Content Include="Content\css\Paginator.css" />
     <Content Include="Content\css\ProductDetails.css" />

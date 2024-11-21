@@ -1,4 +1,3 @@
-
 ﻿@model WebApplication1.Models.Customer
 
 
@@ -171,8 +170,9 @@
 }
 
 <h2>Profile</h2>
-@if (Session["IsAdmin"] is true)
-{
+
+    
+
     <h2 class="py-3">Admin Panel</h2>
     <p>
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#productsCollapse" aria-expanded="false" aria-controls="productsCollapse">
@@ -187,26 +187,27 @@
         <button class="btn btn-primary" type="button" onclick="window.location.href='/Profile/ThongKe'">
             Thống kê
         </button>
-    </p>    
+    </p>
     <div class="px-3 collapse" id="productsCollapse">
         @{
             Html.RenderAction("Index", "Products");
         }
         <hr />
     </div>
-    <div class="px-3 collapse" id="categoryCollapse">
+    @*@ <div class="px-3 collapse" id="categoryCollapse">
         @{
             Html.RenderAction("Index", "Categories");
         }
         <hr />
-    </div>
-    <div class="px-3 collapse" id="customersCollapse">
-        @{
-            Html.RenderAction("Index", "Customers");
-        }
-        <hr />
-    </div>
-}
+</div>/>
+<div class="px-3 collapse" id="customersCollapse">
+    @{
+        Html.RenderAction("Index", "Customers");
+    }
+    <hr />
+</div>*@
+    
+
 
 <hr />
 
