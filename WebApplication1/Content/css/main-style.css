@@ -944,6 +944,17 @@ section {
             color: #b5aec4;
         }
 
+.banner-section {
+    background-image: url('~/Content/images/banner-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Optional: Adjust height */
+    display: flex;
+    align-items: center;
+}
+
+
 /*********************************
 5. New Arrivals
 *********************************/
